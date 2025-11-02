@@ -45,7 +45,7 @@
         { "name": "Creative Direction", "level": 92 }
       ]
     },
-    "avatar": "/assets/avatar.png",
+    "avatar": "/assets/avatar.jpg",
     "glb": "/assets/hero.glb",
     "tags": ["#AI", "#Node.js", "#React"]
   },
