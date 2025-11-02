@@ -1,0 +1,246 @@
+{
+  "profile": {
+    "name": "Felipe Iasi de Barros Costa",
+    "title": "Full Stack Developer & Product Innovator",
+    "availability": {
+      "base": "Berlin, Germany",
+      "work_regions": ["Europe", "Latin America"],
+      "status": "Eligible and available to work freely across the EU and LATAM regions."
+    },
+    "summary": "Creative and driven by innovation. 14+ years in development, broadcast, and product leadership — transforming complex ideas into practical, visually engaging results.",
+    "long_summary": "With over 14 years of experience in development, broadcast, and product leadership, I am passionate about transforming complex ideas into practical and visually engaging results. My journey has taken me from the fast-paced world of broadcast media to the innovative landscape of product development, where I have consistently driven projects that blend creativity with technology.",
+    "contacts": {
+      "email": "felipeiasi@gmail.com",
+      "phone": "+49 151 15089605",
+      "linkedin": "https://www.linkedin.com/in/felipe-iasi",
+      "portfolio": "https://felipeiasi.com",
+      "github": "https://github.com/ficosta"
+    },
+    "languages": {
+      "Portuguese": "Native",
+      "English": "Full Professional",
+      "German": "Basic (A2)",
+      "Spanish": "Conversational"
+    },
+    "skills": {
+      "languages": [
+        { "name": "Node.js", "level": 95 },
+        { "name": "React", "level": 90 },
+        { "name": "TypeScript", "level": 88 },
+        { "name": "C#", "level": 70 },
+        { "name": "Python", "level": 65 }
+      ],
+      "platforms": [
+        { "name": "AWS", "level": 85 },
+        { "name": "Docker", "level": 80 },
+        { "name": "AI Integration", "level": 90 },
+        { "name": "Broadcast Systems", "level": 92 },
+        { "name": "Vizrt", "level": 95 },
+        { "name": "Real-Time Graphics", "level": 90 }
+      ],
+      "design": [
+        { "name": "UX/UI Design", "level": 85 },
+        { "name": "Figma", "level": 80 },
+        { "name": "Adobe Suite", "level": 90 },
+        { "name": "Motion Design", "level": 88 },
+        { "name": "Creative Direction", "level": 92 }
+      ]
+    },
+    "avatar": "/assets/avatar.png",
+    "glb": "/assets/hero.glb",
+    "tags": ["#AI", "#Node.js", "#React"]
+  },
+
+  "experience": [
+    {
+      "role": "Head of Product and Innovation",
+      "company": "Axel Springer / Bild",
+      "location": "Berlin, Germany",
+      "period": "Jul 2023 – Present",
+      "highlights": [
+        "Leading innovation initiatives in AI-driven content production",
+        "Integrating creative workflows across product, design, and engineering teams",
+        "Building real-time tools for broadcast and digital environments"
+      ],
+      "tech": ["Node.js", "AWS", "AI", "Docker"]
+    },
+    {
+      "role": "Head of Real Time Broadcast Design Team",
+      "company": "Axel Springer / Bild",
+      "location": "Berlin, Germany",
+      "period": "Aug 2021 – Jul 2023",
+      "highlights": [
+        "Led the real-time graphics and broadcast design team",
+        "Developed internal automation tools for newsroom systems",
+        "Optimized production pipelines and Vizrt workflows"
+      ]
+    },
+    {
+      "role": "Motion Design Team Lead",
+      "company": "Axel Springer / Bild",
+      "location": "Berlin, Germany",
+      "period": "Nov 2020 – Aug 2021",
+      "highlights": [
+        "Introduced design system for live graphics",
+        "Transitioned legacy Vizrt projects to modular templates"
+      ]
+    },
+    {
+      "role": "Real Time GFX Consultant",
+      "company": "Garena — Free Fire",
+      "location": "São Paulo, Brazil",
+      "period": "Jul 2020 – Dec 2020",
+      "highlights": [
+        "Created real-time broadcast graphics for eSports streams",
+        "Integrated Unreal and Vizrt pipelines"
+      ]
+    },
+    {
+      "role": "Vizrt Consultant & Designer",
+      "company": "CNN Brasil",
+      "location": "São Paulo, Brazil",
+      "period": "Aug 2020 – Nov 2020",
+      "highlights": [
+        "Developed live on-air graphics and data-driven dashboards",
+        "Collaborated with editorial and tech teams on launch visuals"
+      ]
+    },
+    {
+      "role": "Real Time GFX Team Lead",
+      "company": "Grupo Bandeirantes",
+      "location": "São Paulo, Brazil",
+      "period": "Dec 2013 – Nov 2020",
+      "highlights": [
+        "Led a multidisciplinary Vizrt graphics team for TV and sports events",
+        "Created tools for dynamic newsroom integration and election coverage"
+      ]
+    },
+    {
+      "role": "Avid / ORAD Senior Designer",
+      "company": "Rede Record",
+      "location": "São Paulo, Brazil",
+      "period": "Sep 2008 – Dec 2013",
+      "highlights": [
+        "Designed and implemented real-time templates using ORAD and Viz",
+        "Coordinated creative transition between platforms"
+      ]
+    },
+    {
+      "role": "Real Time GFX Designer",
+      "company": "MTV Brasil",
+      "location": "São Paulo, Brazil",
+      "period": "Jan 2009 – Jan 2012",
+      "highlights": ["Created 3D interactive graphics for live and recorded programs"]
+    },
+    {
+      "role": "Designer Assistant",
+      "company": "Rede Bandeirantes de Televisão",
+      "location": "São Paulo, Brazil",
+      "period": "Feb 2008 – Sep 2008"
+    },
+    {
+      "role": "Designer Assistant",
+      "company": "RedeTV!",
+      "location": "São Paulo, Brazil",
+      "period": "Feb 2006 – Feb 2008"
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Bachelor’s in Social Communication with Emphasis in Digital Design",
+      "institution": "Centro Universitário Ibero Americano de São Paulo",
+      "years": "2006 – 2010"
+    },
+    {
+      "degree": "Computer Science (Business Management Emphasis)",
+      "institution": "Faculdade de Tecnologia de São Paulo — FATEC-SP",
+      "years": "2003 – 2004"
+    },
+    {
+      "degree": "Specialization in Mechatronics",
+      "institution": "Impacta Tecnologia",
+      "years": "2012 – 2014"
+    }
+  ],
+
+  "certifications": [
+    {
+      "name": "Generative AI Developer",
+      "issuer": "OpenAI / AWS / MAPS",
+      "year": 2025
+    },
+    {
+      "name": "Cloud Practitioner MAPS",
+      "issuer": "AWS",
+      "year": 2025
+    },
+    { "name": "LINUX LPI 2", "issuer": "Linux Professional Institute", "year": 2023 },
+    {
+      "name": "UNREAL Engine Learning for Tomorrow – EMEA Initiative",
+      "issuer": "Epic Games",
+      "year": 2022
+    },
+    { "name": "Viz Artist Designer", "issuer": "Vizrt", "year": 2020 }
+  ],
+
+  "presentations": [
+    {
+      "title": "Unreal into News Media",
+      "event": "Axel Springer",
+      "year": 2024,
+      "type": "Presentation"
+    },
+    {
+      "title": "How to Choose a MAM",
+      "event": "European Broadcasting Union (EBU)",
+      "year": 2024,
+      "type": "Presentation"
+    },
+    {
+      "title": "Fastchannels Next Steps",
+      "event": "AWS",
+      "year": 2024,
+      "type": "Presentation"
+    }
+  ],
+
+  "publications": [
+    { "title": "Larry and TV — Best Friends", "year": 2018 },
+    { "title": "Second Screen — Bola Rolando", "year": 2019 },
+    { "title": "Twitter 50 Minutes", "year": 2020 }
+  ],
+
+  "projects": [
+    {
+      "id": "findu",
+      "title": "FindU",
+      "summary": "Mobile app for spontaneous, proximity-based encounters — prioritizing real-world interaction and anonymity until meeting in person.",
+      "impact": "Prototype emphasizing human connection over digital profiles.",
+      "stack": ["React Native", "Expo", "TypeScript"],
+      "tags": ["#React", "#AI"],
+      "thumbnail": "/projects/findu/cover.jpg",
+      "links": { "demo": null, "code": null }
+    },
+    {
+      "id": "teaserfly",
+      "title": "Teaserfly",
+      "summary": "Automation tool for generating teaser video collages using AI-driven layouts and content recognition.",
+      "impact": "Reduced manual editing time by 80% for social video distribution.",
+      "stack": ["Node.js", "FFmpeg", "AWS Lambda", "AI"],
+      "tags": ["#AI", "#Node.js"],
+      "thumbnail": "/projects/teaserfly/cover.jpg",
+      "links": { "demo": null, "code": null }
+    },
+    {
+      "id": "onair-automation",
+      "title": "OnAir Automation Suite",
+      "summary": "Internal broadcast automation tool integrating real-time data feeds, graphics, and Vizrt pipelines.",
+      "impact": "Streamlined editorial workflows for major live events and news.",
+      "stack": ["Node.js", "TypeScript", "AWS", "Docker"],
+      "tags": ["#Node.js", "#AWS", "#Vizrt"],
+      "thumbnail": "/projects/onair/cover.jpg",
+      "links": { "demo": null, "code": null }
+    }
+  ]
+}

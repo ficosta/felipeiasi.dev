@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: oklch(100% 0 0);
+  --color-foreground: oklch(21.57% 0.027 270.71);
+  --color-primary: oklch(67.11% 0.264 296.85);
+  --color-secondary: oklch(77.05% 0.131 213.37);
+  --color-muted: oklch(92.41% 0.007 270.71);
+  --color-card: oklch(100% 0 0);
+  --color-ring: oklch(67.11% 0.264 296.85);
+
+  --font-sans: system-ui, -apple-system, sans-serif;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
+
+.dark {
+  --color-background: oklch(18.59% 0.015 270.71);
+  --color-foreground: oklch(94.51% 0.009 270.71);
+  --color-primary: oklch(67.11% 0.264 296.85);
+  --color-secondary: oklch(77.05% 0.131 213.37);
+  --color-muted: oklch(28.97% 0.009 270.71);
+  --color-card: oklch(22.05% 0.013 270.71);
+  --color-ring: oklch(67.11% 0.264 296.85);
+}
+
+.surprise {
+  /* Colors set dynamically via JS */
+  position: relative;
+}
+
+.surprise::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 20% 30%, var(--color-primary) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, var(--color-secondary) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, var(--color-primary) 0%, transparent 70%);
+  opacity: 0.1;
+  animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(5%, -5%) scale(1.1);
+  }
+  66% {
+    transform: translate(-5%, 5%) scale(0.9);
+  }
+}
+
+/* Global Styles */
+* {
+  cursor: none !important; /* Hide default cursor on desktop */
+}
+
+@media (hover: none) {
+  * {
+    cursor: auto !important; /* Restore cursor on touch devices */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  transition: background 500ms ease, color 500ms ease;
+}
+
+/* Custom Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out;
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 50%;
+  background: linear-gradient(135deg, oklch(var(--color-primary)), oklch(var(--color-secondary)));
+  background-size: 200% 200%;
+  animation: gradient-rotate 6s ease infinite;
+  padding: 3px;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--color-background);
+}
+
+/* Container centering */
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
