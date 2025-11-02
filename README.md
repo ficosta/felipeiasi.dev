@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+<div align="center">
+  <img src="public/apple-touch-icon.png" alt="Felipe Iasi" width="120" height="120" style="border-radius: 50%;" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  # Felipe Iasi
 
-Currently, two official plugins are available:
+  **Full Stack Developer & Product Innovator**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  [![Portfolio](https://img.shields.io/badge/Portfolio-felipeiasi.com-8B5CF6?style=flat-square)](https://felipeiasi.com)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-felipe--iasi-0077B5?style=flat-square)](https://www.linkedin.com/in/felipe-iasi)
+  [![GitHub](https://img.shields.io/badge/GitHub-ficosta-181717?style=flat-square)](https://github.com/ficosta)
+</div>
 
-## React Compiler
+## About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Personal portfolio website showcasing my work as a Full Stack Developer and Product Innovator. 14+ years of experience in development, broadcast media, and product leadership.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19 + TypeScript
+- Vite
+- Tailwind CSS v4
+- Framer Motion
+- OKLCH color space
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Three theme modes (Light, Dark, Surprise)
+- Fully responsive
+- SEO optimized
+- PWA support
+- Custom cursor
+- Smooth animations
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Installation
+
+```bash
+git clone https://github.com/ficosta/felipe-portfolio.git
+cd felipe-portfolio
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
+npm run preview
 ```
+
+## Project Structure
+
+```
+src/
+├── components/       # Reusable components
+├── sections/         # Page sections
+├── lib/              # Utilities
+├── types/            # TypeScript types
+└── data/             # Content (site.json)
+```
+
+## Theme System
+
+### Light Mode
+Notebook-inspired design with ruled lines and margin
+
+### Dark Mode (default)
+Clean dark interface
+
+### Surprise Mode
+8 creative themes: Doom 64, Monochrome, Neo-Brutalism, Notebook, Bubblegum, Vaporwave, Forest Depths, Cyber Tokyo
+
+## License
+
+Open source - available for reference
+
+---
+
+© 2025 Felipe Iasi | Built with React & Tailwind CSS

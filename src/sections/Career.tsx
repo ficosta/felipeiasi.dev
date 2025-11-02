@@ -69,10 +69,20 @@ export default function Career({ data }: { data: Career[] }) {
                       </div>
 
                       {/* Role & Company */}
-                      <h3 className="text-xl lg:text-2xl font-bold tracking-tight mb-2">
-                        {item.role}
-                      </h3>
-                      <div className={`flex items-center gap-2 text-foreground/60 mb-4 ${isLeft ? 'lg:justify-start' : 'lg:justify-start'}`}>
+                      <div className="flex items-center gap-3 mb-3">
+                        {/* Company logo */}
+                        {item.logo && (
+                          <img
+                            src={item.logo}
+                            alt={`${item.company} logo`}
+                            className="w-8 h-8 object-contain flex-shrink-0"
+                          />
+                        )}
+                        <h3 className="text-xl lg:text-2xl font-bold tracking-tight">
+                          {item.role}
+                        </h3>
+                      </div>
+                      <div className="flex items-center gap-2 text-foreground/60 mb-4 flex-wrap">
                         <span className="font-medium">{item.company}</span>
                         {item.location && (
                           <>

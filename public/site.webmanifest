@@ -1,0 +1,21 @@
+{
+  "name": "Felipe Iasi — Portfolio",
+  "short_name": "Felipe Iasi",
+  "description": "Full Stack Developer & Product Innovator",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#8B5CF6",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "start_url": "/"
+}

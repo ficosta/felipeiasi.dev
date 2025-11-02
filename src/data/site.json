@@ -11,7 +11,6 @@
     "long_summary": "With over 14 years of experience in development, broadcast, and product leadership, I am passionate about transforming complex ideas into practical and visually engaging results. My journey has taken me from the fast-paced world of broadcast media to the innovative landscape of product development, where I have consistently driven projects that blend creativity with technology.",
     "contacts": {
       "email": "felipeiasi@gmail.com",
-      "phone": "+49 151 15089605",
       "linkedin": "https://www.linkedin.com/in/felipe-iasi",
       "portfolio": "https://felipeiasi.com",
       "github": "https://github.com/ficosta"
@@ -55,6 +54,7 @@
     {
       "role": "Head of Product and Innovation",
       "company": "Axel Springer / Bild",
+      "logo": "/BILD.svg",
       "location": "Berlin, Germany",
       "period": "Jul 2023 – Present",
       "highlights": [
@@ -67,6 +67,7 @@
     {
       "role": "Head of Real Time Broadcast Design Team",
       "company": "Axel Springer / Bild",
+      "logo": "/BILD.svg",
       "location": "Berlin, Germany",
       "period": "Aug 2021 – Jul 2023",
       "highlights": [
@@ -78,6 +79,7 @@
     {
       "role": "Motion Design Team Lead",
       "company": "Axel Springer / Bild",
+      "logo": "/BILD.svg",
       "location": "Berlin, Germany",
       "period": "Nov 2020 – Aug 2021",
       "highlights": [
@@ -88,6 +90,7 @@
     {
       "role": "Real Time GFX Consultant",
       "company": "Garena — Free Fire",
+      "logo": "/RIOT.svg",
       "location": "São Paulo, Brazil",
       "period": "Jul 2020 – Dec 2020",
       "highlights": [
@@ -98,6 +101,7 @@
     {
       "role": "Vizrt Consultant & Designer",
       "company": "CNN Brasil",
+      "logo": "/CNN.svg",
       "location": "São Paulo, Brazil",
       "period": "Aug 2020 – Nov 2020",
       "highlights": [
@@ -108,6 +112,7 @@
     {
       "role": "Real Time GFX Team Lead",
       "company": "Grupo Bandeirantes",
+      "logo": "/BAND.svg",
       "location": "São Paulo, Brazil",
       "period": "Dec 2013 – Nov 2020",
       "highlights": [
@@ -118,6 +123,7 @@
     {
       "role": "Avid / ORAD Senior Designer",
       "company": "Rede Record",
+      "logo": "/RECORD.png",
       "location": "São Paulo, Brazil",
       "period": "Sep 2008 – Dec 2013",
       "highlights": [
@@ -128,6 +134,7 @@
     {
       "role": "Real Time GFX Designer",
       "company": "MTV Brasil",
+      "logo": "/MTV.svg",
       "location": "São Paulo, Brazil",
       "period": "Jan 2009 – Jan 2012",
       "highlights": ["Created 3D interactive graphics for live and recorded programs"]
@@ -135,12 +142,14 @@
     {
       "role": "Designer Assistant",
       "company": "Rede Bandeirantes de Televisão",
+      "logo": "/BAND.svg",
       "location": "São Paulo, Brazil",
       "period": "Feb 2008 – Sep 2008"
     },
     {
       "role": "Designer Assistant",
       "company": "RedeTV!",
+      "logo": "/REDETV.svg",
       "location": "São Paulo, Brazil",
       "period": "Feb 2006 – Feb 2008"
     }

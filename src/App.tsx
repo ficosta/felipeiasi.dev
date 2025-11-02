@@ -9,6 +9,7 @@ import Skills from '@/sections/Skills';
 import Languages from '@/sections/Languages';
 import Projects from '@/sections/Projects';
 import Career from '@/sections/Career';
+import Education from '@/sections/Education';
 import Certs from '@/sections/Certs';
 import Contact from '@/sections/Contact';
 import { loadSiteData, type SiteData } from '@/lib/content';
@@ -111,8 +112,13 @@ export default function App() {
           {data.projects && data.projects.length > 0 && <Projects data={data.projects} />}
 
           {/* Experience Section */}
-          {((data as any).career || (data as any).experience) && (
-            <Career data={(data as any).career || (data as any).experience || []} />
+          {data.experience && data.experience.length > 0 && (
+            <Career data={data.experience} />
+          )}
+
+          {/* Education Section */}
+          {data.education && data.education.length > 0 && (
+            <Education data={data.education} />
           )}
 
           {/* Certifications Section */}
@@ -121,16 +127,10 @@ export default function App() {
           )}
 
           {/* Contact Section */}
-          <Contact data={data.profile.contacts || (data.profile as any).social} />
+          <Contact data={data.profile.contacts} />
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="relative z-10 py-16 text-center border-t border-foreground/10">
-        <p className="text-sm text-foreground/50">
-          © {new Date().getFullYear()} Felipe Iasi. Built with React & Tailwind CSS.
-        </p>
-      </footer>
     </>
   );
 }

@@ -107,14 +107,14 @@ export default function About({ data }: { data: Profile }) {
                       <div className="text-right">
                         <div className="text-xs text-foreground/50 uppercase tracking-wide mb-1">Available in</div>
                         <div className="flex gap-2">
-                          {data.availability.work_regions.map((region) => (
-                            <span
-                              key={region}
-                              className="text-sm font-medium text-foreground/80"
-                            >
-                              {region}
+                          {data.availability.work_regions.map((region, index) => (
+                            <span key={region}>
+                              {index > 0 && <span className="text-foreground/30 mr-2">•</span>}
+                              <span className="text-sm font-medium text-foreground/80">
+                                {region}
+                              </span>
                             </span>
-                          )).reduce((prev, curr) => [prev, <span key="sep" className="text-foreground/30">•</span>, curr] as any)}
+                          ))}
                         </div>
                       </div>
                     </div>

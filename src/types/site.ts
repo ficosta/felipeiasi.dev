@@ -56,6 +56,7 @@ export interface Career {
   period: string;
   role: string;
   company: string;
+  logo?: string;
   location?: string;
   highlights?: string[];
   tech?: string[];
