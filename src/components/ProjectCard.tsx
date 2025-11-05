@@ -1,19 +1,18 @@
 import { motion } from 'framer-motion';
-import { VideoThumbnail } from '@/components/VideoThumbnail';
 import type { Project } from '@/types/site';
 
 const PROJECT_TYPE_STYLES = {
-  'freelancer': 'bg-purple-500/20 border-purple-500/40 text-purple-400',
+  freelancer: 'bg-purple-500/20 border-purple-500/40 text-purple-400',
   'personal-lab': 'bg-cyan-500/20 border-cyan-500/40 text-cyan-400',
   'open-source': 'bg-emerald-500/20 border-emerald-500/40 text-emerald-400',
-  'collective': 'bg-amber-500/20 border-amber-500/40 text-amber-400',
+  collective: 'bg-amber-500/20 border-amber-500/40 text-amber-400',
 };
 
 const PROJECT_TYPE_LABELS = {
-  'freelancer': 'Freelancer',
+  freelancer: 'Freelancer',
   'personal-lab': 'Personal Lab',
   'open-source': 'Open Source',
-  'collective': 'Collective',
+  collective: 'Collective',
 };
 
 export function ProjectCard({ p, onClick }: { p: Project; onClick?: () => void }) {
@@ -36,19 +35,23 @@ export function ProjectCard({ p, onClick }: { p: Project; onClick?: () => void }
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
       </div>
 
-      {/* Thumbnail/Video */}
+      {/* Thumbnail */}
       <div className="relative aspect-[16/10] overflow-hidden">
-        <VideoThumbnail
-          video={p.video}
-          thumbnail={p.thumbnail}
+        <img
+          src={p.thumbnail}
           alt={p.title}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+          loading="lazy"
         />
 
         {/* Project Type Badge */}
         {p.type && (
           <div className="absolute top-4 right-4 z-10">
-            <div className={`px-3 py-1.5 rounded-full border backdrop-blur-md text-xs font-medium ${PROJECT_TYPE_STYLES[p.type]}`}>
+            <div
+              className={`px-3 py-1.5 rounded-full border backdrop-blur-md text-xs font-medium ${
+                PROJECT_TYPE_STYLES[p.type]
+              }`}
+            >
               {PROJECT_TYPE_LABELS[p.type]}
             </div>
           </div>
@@ -63,9 +66,7 @@ export function ProjectCard({ p, onClick }: { p: Project; onClick?: () => void }
         <div className="space-y-2">
           <h3 className="text-xl font-bold tracking-tight">{p.title}</h3>
           <p className="text-sm text-foreground/70 leading-relaxed">{p.summary}</p>
-          {p.impact && (
-            <p className="text-sm text-primary/80 italic font-medium">{p.impact}</p>
-          )}
+          {p.impact && <p className="text-sm text-primary/80 italic font-medium">{p.impact}</p>}
         </div>
 
         {/* Stack */}
@@ -110,7 +111,12 @@ export function ProjectCard({ p, onClick }: { p: Project; onClick?: () => void }
               >
                 View Demo
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
                 </svg>
               </a>
             )}
@@ -125,7 +131,12 @@ export function ProjectCard({ p, onClick }: { p: Project; onClick?: () => void }
               >
                 Code
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
                 </svg>
               </a>
             )}

@@ -51,7 +51,7 @@ export function VideoThumbnail({ video, thumbnail, alt, className = '' }: VideoT
   // Show video with image poster
   return (
     <div
-      className="relative w-full h-full"
+      className="relative w-full h-full pointer-events-auto"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -62,7 +62,7 @@ export function VideoThumbnail({ video, thumbnail, alt, className = '' }: VideoT
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
         onError={handleVideoError}
       >
         <source src={video} type="video/mp4" />

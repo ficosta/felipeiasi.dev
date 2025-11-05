@@ -65,13 +65,13 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
           {/* Modal */}
           <div className="fixed inset-0 z-[100] overflow-y-auto pt-20">
-            <div className="flex min-h-full items-start justify-center p-6 sm:p-8 md:p-12 pt-8">
+            <div className="flex min-h-full items-start justify-center px-4 sm:px-6 md:px-8 lg:px-12 pt-8">
               <motion.div
                 initial={{ opacity: 0, y: 50, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 50, scale: 0.95 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="relative w-full max-w-5xl bg-card/95 backdrop-blur-xl rounded-3xl border border-foreground/10 shadow-2xl overflow-hidden mb-8"
+                className="relative w-full max-w-[calc(100vw-2rem)] sm:max-w-[calc(100vw-3rem)] md:max-w-4xl lg:max-w-5xl bg-card/95 backdrop-blur-xl rounded-3xl border border-foreground/10 shadow-2xl overflow-hidden mb-8"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Close Button */}
@@ -88,6 +88,10 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   {project.video ? (
                     <video
                       className="w-full h-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
                       controls
                       poster={project.thumbnail}
                     >
@@ -178,13 +182,13 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                                 {...props}
                               />
                             ),
-                            video: ({ src, ...props }) => (
+                            video: ({ children, ...props }) => (
                               <video
                                 controls
                                 className="rounded-2xl w-full my-6 border border-foreground/10"
                                 {...props}
                               >
-                                <source src={src} type="video/mp4" />
+                                {children}
                               </video>
                             ),
                             ul: ({ children, ...props }) => (
