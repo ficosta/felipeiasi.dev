@@ -1,10 +1,23 @@
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { ProjectCard } from '@/components/ProjectCard';
+import { ProjectModal } from '@/components/ProjectModal';
 import type { Project } from '@/types/site';
 
 export default function Projects({ data }: { data: Project[] }) {
   const [filter, setFilter] = useState<string>('All');
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedProject(null), 300); // Wait for animation
+  };
   const allTags = useMemo(() => {
     const tags = new Set<string>();
     data.forEach((d) => d.tags?.forEach((t: string) => tags.add(t)));
@@ -79,7 +92,7 @@ export default function Projects({ data }: { data: Project[] }) {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <ProjectCard p={project} />
+            <ProjectCard p={project} onClick={() => handleProjectClick(project)} />
           </motion.div>
         ))}
       </motion.div>
@@ -94,6 +107,13 @@ export default function Projects({ data }: { data: Project[] }) {
           <p className="text-foreground/50">No projects found with tag "{filter}"</p>
         </motion.div>
       )}
+
+      {/* Project Modal */}
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </section>
   );
 }

@@ -42,10 +42,14 @@ export interface Project {
   id: string;
   title: string;
   summary: string;
+  type?: 'freelancer' | 'personal-lab' | 'open-source' | 'collective';
   impact?: string;
   stack?: string[];
   tags?: string[];
   thumbnail: string;
+  video?: string;
+  hasDetailedContent?: boolean;
+  story?: string;
   links?: {
     code?: string | null;
     demo?: string | null;

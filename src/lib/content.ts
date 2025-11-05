@@ -1,5 +1,8 @@
-export type SiteData = typeof import('@/data/site.json');
-export async function loadSiteData() {
+import type { SiteData } from '@/types/site';
+
+export async function loadSiteData(): Promise<SiteData> {
   const data = await import('@/data/site.json');
-  return data as SiteData;
+  return (data.default || data) as SiteData;
 }
+
+export type { SiteData };

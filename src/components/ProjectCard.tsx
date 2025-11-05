@@ -1,32 +1,59 @@
 import { motion } from 'framer-motion';
+import { VideoThumbnail } from '@/components/VideoThumbnail';
 import type { Project } from '@/types/site';
 
-export function ProjectCard({ p }: { p: Project }) {
+const PROJECT_TYPE_STYLES = {
+  'freelancer': 'bg-purple-500/20 border-purple-500/40 text-purple-400',
+  'personal-lab': 'bg-cyan-500/20 border-cyan-500/40 text-cyan-400',
+  'open-source': 'bg-emerald-500/20 border-emerald-500/40 text-emerald-400',
+  'collective': 'bg-amber-500/20 border-amber-500/40 text-amber-400',
+};
+
+const PROJECT_TYPE_LABELS = {
+  'freelancer': 'Freelancer',
+  'personal-lab': 'Personal Lab',
+  'open-source': 'Open Source',
+  'collective': 'Collective',
+};
+
+export function ProjectCard({ p, onClick }: { p: Project; onClick?: () => void }) {
+  const handleClick = () => {
+    if (p.hasDetailedContent && onClick) {
+      onClick();
+    }
+  };
+
   return (
     <motion.article
-      className="group relative overflow-hidden rounded-3xl border border-foreground/10 bg-card/50 backdrop-blur-sm"
+      className="group relative overflow-hidden rounded-3xl border border-foreground/10 bg-card/50 backdrop-blur-sm cursor-pointer"
       whileHover={{ y: -8 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
       data-cursor-hover
+      onClick={handleClick}
     >
       {/* Gradient overlay on hover */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
       </div>
 
-      {/* Image */}
+      {/* Thumbnail/Video */}
       <div className="relative aspect-[16/10] overflow-hidden">
-        <motion.img
-          src={p.thumbnail}
+        <VideoThumbnail
+          video={p.video}
+          thumbnail={p.thumbnail}
           alt={p.title}
           className="h-full w-full object-cover"
-          loading="lazy"
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          onError={(e) => {
-            e.currentTarget.src = `https://placehold.co/800x500/8B5CF6/FFFFFF?text=${encodeURIComponent(p.title)}`;
-          }}
         />
+
+        {/* Project Type Badge */}
+        {p.type && (
+          <div className="absolute top-4 right-4 z-10">
+            <div className={`px-3 py-1.5 rounded-full border backdrop-blur-md text-xs font-medium ${PROJECT_TYPE_STYLES[p.type]}`}>
+              {PROJECT_TYPE_LABELS[p.type]}
+            </div>
+          </div>
+        )}
+
         {/* Gradient overlay on image */}
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
@@ -36,6 +63,9 @@ export function ProjectCard({ p }: { p: Project }) {
         <div className="space-y-2">
           <h3 className="text-xl font-bold tracking-tight">{p.title}</h3>
           <p className="text-sm text-foreground/70 leading-relaxed">{p.summary}</p>
+          {p.impact && (
+            <p className="text-sm text-primary/80 italic font-medium">{p.impact}</p>
+          )}
         </div>
 
         {/* Stack */}
@@ -76,6 +106,7 @@ export function ProjectCard({ p }: { p: Project }) {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-primary text-white text-sm font-medium hover:bg-primary/90 transition-colors"
                 data-cursor-hover
+                onClick={(e) => e.stopPropagation()}
               >
                 View Demo
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -90,6 +121,7 @@ export function ProjectCard({ p }: { p: Project }) {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 px-4 py-2 rounded-xl border border-foreground/20 text-sm font-medium hover:border-foreground/40 transition-colors"
                 data-cursor-hover
+                onClick={(e) => e.stopPropagation()}
               >
                 Code
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

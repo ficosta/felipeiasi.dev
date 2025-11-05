@@ -127,7 +127,7 @@ export default function App() {
           )}
 
           {/* Contact Section */}
-          <Contact data={data.profile.contacts} />
+          {data.profile.contacts && <Contact data={data.profile.contacts} />}
         </div>
       </main>
 
