@@ -69,20 +69,6 @@ export function ProjectCard({ p, onClick }: { p: Project; onClick?: () => void }
           {p.impact && <p className="text-sm text-primary/80 italic font-medium">{p.impact}</p>}
         </div>
 
-        {/* Stack */}
-        {p.stack && p.stack.length > 0 && (
-          <div className="flex flex-wrap gap-2">
-            {p.stack.map((tech: string) => (
-              <span
-                key={tech}
-                className="px-3 py-1 rounded-full bg-foreground/5 border border-foreground/10 text-xs font-medium"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        )}
-
         {/* Tags */}
         {p.tags && p.tags.length > 0 && (
           <div className="flex flex-wrap gap-2">
