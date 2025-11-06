@@ -27,37 +27,25 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
-  // Handle ESC key press and body scroll lock
   useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = '0px';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && isOpen) {
         onClose();
       }
     };
 
-    if (isOpen) {
-      // Save current scroll position
-      const scrollY = window.scrollY;
-
-      // Add class to body for modal-open state
-      document.body.classList.add('modal-open');
-      document.body.style.top = `-${scrollY}px`;
-
-      document.addEventListener('keydown', handleEsc);
-    }
-
-    return () => {
-      document.removeEventListener('keydown', handleEsc);
-
-      // Remove class and restore scroll position
-      const scrollY = document.body.style.top;
-      document.body.classList.remove('modal-open');
-      document.body.style.top = '';
-
-      if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
-      }
-    };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
   }, [isOpen, onClose]);
 
   if (!project) return null;

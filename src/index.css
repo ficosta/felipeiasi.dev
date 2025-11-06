@@ -253,14 +253,6 @@ body {
   width: 100%;
 }
 
-/* Modal open state - prevents scrolling without causing layout shift */
-body.modal-open {
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
 /* Light mode - Notebook style */
 html:not(.dark):not(.surprise) body::before {
   content: '';
