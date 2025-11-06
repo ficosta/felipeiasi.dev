@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Award } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import type { Certification } from '@/types/site';
 
 export default function Certs({ data }: { data: Certification[] }) {
