@@ -50,12 +50,12 @@ export default function App() {
       {/* Progress Bar */}
       <motion.div
         style={{ scaleX }}
-        className="fixed left-0 right-0 top-0 h-[2px] origin-left bg-primary z-50"
+        className="fixed inset-x-0 top-0 h-[2px] origin-left bg-primary z-50"
       />
 
       {/* Header */}
-      <header className="fixed left-0 right-0 top-0 z-40 px-6 py-4 backdrop-blur-md bg-background/50 border-b border-foreground/5 transition-all duration-300">
-        <div className="container mx-auto flex items-center justify-between">
+      <header className="fixed inset-x-0 top-0 z-40 backdrop-blur-md bg-background/50 border-b border-foreground/5 transition-all duration-300">
+        <div className="container mx-auto flex items-center justify-between py-4">
           <motion.button
             onClick={scrollToTop}
             className="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer"

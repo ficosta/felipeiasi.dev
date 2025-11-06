@@ -33,9 +33,9 @@ export default function About({ data }: { data: Profile }) {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="group relative"
         >
-          {/* Decorative corner accents */}
-          <div className="absolute -top-4 -left-4 w-24 h-24 border-l-2 border-t-2 border-primary/20 rounded-tl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          <div className="absolute -bottom-4 -right-4 w-24 h-24 border-r-2 border-b-2 border-secondary/20 rounded-br-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          {/* Decorative corner accents - hidden on mobile to prevent overflow */}
+          <div className="hidden md:block absolute -top-4 -left-4 w-24 h-24 border-l-2 border-t-2 border-primary/20 rounded-tl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="hidden md:block absolute -bottom-4 -right-4 w-24 h-24 border-r-2 border-b-2 border-secondary/20 rounded-br-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
           {/* Main card */}
           <div className="relative rounded-3xl border border-foreground/10 bg-gradient-to-br from-card/80 via-card/50 to-card/30 backdrop-blur-xl p-8 lg:p-16 overflow-hidden">

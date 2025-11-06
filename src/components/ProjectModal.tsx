@@ -27,7 +27,7 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
-  // Handle ESC key press
+  // Handle ESC key press and body scroll lock
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -36,14 +36,27 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
     };
 
     if (isOpen) {
+      // Save current scroll position
+      const scrollY = window.scrollY;
+
+      // Add class to body for modal-open state
+      document.body.classList.add('modal-open');
+      document.body.style.top = `-${scrollY}px`;
+
       document.addEventListener('keydown', handleEsc);
-      // Prevent body scroll when modal is open
-      document.body.style.overflow = 'hidden';
     }
 
     return () => {
       document.removeEventListener('keydown', handleEsc);
-      document.body.style.overflow = 'unset';
+
+      // Remove class and restore scroll position
+      const scrollY = document.body.style.top;
+      document.body.classList.remove('modal-open');
+      document.body.style.top = '';
+
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      }
     };
   }, [isOpen, onClose]);
 
@@ -65,13 +78,13 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
           {/* Modal */}
           <div className="fixed inset-0 z-[100] overflow-y-auto pt-20">
-            <div className="flex min-h-full items-start justify-center px-4 sm:px-6 md:px-8 lg:px-12 pt-8">
+            <div className="flex min-h-full items-start justify-center p-4 sm:p-6 md:p-8 lg:p-12 pt-20 sm:pt-24">
               <motion.div
                 initial={{ opacity: 0, y: 50, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 50, scale: 0.95 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="relative w-full max-w-[calc(100vw-2rem)] sm:max-w-[calc(100vw-3rem)] md:max-w-4xl lg:max-w-5xl bg-card/95 backdrop-blur-xl rounded-3xl border border-foreground/10 shadow-2xl overflow-hidden mb-8"
+                className="relative w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl bg-card/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-foreground/10 shadow-2xl overflow-hidden mb-8"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Close Button */}
@@ -119,8 +132,8 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                 </div>
 
                 {/* Content */}
-                <div className="relative p-8 lg:p-12 -mt-32">
-                  <div className="relative z-10 space-y-8">
+                <div className="relative px-6 pb-8 sm:px-8 sm:pb-10 lg:px-12 lg:pb-12 -mt-16 sm:-mt-24 md:-mt-32">
+                  <div className="relative z-10 space-y-6 sm:space-y-8">
                     {/* Title & Impact */}
                     <div className="space-y-4">
                       <h2 className="text-3xl lg:text-4xl font-bold tracking-tight">
