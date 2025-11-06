@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Award } from 'lucide-react';
 import type { Certification } from '@/types/site';
 
 export default function Certs({ data }: { data: Certification[] }) {
@@ -13,7 +13,7 @@ export default function Certs({ data }: { data: Certification[] }) {
         transition={{ duration: 0.6 }}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">Certifications</h2>
+        <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">Certifications and Trainings</h2>
       </motion.div>
 
       {/* Certifications Grid */}

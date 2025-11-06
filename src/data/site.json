@@ -175,22 +175,120 @@
 
   "certifications": [
     {
+      "name": "AI Agentic Engineer: Complete Agent & MCP",
+      "issuer": "Ed Donner, Ligency Team",
+      "year": 2025
+    },
+    {
       "name": "Generative AI Developer",
-      "issuer": "OpenAI / AWS / MAPS",
+      "issuer": "Hugging Face",
       "year": 2025
     },
     {
-      "name": "Cloud Practitioner MAPS",
-      "issuer": "AWS",
+      "name": "Build AI-Powered Apps",
+      "issuer": "Code with Mosh",
       "year": 2025
     },
-    { "name": "LINUX LPI 2", "issuer": "Linux Professional Institute", "year": 2023 },
     {
-      "name": "UNREAL Engine Learning for Tomorrow – EMEA Initiative",
+      "name": "AWS Solutions Architect Associate",
+      "issuer": "Andre Iacono",
+      "year": 2024
+    },
+    {
+      "name": "Scrum Project Management with Jira",
+      "issuer": "SquadHub Academy",
+      "year": 2024
+    },
+    {
+      "name": "CompTIA Network+ Full Course",
+      "issuer": "Jason Dion, Dion Training",
+      "year": 2024
+    },
+    {
+      "name": "Node.js Complete: MVC, REST APIs, GraphQL",
+      "issuer": "Academind by Maximilian",
+      "year": 2024
+    },
+    {
+      "name": "D3.js Data Visualization",
+      "issuer": "Vincent Gomez",
+      "year": 2024
+    },
+    {
+      "name": "React 18: Intermediate Topics",
+      "issuer": "Code with Mosh",
+      "year": 2023
+    },
+    {
+      "name": "The Ultimate TypeScript Course",
+      "issuer": "Code with Mosh",
+      "year": 2023
+    },
+    {
+      "name": "Backend REST API with Python & Django",
+      "issuer": "Mark Winterbottom",
+      "year": 2023
+    },
+    {
+      "name": "User Experience Design Fundamentals",
+      "issuer": "Joe Natoli",
+      "year": 2023
+    },
+    {
+      "name": "React.js Ninja: React + Webpack Mastery",
+      "issuer": "Fernando Daciuk",
+      "year": 2023
+    },
+    {
+      "name": "UNREAL Engine Learning for Tomorrow – EMEA",
       "issuer": "Epic Games",
       "year": 2022
     },
-    { "name": "Viz Artist Designer", "issuer": "Vizrt", "year": 2020 }
+    {
+      "name": "Unreal Engine 4: Blueprint Fundamentals",
+      "issuer": "Luccas Schmigel",
+      "year": 2020
+    },
+    {
+      "name": "Unreal Engine 4: Material Shaders Essentials",
+      "issuer": "Daniel Orchard",
+      "year": 2020
+    },
+    {
+      "name": "Unreal Engine 4: VFX for Games",
+      "issuer": "Bradley Wascher",
+      "year": 2020
+    },
+    {
+      "name": "Unreal Engine 4: Lighting Mastery",
+      "issuer": "Bradley Wascher",
+      "year": 2020
+    },
+    {
+      "name": "Unreal Engine 4: Composition & Rendering",
+      "issuer": "Luccas Schmigel",
+      "year": 2020
+    },
+    {
+      "name": "PyTorch and Machine Learning Intro",
+      "issuer": "Aakash N S",
+      "year": 2019
+    },
+    {
+      "name": "Python Computer Vision with OpenCV & Deep Learning",
+      "issuer": "Jose Portilla, Pierian Training",
+      "year": 2018
+    },
+    {
+      "name": "Viz Artist Designer",
+      "issuer": "Vizrt",
+      "year": 2018
+    },
+    {
+      "name": "LINUX LPI 2",
+      "issuer": "Linux Professional Institute",
+      "year": 2017
+    }
   ],
 
   "presentations": [
