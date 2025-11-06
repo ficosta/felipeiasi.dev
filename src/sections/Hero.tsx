@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { LinkedinIcon, GithubIcon, Mail } from 'lucide-react';
+import { LinkedinIcon, GithubIcon, Mail, YoutubeIcon } from 'lucide-react';
 import type { Profile } from '@/types/site';
 
 export default function Hero({ data }: { data: Profile }) {
@@ -140,6 +140,20 @@ export default function Hero({ data }: { data: Profile }) {
                   <span className="relative z-10 group-hover:text-primary transition-colors duration-300">Email</span>
                 </motion.a>
               )}
+              <motion.a
+                href="https://www.youtube.com/c/FelipeIasi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center gap-2 px-6 py-3 rounded-2xl border-2 border-foreground/20 hover:border-[#FF0000] bg-card/50 backdrop-blur-sm font-medium overflow-hidden transition-colors duration-300"
+                data-cursor-hover
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+              >
+                <div className="absolute inset-0 bg-[#FF0000]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <YoutubeIcon className="w-5 h-5 relative z-10 text-foreground group-hover:text-[#FF0000] transition-colors duration-300" />
+                <span className="relative z-10 group-hover:text-[#FF0000] transition-colors duration-300">YouTube</span>
+              </motion.a>
             </motion.div>
           )}
         </motion.div>
