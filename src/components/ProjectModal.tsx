@@ -228,20 +228,26 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     {/* Links */}
                     {(project.links?.demo || project.links?.code) && (
                       <div className="flex gap-4 pt-4 border-t border-foreground/10">
-                        {project.links.demo && (
-                          <a
-                            href={project.links.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-white font-medium hover:bg-primary/90 transition-colors"
-                            data-cursor-hover
-                          >
-                            View Demo
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                          </a>
-                        )}
+                        {project.links.demo && (() => {
+                          // Check if demo link is a downloadable file
+                          const isDownload = /\.(via|zip|pdf|rar|7z|tar|gz|exe|dmg|apk)$/i.test(project.links.demo);
+                          const buttonText = isDownload ? 'Download' : 'View Demo';
+
+                          return (
+                            <a
+                              href={project.links.demo}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-white font-medium hover:bg-primary/90 transition-colors"
+                              data-cursor-hover
+                            >
+                              {buttonText}
+                              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                              </svg>
+                            </a>
+                          );
+                        })()}
                         {project.links.code && (
                           <a
                             href={project.links.code}
