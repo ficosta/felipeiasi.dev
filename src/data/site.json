@@ -320,28 +320,6 @@
 
   "projects": [
     {
-      "id": "teaserfly",
-      "title": "Teaserfly",
-      "summary": "Automation suite for generating AI-driven teaser visuals and video packages across BILD platforms, integrating editorial workflows and design automation.",
-      "type": "collective",
-      "impact": "Reduced teaser production time by 90%, enabling editors to generate cross-platform media packages autonomously.",
-      "stack": [
-        "React",
-        "Node.js",
-        "TypeScript",
-        "AWS",
-        "OpenAI API",
-        "Amazon Rekognition",
-        "Figma"
-      ],
-      "tags": ["#AI", "#Automation", "#Node.js", "#AWS"],
-      "thumbnail": "/assets/projects/teaserfly/teaserflyBanner.png",
-      "video": "/assets/projects/teaserfly/teaserflyBanner.mp4",
-      "hasDetailedContent": true,
-      "story": "# The Challenge\n\nThe BILD editorial and design teams faced an increasing need for **fast, high-quality teaser creation** across multiple platforms, from Bild.de and Bild Play to YouTube, Instagram, and other social channels. The traditional process relied heavily on designers, taking up to 15 minutes per teaser, often under tight news deadlines.\n\n# The Solution\n\nTo address this, we conceptualized and developed **Teaserfly**, a modular and scalable internal tool that automates teaser production using **AI generation, smart text suggestions, and media optimization**. The project was designed to fit seamlessly into existing publishing CMS, streamlining editorial and visual workflows.\n\n### My Role\n\nI played a key role in shaping the **concept, infraestructure, and AI research** behind Teaserfly. I also contributed to the **frontend architecture (React, TypeScript)** and **AI enhancement layer**.\n\n# The Approach\n\nTeaserfly was developed in multiple phases:\n\n- **POC:** Manual MVP via Figma plugin for the Bundesliga vertical teaser.\n- **Alpha:** Web prototype integrating text and image AI features.\n- **Beta:** Expanded for all templates, auto-suggestions using article text.\n\n![User Flow Diagram](/assets/projects/teaserfly/teaserFlyUserFlow.png)\n\n# AI Features\n\n- **Design Automation:** Smart cropping and layout adjustments using Amazon Rekognition.\n- **Headline Optimization:** AI-powered text suggestions for each platform.\n- **Add-on Intelligence:** Automatic inclusion of Ad elements, video tags, and logos.\n- **Image Recommendations:** Sugestion of images based on the context.\n- **Creation Agent – 'Teasy':** An optional assistant that helps editors refine graphics interactively.\n\n# Integration\n\nTeaserfly connects directly with internal publishing tools, ensuring editors can **create, preview, and publish teasers** in one flow:\n- Pushes to **CMS** and **DAM System**.\n- Supports export for third-party platforms (YouTube, Instagram).\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/teaserfly/teaserflyDemo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# Results\n\n- **90% reduction** in manual work time (from 15 min to 90 sec per teaser)\n- **Standardized design output** across all formats\n- **AI-powered scalability**, handling hundreds of assets daily\n- **Empowered newsroom teams** to operate independently of design bottlenecks\n\n# Future Vision\n\nTeaserfly continues to evolve with the introduction of **personalization, A/B testing, and dynamic design adaptation** — using real-time performance data and multilingual optimization to push editorial automation even further.\n\nThis is a company project developed internally at Axel Springer GmbH, no public demo or code repository can be shared.",
-      "links": { "demo": null, "code": null }
-    },
-    {
       "id": "quem-fica-em-pe",
       "title": "Quem Fica em Pé",
       "summary": "Game show control system for the Brazilian adaptation of 'Who’s Still Standing?', automating real-time graphics, questions, and prize management for live television broadcast.",
@@ -375,7 +353,18 @@
       "summary": "GFS weather tile generator that transforms NOAA meteorological data into interactive web map tiles, featuring 20+ meteorological variables, animated wind effects, and real-time visualization capabilities.",
       "type": "personal-lab",
       "impact": "Deep dive into geospatial data processing, mastering GDAL workflows, understanding Web Mercator projections, and building complete data-to-visualization pipelines for meteorological applications.",
-      "stack": ["Python", "GDAL", "xarray", "cfgrib", "NumPy", "Matplotlib", "Leaflet", "Docker", "AWS S3", "GRIB2"],
+      "stack": [
+        "Python",
+        "GDAL",
+        "xarray",
+        "cfgrib",
+        "NumPy",
+        "Matplotlib",
+        "Leaflet",
+        "Docker",
+        "AWS S3",
+        "GRIB2"
+      ],
       "tags": ["#Python", "#Geospatial", "#WebMapping", "#DataVisualization", "#GDAL"],
       "thumbnail": "/assets/projects/blue-marble/banner.jpg",
       "video": "/assets/projects/blue-marble/banner.mp4",
@@ -392,7 +381,13 @@
       "summary": "Interactive Angry Birds-style game built entirely in Vizrt's VBA scripting language, applying projectile motion physics and collision detection for touchscreen broadcast graphics. Community-shared tool demonstrating advanced scripting capabilities in VizArtist.",
       "type": "open-source",
       "impact": "Successfully translated complex physics formulas from Python OOP training into Vizrt's native scripting environment, creating an accessible learning tool for the broadcast graphics community without requiring any plugins.",
-      "stack": ["VizArtist 3.6.3", "VBA", "Physics Simulation", "Touchscreen Interface", "Object-Oriented Design"],
+      "stack": [
+        "VizArtist 3.6.3",
+        "VBA",
+        "Physics Simulation",
+        "Touchscreen Interface",
+        "Object-Oriented Design"
+      ],
       "tags": ["#Vizrt", "#GamePhysics", "#VBA", "#BroadcastTech", "#RealTime"],
       "thumbnail": "/assets/projects/vizbirds/banner.jpg",
       "video": "/assets/projects/vizbirds/banner.mp4",
