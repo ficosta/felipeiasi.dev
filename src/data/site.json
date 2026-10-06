@@ -319,6 +319,7 @@
   ],
 
   "projects": [
+    {"id": "teaserfly", "title": "Teaserfly", "summary": "AI-powered teaser automation for BILD platforms, built inside Axel Springer's product and innovation team.", "type": "collective", "impact": "Reduced teaser production time by 90%, from 15 minutes to about 90 seconds.", "stack": ["React", "Node.js", "TypeScript", "AWS", "OpenAI API", "Amazon Rekognition"], "tags": ["#AI", "#Automation", "#Node.js", "#AWS"], "thumbnail": "/assets/projects/teaserfly/teaserflyBanner.png", "video": "/assets/projects/teaserfly/teaserflyBanner.mp4", "hasDetailedContent": true, "links": {"demo": null, "code": null}, "story": "# Teaserfly\n\nAI-powered tool I helped conceive and build at BILD (Axel Springer) to automate teaser production for Bild.de, BILDplay and social channels.\n\n### My Role\n\nConcept, infrastructure and AI research, plus frontend architecture (React, TypeScript) and the AI enhancement layer.\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/teaserfly/teaserflyDemo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# Results\n\n- Teaser production time cut by 90%, from 15 minutes to about 90 seconds\n- Consistent design output across all formats\n\nThis is an internal Axel Springer project; no public demo or code can be shared."},
     {
       "id": "quem-fica-em-pe",
       "title": "Quem Fica em Pé",
