@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown, { type Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import SignalFlow from '@/components/SignalFlow';
@@ -9,6 +9,21 @@ interface CaseFileProps {
   project: Project;
   onClose: () => void;
 }
+
+// Story images become captioned figures (the alt text is the caption). Spans keep
+// the markup valid inside the paragraph markdown wraps images in.
+const markdownComponents: Components = {
+  img: ({ src, alt }) => (
+    <span className="figure">
+      <img src={typeof src === 'string' ? src : undefined} alt={alt ?? ''} loading="lazy" />
+      {alt && <span className="figure-caption">{alt}</span>}
+    </span>
+  ),
+  p: ({ children, node }) => {
+    const onlyImage = node?.children.length === 1 && node.children[0].type === 'element' && node.children[0].tagName === 'img';
+    return onlyImage ? <div>{children}</div> : <p>{children}</p>;
+  },
+};
 
 const FOCUSABLE = 'a[href], button, video[controls], [tabindex]:not([tabindex="-1"])';
 
@@ -129,7 +144,7 @@ export default function CaseFile({ project, onClose }: CaseFileProps) {
           </aside>
           {project.story && (
             <div className="story">
-              <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+              <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={markdownComponents}>
                 {project.story}
               </ReactMarkdown>
             </div>

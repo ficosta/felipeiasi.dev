@@ -969,6 +969,95 @@
       }
     },
     {
+      "id": "flow-radar",
+      "title": "Flow Radar",
+      "client": "Personal lab",
+      "type": "personal-lab",
+      "summary": "Live 2D football radar from broadcast video: players as team-coloured dots, the ball and smoothed movement, streamed over WebSocket from a serverless GPU.",
+      "impact": "About 17 fps live on one L4 GPU, about US$1.65 per 90-minute match and US$0 idle. SAM 3 was tested and set aside: detection was never the bottleneck.",
+      "stack": [
+        "Python",
+        "YOLOv8",
+        "PnLCalib",
+        "SigLIP",
+        "Modal · L4 GPU",
+        "FastAPI WebSocket",
+        "Bunny Edge"
+      ],
+      "thumbnail": "/assets/projects/flow-radar/banner.jpg",
+      "video": "/assets/projects/flow-radar/banner.mp4",
+      "hasDetailedContent": true,
+      "links": {
+        "demo": null,
+        "code": null
+      },
+      "story": "# What it is\n\nA live 2D radar for football. The input is broadcast video, the camera that pans, zooms and cuts like on TV. The output is a top-down minimap where every player is a dot coloured by team, with the ball and smoothed movement, streamed in real time over WebSocket from a serverless GPU.\n\nNo model trained from scratch: the project is a composition of ready models with the right engineering between them.\n\n![Broadcast with team-classified detections, and the same moment on the 2D radar](/assets/projects/flow-radar/fig-1.jpg)\n\n# Detection was never the bottleneck\n\nYOLOv8 already found about 18 of 22 players. I also tested Meta's **SAM 3**, concept-prompted segmentation, in a one-day spike on an A100: similar detection, much higher cost, a more restrictive licence. For a dot on a map, a silhouette adds nothing, so SAM 3 stayed as a possible future occlusion enhancement, not the base.\n\nWhat really broke the radar was the **projection**: taking a TV pixel to a real field coordinate. A generic homography collapsed with oblique, partial views, and everyone piled up in the centre circle. Switching to a dedicated field-calibration model, **PnLCalib** (points and lines, fine-tuned on World Cup footage), put players on their real positions. On the test clip, **100% of frames calibrated**.\n\n# Going live: three engineering problems\n\n1. **Stutter.** Calibration costs about 400 ms. Running it inside the frame loop froze the worker. Moving it to a throttled background loop (about 1 Hz, the homography changes slowly) took the live loop from stuttering to **about 17 fps**.\n2. **Swapped teams.** The SigLIP + clustering team classifier sampled shirts over a 1 to 2 second window and degenerated. Sampling the same 200 crops spread over time gave a clean 50/50 split. Batching SigLIP per frame cut it from 75 ms to about 30 ms.\n3. **Robotic movement.** A 3-second acausal buffer fills gaps when the ball disappears and applies a centred moving average, so trajectories look alive without losing quick plays.\n\n![Tracking held as the camera pans towards the goal](/assets/projects/flow-radar/fig-2.jpg)\n\n# Serverless economics\n\nEverything runs on **Modal**: a GPU function for perception and a web endpoint serving the WebSocket, billed per second only while it runs. A 90-minute match on an L4 costs **about US$1.65**, and idle costs **US$0**.\n\nFor the World Cup live demo (Brasil x Marrocos), the stream came in through OBS, and the `/view` fan-out was tuned for about 150 simultaneous viewers behind a Bunny Edge script.\n\n<video controls preload=\"metadata\" poster=\"/assets/projects/flow-radar/banner.jpg\" style=\"width: 100%;\">\n  <source src=\"/assets/projects/flow-radar/demo.mp4\" type=\"video/mp4\">\n</video>\n\n# Results\n\n- About **17 fps** live on a single L4\n- About **US$1.65** per 90-minute match, US$0 idle\n- 100% of frames calibrated on the Mexico 2-0 South Africa test clip\n- Sources, perception, state and transport behind clean interfaces: swapping a file for a live stream is swapping an adapter",
+      "flow": {
+        "nodes": [
+          {
+            "id": "src",
+            "label": "Broadcast video",
+            "tech": "OBS · file · screen",
+            "kind": "source"
+          },
+          {
+            "id": "ingest",
+            "label": "Ingest",
+            "tech": "WebSocket /ingest",
+            "kind": "process"
+          },
+          {
+            "id": "detect",
+            "label": "Detect + teams",
+            "tech": "YOLOv8 · SigLIP",
+            "kind": "process"
+          },
+          {
+            "id": "calib",
+            "label": "Field calibration",
+            "tech": "PnLCalib · ~1 Hz",
+            "kind": "process"
+          },
+          {
+            "id": "track",
+            "label": "Track + smooth",
+            "tech": "Field coords · 3 s buffer",
+            "kind": "process"
+          },
+          {
+            "id": "radar",
+            "label": "Radar dashboard",
+            "tech": "WebSocket /view",
+            "kind": "output"
+          }
+        ],
+        "edges": [
+          {
+            "from": "src",
+            "to": "ingest",
+            "label": "12 fps"
+          },
+          {
+            "from": "ingest",
+            "to": "detect"
+          },
+          {
+            "from": "detect",
+            "to": "calib"
+          },
+          {
+            "from": "calib",
+            "to": "track"
+          },
+          {
+            "from": "track",
+            "to": "radar",
+            "label": "< 1 KB/tick"
+          }
+        ]
+      }
+    },
+    {
       "id": "riot-telemetry",
       "title": "Riot Games – CBLOL Telemetry 2016",
       "summary": "Real-time telemetry system integrating biometric data from players into live eSports broadcasts for Riot Games' CBLOL 2016, connecting Zephyr sensors to Vizrt graphics via custom-built C# software.",
