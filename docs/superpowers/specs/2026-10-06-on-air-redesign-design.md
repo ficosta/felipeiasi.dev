@@ -217,3 +217,9 @@ Featured (PGM): CNN Brasil Elections 2026.
   - `layoutFlow`: column placement, edge endpoints, unknown node ids throw;
   - a `site.json` shape check (exactly one featured project, every edge references existing nodes).
 - Visual check: Playwright screenshots at 1440 and 390 widths, sent to Felipe for review.
+
+## Backlog
+
+- Add **ograf.dev** to Systems (requested 6 Oct 2026).
+- Add **storyobjectmodel.dev** to Systems (requested 6 Oct 2026).
+- Highlights for the current Astucemedia role (LinkedIn has none yet).
