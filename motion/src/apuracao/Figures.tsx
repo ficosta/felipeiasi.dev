@@ -1,9 +1,20 @@
 import { AbsoluteFill } from 'remotion';
 import { C, F, displayStyle, labelStyle } from '../shared/theme';
-import { Browser, Phone } from './Frames';
+import { Browser, Crop, Phone } from './Frames';
 
 
-export type FigureId = 'flow' | 'realtime' | 'resultados' | 'map' | 'arch';
+export type FigureId =
+  | 'flow'
+  | 'realtime'
+  | 'resultados'
+  | 'map'
+  | 'arch'
+  | 'muncloseup'
+  | 'muntap'
+  | 'candidate'
+  | 'mobilecand'
+  | 'camara'
+  | 'mobilemap';
 
 const Label: React.FC<{ n: string; text: string; x: number; y: number }> = ({ n, text, x, y }) => (
   <div style={{ position: 'absolute', left: x, top: y, ...labelStyle, fontSize: 20 }}>
@@ -13,15 +24,10 @@ const Label: React.FC<{ n: string; text: string; x: number; y: number }> = ({ n,
   </div>
 );
 
-const Flow: React.FC = () => {
+const Triptych: React.FC<{ shots: Array<[string, string]> }> = ({ shots }) => {
   const w = 380;
   const gap = 90;
   const x0 = (1600 - (w * 3 + gap * 2)) / 2;
-  const shots: Array<[string, string]> = [
-    ['mobile-02-selected.png', 'Pick races'],
-    ['mobile-03-after.png', 'Get the alert'],
-    ['mobile-04-results.png', 'Read the result'],
-  ];
   return (
     <>
       {shots.map(([src, text], i) => (
@@ -30,6 +36,32 @@ const Flow: React.FC = () => {
           <Phone src={src} width={w} x={x0 + i * (w + gap)} y={112} />
         </div>
       ))}
+    </>
+  );
+};
+
+const Flow: React.FC = () => (
+  <Triptych
+    shots={[
+      ['mobile-02-selected.png', 'Pick races'],
+      ['mobile-03-after.png', 'Get the alert'],
+      ['mobile-04-results.png', 'Read the result'],
+    ]}
+  />
+);
+
+const CloseUp: React.FC<{ n: string; text: string; src: string; sx: number; sy: number; sw: number; sh: number }> = ({
+  n,
+  text,
+  ...c
+}) => {
+  const width = 1456;
+  const h = Math.round((c.sh * width) / c.sw);
+  const top = Math.max(120, Math.round((1000 - h) / 2) + 24);
+  return (
+    <>
+      <Label n={n} text={text} x={72} y={top - 52} />
+      <Crop natW={3840} x={72} y={top} width={width} {...c} />
     </>
   );
 };
@@ -158,5 +190,31 @@ export const Figure: React.FC<{ id: FigureId }> = ({ id }) => (
     {id === 'resultados' && <Browser src="desktop-05-resultados.png" width={1376} x={112} y={44} />}
     {id === 'map' && <Map />}
     {id === 'arch' && <Arch />}
+    {id === 'muncloseup' && (
+      <CloseUp n="Mapa" text="Minas Gerais por município" src="w-mun-mg-2026.png" sx={660} sy={420} sw={2520} sh={1240} />
+    )}
+    {id === 'muntap' && <Browser src="d2-mun-mg-click.png" width={1376} x={112} y={44} />}
+    {id === 'candidate' && <Browser src="d2-cand-lula-top.png" width={1376} x={112} y={44} />}
+    {id === 'mobilecand' && (
+      <Triptych
+        shots={[
+          ['m3-cand-1.png', 'Profile and result'],
+          ['m3-cand-3.png', 'Electoral history'],
+          ['m3-cand-5.png', 'Campaign accounts'],
+        ]}
+      />
+    )}
+    {id === 'camara' && (
+      <CloseUp n="Congresso" text="Câmara dos Deputados" src="w-camara.png" sx={688} sy={372} sw={2464} sh={1380} />
+    )}
+    {id === 'mobilemap' && (
+      <Triptych
+        shots={[
+          ['m3-map-br.png', 'Map by state'],
+          ['m3-mun-mg.png', 'Map by municipality'],
+          ['m3-camara.png', 'Congress'],
+        ]}
+      />
+    )}
   </AbsoluteFill>
 );

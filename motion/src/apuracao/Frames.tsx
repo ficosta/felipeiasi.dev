@@ -70,3 +70,36 @@ export const Browser: React.FC<{ src: string; width: number; x: number; y: numbe
     </div>
   );
 };
+
+/** Close-up: shows the region (sx, sy, sw, sh) of a capture inside a 1px-ruled box `width` wide. */
+export const Crop: React.FC<{
+  src: string;
+  natW: number;
+  sx: number;
+  sy: number;
+  sw: number;
+  sh: number;
+  x: number;
+  y: number;
+  width: number;
+}> = ({ src, natW, sx, sy, sw, sh, x, y, width }) => {
+  const k = width / sw;
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        left: x,
+        top: y,
+        width,
+        height: Math.round(sh * k),
+        overflow: 'hidden',
+        outline: '1px solid #3A3A3D',
+      }}
+    >
+      <Img
+        src={staticFile(`apuracao/${src}`)}
+        style={{ position: 'absolute', width: natW * k, left: -sx * k, top: -sy * k, maxWidth: 'none' }}
+      />
+    </div>
+  );
+};
