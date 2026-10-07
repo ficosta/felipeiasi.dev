@@ -622,7 +622,7 @@
         "demo": "https://apuracao.setup.news",
         "code": null
       },
-      "story": "# The problem\n\nOn election night everyone hits the same official source at the same time. The TSE publishes results as static JSON files, and it rate-limits heavy readers.\n\n# The solution\n\nApuração reads the TSE once and serves everyone else from a CDN.\n\n- A **mirror service** follows the official result files and copies them into object storage, keeping the TSE's own paths\n- A **CDN pull zone** (`api.apuracao.setup.news`) fronts the bucket, so the web app, newsroom graphics and maps read cached files\n- **Historical layers** sit next to the live ones: 2022 results by municipality and simplified municipal geometry, ready for maps\n\nThe app lets readers choose the races they follow (president, governor by state, candidates by name or number) and notifies them when results come in.\n\n# Results\n\n- Live 2026 results by municipality served without touching the TSE\n- The same feed powers the Urnas map and swing analyses on election night",
+      "story": "# The problem\n\nOn election night everyone hits the same official source at the same time. The TSE publishes results as static JSON files, and it rate-limits heavy readers.\n\n# The solution\n\nApuração reads the TSE once and serves everyone else from a CDN.\n\n- A **mirror service** follows the official result files and copies them into object storage, keeping the TSE's own paths\n- A **CDN pull zone** (`api.apuracao.setup.news`) fronts the bucket, so the web app, newsroom graphics and maps read cached files\n- **Historical layers** sit next to the live ones: 2022 results by municipality and simplified municipal geometry, ready for maps\n\n![One read from the TSE, served to everyone: a mirror copies the official files to storage and a CDN serves the app, TV graphics and maps](/assets/projects/apuracao/fig-5.jpg)\n\nThe app lets readers choose the races they follow (president, governor by state, candidates by name or number) and notifies them when results come in.\n\n![Three steps on a phone: pick the races, get the alert, read the result](/assets/projects/apuracao/fig-1.jpg)\n\n![The Real time screen follows each race you picked, here President and São Paulo governor, with the share of sections counted](/assets/projects/apuracao/fig-2.jpg)\n\n![The full results page adds turnout, blank and null votes, and the most voted candidate by state](/assets/projects/apuracao/fig-3.jpg)\n\n![The map view shows the governor races by state: elected in the first round, or going to a runoff](/assets/projects/apuracao/fig-4.jpg)\n\n# Results\n\n- Live 2026 results by municipality served without touching the TSE\n- The same feed powers the Urnas map and swing analyses on election night\n\n![The final first-round count for President, from the app's own data: 499,248 of 499,248 sections](/assets/projects/apuracao/fig-6.jpg)",
       "flow": {
         "nodes": [
           {
@@ -692,7 +692,8 @@
             "to": "maps"
           }
         ]
-      }
+      },
+      "video": "/assets/projects/apuracao/banner.mp4"
     },
     {
       "id": "ograf",
@@ -714,7 +715,7 @@
         "demo": "https://ograf.dev",
         "code": null
       },
-      "story": "# Why it matters\n\nBroadcast graphics have always been tied to the engine that renders them. OGraf, an open specification backed by the European Broadcasting Union, changes the unit of exchange: a graphic is a web package that any compliant renderer can play.\n\n# What ograf.dev is\n\nI curate ograf.dev with the OGraf community. It is the practical entry point to the spec for designers, developers and broadcasters.\n\n- **11 production tutorials**: lower thirds, tickers, quotes and more\n- A map of the **tools and renderers** that already speak OGraf (SPX Graphics, Loopic, SuperFlyTV, StreamShapers, CasparCG, ograf-server)\n- Spec, history and news in English, Portuguese and Spanish\n\n# How a graphic flows\n\nA graphic is a **Web Component** with standard lifecycle methods plus a **JSON Schema** describing its data. It is validated against the EBU schema and then plays on any OGraf renderer, with no proprietary runtime.\n\n# Results\n\n- v1 stable since September 2025\n- 10+ tools and renderers\n- Adopters include Adobe, BBC, NRK, Deutsche Welle and CBC",
+      "story": "# Why it matters\n\nBroadcast graphics have always been tied to the engine that renders them. OGraf, an open specification backed by the European Broadcasting Union, changes the unit of exchange: a graphic is a web package that any compliant renderer can play.\n\n![Where OGraf fits in: the site's comparison of cross-renderer portability against Vizrt, Chyron, Ross, Avid, Flowics and Singular](/assets/projects/ograf/fig-4.jpg)\n\n# What ograf.dev is\n\nI curate ograf.dev with the OGraf community. It is the practical entry point to the spec for designers, developers and broadcasters.\n\n![The ograf.dev home page: a community guide to OGraf, the EBU's open format for broadcast graphics](/assets/projects/ograf/fig-1.jpg)\n\n- **11 production tutorials**: lower thirds, tickers, quotes and more\n- A map of the **tools and renderers** that already speak OGraf (SPX Graphics, Loopic, SuperFlyTV, StreamShapers, CasparCG, ograf-server)\n- Spec, history and news in English, Portuguese and Spanish\n\n![Four of the 11 production tutorials, each a working OGraf graphic in the site's live preview](/assets/projects/ograf/fig-3.jpg)\n\n# How a graphic flows\n\nA graphic is a **Web Component** with standard lifecycle methods plus a **JSON Schema** describing its data. It is validated against the EBU schema and then plays on any OGraf renderer, with no proprietary runtime.\n\n![The first tutorial pairs the package's manifest.json with the graphic playing live, with Play, Update and Stop](/assets/projects/ograf/fig-2.jpg)\n\n![One OGraf package going to air on CasparCG, SPX, ograf-server and Loopic](/assets/projects/ograf/fig-6.jpg)\n\n# Results\n\n- v1 stable since September 2025\n- 10+ tools and renderers\n- Adopters include Adobe, BBC, NRK, Deutsche Welle and CBC\n\n![Vendors and broadcasters supporting the spec, from Adobe to the BBC, NRK, Deutsche Welle and CBC](/assets/projects/ograf/fig-5.jpg)",
       "flow": {
         "nodes": [
           {
@@ -773,7 +774,8 @@
             "to": "server"
           }
         ]
-      }
+      },
+      "video": "/assets/projects/ograf/banner.mp4"
     },
     {
       "id": "story-object-model",
@@ -795,7 +797,7 @@
         "demo": "https://storyobjectmodel.dev",
         "code": null
       },
-      "story": "# The problem\n\nA story lives in many tools at once: planning, rundown, graphics, playout, the MAM. Each holds a slightly different version of what is true, and they keep each other in sync through point-to-point integrations.\n\n# The model\n\nSOM puts one layer underneath those tools. **Tools talk to the story, not to each other.**\n\n- A **publish/subscribe bus** (broker-agnostic) carrying seven JSON message families with permanent schema URLs\n- Three core concepts: **Story**, **Asset** and **Telling**\n- **Full snapshots**: omission means absent, and late joiners receive the complete state\n- A **skills library** that encodes editorial rules once, readable by every tool\n- **Compliance gates** tied to story versions: any hold means held\n- Media travels by reference only; content never rides the bus\n\nSOM does not replace MOS, the NCS or the MAM. It coordinates context above them.\n\n# Results\n\n- SOM 1.0 published at IBC Amsterdam, 12 September 2026\n- Developed in the IBC Accelerator Media Innovation Programme 2026 (SMART STORIES)\n- 14 champion organisations and 17 technology participants",
+      "story": "# The problem\n\nA story lives in many tools at once: planning, rundown, graphics, playout, the MAM. Each holds a slightly different version of what is true, and they keep each other in sync through point-to-point integrations.\n\n![The storyobjectmodel.dev home page: one bus for story context, every tool on it](/assets/projects/som/fig-1.jpg)\n\n# The model\n\nSOM puts one layer underneath those tools. **Tools talk to the story, not to each other.**\n\n![Tools talk to the story, not to each other: six roles on one bus, and the three nouns Story, Asset and Telling](/assets/projects/som/fig-2.jpg)\n\n- A **publish/subscribe bus** (broker-agnostic) carrying seven JSON message families with permanent schema URLs\n- Three core concepts: **Story**, **Asset** and **Telling**\n- **Full snapshots**: omission means absent, and late joiners receive the complete state\n- A **skills library** that encodes editorial rules once, readable by every tool\n- **Compliance gates** tied to story versions: any hold means held\n- Media travels by reference only; content never rides the bus\n\n![Every SOM message shares one closed envelope, with message_type as the only discriminator](/assets/projects/som/fig-3.jpg)\n\nSOM does not replace MOS, the NCS or the MAM. It coordinates context above them.\n\n![Editorial rules are written once as skills every tool can read, and a hold stays held until a person decides](/assets/projects/som/fig-4.jpg)\n\n# My role\n\nI am the author of storyobjectmodel.dev, the public home of SOM 1.0: the concepts, the envelope and message references, the skills rulebook and the getting-started path, in English, Portuguese, Spanish and German.\n\n![From the animation: a warning holds playout until the standards desk clears it](/assets/projects/som/fig-6.jpg)\n\n# Results\n\n- SOM 1.0 published at IBC Amsterdam, 12 September 2026\n- Developed in the IBC Accelerator Media Innovation Programme 2026 (SMART STORIES)\n- 14 champion organisations and 17 technology participants\n\n![SOM 1.0 was built with fourteen champion organisations and seventeen technology participants through the IBC Accelerator](/assets/projects/som/fig-5.jpg)",
       "flow": {
         "nodes": [
           {
@@ -873,7 +875,8 @@
             "to": "gates"
           }
         ]
-      }
+      },
+      "video": "/assets/projects/som/banner.mp4"
     },
     {
       "id": "urnas-2026",

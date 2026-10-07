@@ -21,6 +21,9 @@ function spanClasses(i: number, total: number): string {
   if (leftover > 0 && pos >= 0 && pos < leftover) {
     const spans = leftover === 1 ? [4] : leftover === 2 ? [2, 2] : [2, 1, 1];
     classes.push({ 1: 'lg:col-span-1', 2: 'lg:col-span-2', 4: 'lg:col-span-4' }[spans[pos]]!);
+  } else {
+    // Reset any two-column span so it does not leak into the four-column grid.
+    classes.push('lg:col-span-1');
   }
   return classes.join(' ');
 }

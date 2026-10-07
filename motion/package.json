@@ -1,0 +1,21 @@
+{
+  "name": "felipeiasi-motion",
+  "private": true,
+  "type": "module",
+  "description": "Remotion source for the animated case thumbnails (On Air look).",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render",
+    "still": "remotion still"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.533",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.533"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}

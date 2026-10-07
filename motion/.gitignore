@@ -1,0 +1,6 @@
+node_modules
+out
+# raw captures kept locally only; the compositions use the cropped files
+public/ograf/raw/
+public/som/src-*
+public/som/d-*
