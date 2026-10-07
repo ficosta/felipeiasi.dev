@@ -503,102 +503,76 @@
       }
     },
     {
-      "id": "setup-news",
-      "title": "setup.news",
-      "client": "setup.news",
-      "summary": "AI platform for newsrooms: discovery, creation and distribution of news in one cloud ecosystem, joining LLMs, real-time data and broadcast graphics.",
-      "impact": "12 integrated modules, 400+ LLMs under one contract, 55+ databases connected and a 42 ms real-time data flow.",
+      "id": "magicwall",
+      "title": "CNN Brasil Magic Wall",
+      "client": "CNN Brasil",
+      "summary": "Touch wall for CNN Brasil's 2026 election coverage: four offices, every state and municipality, 2018 and 2022 history, and results that animate in as the presenter navigates.",
+      "impact": "President, Governor, Senate and Chamber on one 1920×1080 touch stage, down to every municipality, fed live from the official TSE files.",
       "stack": [
-        "Multi-LLM API layer",
-        "Real-time data platform",
-        "Broadcast graphics",
-        "Vizrt · vMix · Avid integrations",
-        "SSO · audit log"
+        "React",
+        "GSAP",
+        "TSE result files",
+        "MQTT · polling fallback",
+        "Bunny CDN",
+        "Touch 1920×1080"
       ],
-      "thumbnail": "/assets/projects/setup-news/banner.jpg",
+      "thumbnail": "/assets/projects/magicwall/banner.jpg",
+      "video": "/assets/projects/magicwall/banner.mp4",
       "hasDetailedContent": true,
       "links": {
-        "demo": "https://setup.news",
+        "demo": "https://magicwall.tse.insyde.one/",
         "code": null
       },
-      "story": "# The platform\n\nsetup.news is an AI platform built around journalistic production. It brings the tools a newsroom needs to **discover**, **create** and **distribute** news into one cloud ecosystem.\n\n### Architecture\n\n- **Data Platform**: real-time feeds and 55+ public and market databases (IBGE, Banco Central, TSE, World Bank, INMET weather, sports statistics), normalised once and served to every module\n- **Multi-LLM layer**: 400+ models (Claude, GPT, Gemini, Grok, DeepSeek and others) behind a single API and a single contract\n- **12 modules** on top: Prompt Press (assistant builder), Transcript, Smart Drive, edge.template (broadcast graphics), edge.engine (overlay/keyer), Magic Wall (interactive studio screen) and more\n- **Integrations** with Ardome, AP, vMix, Avid, Premiere and Vizrt\n\n### Operations\n\n- Data residency in Brazil, Europe or the US\n- SSO, LGPD compliance, role-based access and a complete audit log\n\n# Results\n\n- **42 ms** real-time data flow\n- The data layer behind the CNN Brasil 2026 election pipeline, the Apuração app and the Urnas map",
+      "story": "# What it is\n\nA touch wall for CNN Brasil's 2026 election coverage, delivered through setup.news. One 1920×1080 stage, four offices (President, Governor, Senate, Chamber), every state and every municipality, with the results animating in as you navigate.\n\n![The 2026 presidential result by state, with each state coloured by its leading party and the top candidates ranked beside the map](/assets/projects/magicwall/fig-1.jpg)\n\n# How a presenter drives it\n\n- A left rail picks the office and the state; inside a state it becomes an A to Z index of municipalities\n- Tap the map to drill down: every municipality coloured by its winner, with the municipal count of ballot boxes\n- Archive tabs replay 2018 and 2022, first and second round, on the same map\n- Capitals mode marks every state capital and opens its vote with one tap\n\n![Tapping a state swaps the map for its municipalities, and an A to Z index opens any city's result, here Campinas](/assets/projects/magicwall/fig-2.jpg)\n\n![The 2018 and 2022 tabs replay past presidential races, first or second round, on the same map](/assets/projects/magicwall/fig-3.jpg)\n\n![Capitals mode marks every state capital on the map, and tapping a state opens its capital's vote, here Salvador](/assets/projects/magicwall/fig-4.jpg)\n\n# Every office\n\n![The governor view sorts the 27 states into races decided in the first round and races going to a runoff](/assets/projects/magicwall/fig-5.jpg)\n\n![A state's governor race, with its municipal map and the leading candidates](/assets/projects/magicwall/fig-6.jpg)\n\n![A semicircle of the 81 seats shows the Senate's 2027 makeup by party](/assets/projects/magicwall/fig-7.jpg)\n\n![A 513-seat hemicycle with seats by party; tapping a party lists its elected deputies by vote](/assets/projects/magicwall/fig-8.jpg)\n\n# Motion\n\nEvery change is animated: maps grey out and refill with the new colours, numbers count up from zero, cards slide in, the Senate arc and the Chamber hemicycle build seat by seat. A URL flag turns animation off for rehearsals, and a simulator data source with self-changing fictional numbers tests the animations before election night.\n\n<video controls preload=\"metadata\" poster=\"/assets/projects/magicwall/banner.jpg\" style=\"width: 100%;\">\n  <source src=\"/assets/projects/magicwall/demo.mp4\" type=\"video/mp4\">\n</video>\n\n# Data path\n\nThe wall reads the official TSE result files, mirrored with the TSE's own paths, plus processed layers on the same results API: national summaries, municipal winners, Chamber seat projections, 2018 and 2022 history and candidate photos. Live updates arrive over MQTT, with polling every 5 seconds as the fallback. The app itself is a static React and GSAP build on Bunny CDN.\n\n# Results\n\n- 2026 first round complete on the wall: 499,248 ballot boxes nationally\n- President, Governor, Senate and Chamber, all 27 states, every municipality\n- 2018 and 2022 presidential history, both rounds, on the same map",
       "flow": {
         "nodes": [
           {
-            "id": "data",
-            "label": "Public & market data",
-            "kind": "source",
-            "tech": "55+ databases"
+            "id": "tse",
+            "label": "TSE result files",
+            "tech": "Official JSON",
+            "kind": "source"
           },
           {
-            "id": "feeds",
-            "label": "Live feeds",
-            "kind": "source",
-            "tech": "Agencies · sports · weather"
+            "id": "mirror",
+            "label": "Results API",
+            "tech": "Mirror + processed layers",
+            "kind": "process"
           },
           {
-            "id": "platform",
-            "label": "Data Platform",
-            "kind": "process",
-            "tech": "Ingest · normalise · 42 ms"
+            "id": "push",
+            "label": "Live updates",
+            "tech": "MQTT · 5 s polling",
+            "kind": "process"
           },
           {
-            "id": "llm",
-            "label": "Multi-LLM layer",
-            "kind": "process",
-            "tech": "400+ models, one API"
-          },
-          {
-            "id": "modules",
-            "label": "Newsroom modules",
-            "kind": "process",
-            "tech": "12 modules"
-          },
-          {
-            "id": "gfx",
-            "label": "Broadcast graphics",
-            "kind": "output",
-            "tech": "edge.template · Vizrt"
+            "id": "app",
+            "label": "Wall app",
+            "tech": "React · GSAP · Bunny CDN",
+            "kind": "process"
           },
           {
             "id": "wall",
-            "label": "Studio Magic Wall",
-            "kind": "output"
-          },
-          {
-            "id": "web",
-            "label": "Web & social",
+            "label": "Touch wall",
+            "tech": "1920×1080 · presenter",
             "kind": "output"
           }
         ],
         "edges": [
           {
-            "from": "data",
-            "to": "platform"
+            "from": "tse",
+            "to": "mirror"
           },
           {
-            "from": "feeds",
-            "to": "platform"
+            "from": "mirror",
+            "to": "push"
           },
           {
-            "from": "platform",
-            "to": "llm"
+            "from": "push",
+            "to": "app"
           },
           {
-            "from": "llm",
-            "to": "modules"
-          },
-          {
-            "from": "modules",
-            "to": "gfx"
-          },
-          {
-            "from": "modules",
+            "from": "app",
             "to": "wall"
-          },
-          {
-            "from": "modules",
-            "to": "web"
           }
         ]
       }
@@ -1133,6 +1107,107 @@
             "from": "ctrl",
             "to": "viz",
             "label": "UDP"
+          }
+        ]
+      }
+    },
+    {
+      "id": "setup-news",
+      "title": "setup.news",
+      "client": "setup.news",
+      "summary": "AI platform for newsrooms: discovery, creation and distribution of news in one cloud ecosystem, joining LLMs, real-time data and broadcast graphics.",
+      "impact": "12 integrated modules, 400+ LLMs under one contract, 55+ databases connected and a 42 ms real-time data flow.",
+      "stack": [
+        "Multi-LLM API layer",
+        "Real-time data platform",
+        "Broadcast graphics",
+        "Vizrt · vMix · Avid integrations",
+        "SSO · audit log"
+      ],
+      "thumbnail": "/assets/projects/setup-news/banner.jpg",
+      "hasDetailedContent": true,
+      "links": {
+        "demo": "https://setup.news",
+        "code": null
+      },
+      "story": "# The platform\n\nsetup.news is an AI platform built around journalistic production. It brings the tools a newsroom needs to **discover**, **create** and **distribute** news into one cloud ecosystem.\n\n### Architecture\n\n- **Data Platform**: real-time feeds and 55+ public and market databases (IBGE, Banco Central, TSE, World Bank, INMET weather, sports statistics), normalised once and served to every module\n- **Multi-LLM layer**: 400+ models (Claude, GPT, Gemini, Grok, DeepSeek and others) behind a single API and a single contract\n- **12 modules** on top: Prompt Press (assistant builder), Transcript, Smart Drive, edge.template (broadcast graphics), edge.engine (overlay/keyer), Magic Wall (interactive studio screen) and more\n- **Integrations** with Ardome, AP, vMix, Avid, Premiere and Vizrt\n\n### Operations\n\n- Data residency in Brazil, Europe or the US\n- SSO, LGPD compliance, role-based access and a complete audit log\n\n# Results\n\n- **42 ms** real-time data flow\n- The data layer behind the CNN Brasil 2026 election pipeline, the Apuração app and the Urnas map",
+      "flow": {
+        "nodes": [
+          {
+            "id": "data",
+            "label": "Public & market data",
+            "kind": "source",
+            "tech": "55+ databases"
+          },
+          {
+            "id": "feeds",
+            "label": "Live feeds",
+            "kind": "source",
+            "tech": "Agencies · sports · weather"
+          },
+          {
+            "id": "platform",
+            "label": "Data Platform",
+            "kind": "process",
+            "tech": "Ingest · normalise · 42 ms"
+          },
+          {
+            "id": "llm",
+            "label": "Multi-LLM layer",
+            "kind": "process",
+            "tech": "400+ models, one API"
+          },
+          {
+            "id": "modules",
+            "label": "Newsroom modules",
+            "kind": "process",
+            "tech": "12 modules"
+          },
+          {
+            "id": "gfx",
+            "label": "Broadcast graphics",
+            "kind": "output",
+            "tech": "edge.template · Vizrt"
+          },
+          {
+            "id": "wall",
+            "label": "Studio Magic Wall",
+            "kind": "output"
+          },
+          {
+            "id": "web",
+            "label": "Web & social",
+            "kind": "output"
+          }
+        ],
+        "edges": [
+          {
+            "from": "data",
+            "to": "platform"
+          },
+          {
+            "from": "feeds",
+            "to": "platform"
+          },
+          {
+            "from": "platform",
+            "to": "llm"
+          },
+          {
+            "from": "llm",
+            "to": "modules"
+          },
+          {
+            "from": "modules",
+            "to": "gfx"
+          },
+          {
+            "from": "modules",
+            "to": "wall"
+          },
+          {
+            "from": "modules",
+            "to": "web"
           }
         ]
       }
