@@ -1,19 +1,23 @@
 {
   "profile": {
     "name": "Felipe Iasi de Barros Costa",
-    "title": "Full Stack Developer & Product Innovator",
+    "title": "Broadcast Solutions Architect",
     "availability": {
       "base": "Madrid, Spain",
-      "work_regions": ["Europe", "Latin America"],
+      "work_regions": [
+        "Europe",
+        "Latin America"
+      ],
       "status": "Eligible and available to work freely across the EU and LATAM regions."
     },
-    "summary": "Creative and driven by innovation. 14+ years in development, broadcast, and product leadership — transforming complex ideas into practical, visually engaging results.",
-    "long_summary": "With over 14 years of experience in development, broadcast, and product leadership, I am passionate about transforming complex ideas into practical and visually engaging results. My journey has taken me from the fast-paced world of broadcast media to the innovative landscape of product development, where I have consistently driven projects that blend creativity with technology.",
+    "summary": "Solutions architect for broadcast and media technology. 18+ years in live sports, news and digital production — from on-air graphics to AI-driven workflows.",
+    "long_summary": "I started in broadcast graphics and ended up designing the systems around them: data pipelines that feed election nights, control software for live shows, and the bridges between legacy broadcast infrastructure and cloud, API-driven and AI tooling.",
     "contacts": {
       "email": "felipeiasi@gmail.com",
       "linkedin": "https://www.linkedin.com/in/felipe-iasi",
       "portfolio": "https://felipeiasi.com",
-      "github": "https://github.com/ficosta"
+      "github": "https://github.com/ficosta",
+      "youtube": "https://www.youtube.com/c/FelipeIasi"
     },
     "languages": {
       "Portuguese": "Native",
@@ -21,140 +25,202 @@
       "German": "Basic (A2)",
       "Spanish": "Conversational"
     },
-    "skills": {
-      "languages": [
-        { "name": "Node.js", "level": 95 },
-        { "name": "React", "level": 90 },
-        { "name": "TypeScript", "level": 88 },
-        { "name": "C#", "level": 70 },
-        { "name": "Python", "level": 65 }
-      ],
-      "platforms": [
-        { "name": "AWS", "level": 85 },
-        { "name": "Docker", "level": 80 },
-        { "name": "AI Integration", "level": 90 },
-        { "name": "Broadcast Systems", "level": 92 },
-        { "name": "Vizrt", "level": 95 },
-        { "name": "Real-Time Graphics", "level": 90 }
-      ],
-      "design": [
-        { "name": "UX/UI Design", "level": 85 },
-        { "name": "Figma", "level": 80 },
-        { "name": "Adobe Suite", "level": 90 },
-        { "name": "Motion Design", "level": 88 },
-        { "name": "Creative Direction", "level": 92 }
-      ]
-    },
     "avatar": "/assets/avatar.jpg",
-    "glb": "/assets/hero.glb",
-    "tags": ["#AI", "#Node.js", "#React"]
+    "headline": "Broadcast Solutions Architect",
+    "tagline": "I design the real-time systems behind live sports, news and elections — where the data has to be right the second it airs.",
+    "years": "18+",
+    "current": {
+      "role": "Broadcast Solutions Architect · Team Lead",
+      "company": "Astucemedia"
+    },
+    "stackByLayer": [
+      {
+        "layer": "Ingest & Data",
+        "items": [
+          "Node.js",
+          "Python",
+          "PostgreSQL",
+          "TCP / UDP sockets",
+          "REST APIs",
+          "GDAL · xarray"
+        ]
+      },
+      {
+        "layer": "Cloud & Infra",
+        "items": [
+          "AWS",
+          "Docker",
+          "S3 / MinIO",
+          "Linux"
+        ]
+      },
+      {
+        "layer": "Real-time & Broadcast",
+        "items": [
+          "Vizrt (Viz Artist, Trio, Pilot Edge, Transition Logic)",
+          "Unreal Engine",
+          "Aximmetry",
+          "ORAD / Avid"
+        ]
+      },
+      {
+        "layer": "Applications",
+        "items": [
+          "TypeScript",
+          "React",
+          "C# / .NET",
+          "Java"
+        ]
+      },
+      {
+        "layer": "AI",
+        "items": [
+          "OpenAI API",
+          "Amazon Rekognition",
+          "LLM agents & MCP",
+          "PyTorch · OpenCV"
+        ]
+      }
+    ]
   },
-
   "experience": [
+    {
+      "role": "Broadcast Solutions Architect · Team Lead",
+      "company": "Astucemedia",
+      "location": "Remote, Spain",
+      "period": "Jul 2026 – Present",
+      "current": true
+    },
     {
       "role": "Head of Product and Innovation",
       "company": "Axel Springer / Bild",
-      "logo": "/BILD.svg",
       "location": "Berlin, Germany",
-      "period": "Jul 2023 – Present",
+      "period": "Sep 2023 – May 2026",
       "highlights": [
-        "Leading innovation initiatives in AI-driven content production",
-        "Integrating creative workflows across product, design, and engineering teams",
-        "Building real-time tools for broadcast and digital environments"
+        "Architected AI-driven content automation and layout generation for digital and print",
+        "Bridged legacy broadcast infrastructure with cloud-based, API-driven systems",
+        "Designed a web-based studio production concept to cut costs and streamline operations",
+        "Led a cross-functional team of developers, designers and media engineers"
       ],
-      "tech": ["Node.js", "AWS", "AI", "Docker"]
+      "tech": [
+        "Node.js",
+        "AWS",
+        "AI",
+        "Docker"
+      ]
     },
     {
       "role": "Head of Real Time Broadcast Design Team",
       "company": "Axel Springer / Bild",
-      "logo": "/BILD.svg",
       "location": "Berlin, Germany",
-      "period": "Aug 2021 – Jul 2023",
+      "period": "Aug 2021 – Jan 2024",
       "highlights": [
-        "Led the real-time graphics and broadcast design team",
-        "Developed internal automation tools for newsroom systems",
-        "Optimized production pipelines and Vizrt workflows"
+        "Built and led a Vizrt team of 5+ designers and 20+ freelancers, with zero turnover",
+        "Delivered a virtual set for the Ukraine war coverage with Unreal and Aximmetry in one week",
+        "Live graphics for the British coronation, German and US elections, COVID-19 and virtual sets"
+      ],
+      "tech": [
+        "Vizrt",
+        "Unreal Engine",
+        "Aximmetry"
       ]
     },
     {
       "role": "Motion Design Team Lead",
       "company": "Axel Springer / Bild",
-      "logo": "/BILD.svg",
       "location": "Berlin, Germany",
-      "period": "Nov 2020 – Aug 2021",
+      "period": "Nov 2020 – Jan 2022",
       "highlights": [
-        "Introduced design system for live graphics",
-        "Transitioned legacy Vizrt projects to modular templates"
+        "Introduced a design system for live graphics",
+        "Moved legacy Vizrt projects to modular templates"
       ]
     },
     {
       "role": "Real Time GFX Consultant",
       "company": "Garena — Free Fire",
-      "logo": "/RIOT.svg",
       "location": "São Paulo, Brazil",
       "period": "Jul 2020 – Dec 2020",
       "highlights": [
-        "Created real-time broadcast graphics for eSports streams",
+        "Real-time broadcast graphics for eSports streams",
         "Integrated Unreal and Vizrt pipelines"
       ]
     },
     {
       "role": "Vizrt Consultant & Designer",
       "company": "CNN Brasil",
-      "logo": "/CNN.svg",
       "location": "São Paulo, Brazil",
       "period": "Aug 2020 – Nov 2020",
       "highlights": [
-        "Developed live on-air graphics and data-driven dashboards",
-        "Collaborated with editorial and tech teams on launch visuals"
+        "Launched the network's on-air graphics, based on CNN Atlanta, with Transition Logic and Pilot Edge",
+        "Set up Vizrt systems and backup workflows with the engineering team",
+        "Built automated election graphics, the finance crawl and the NBA package",
+        "Trained a new team of 3 designers and 10 operators"
+      ],
+      "tech": [
+        "Vizrt",
+        "Pilot Edge",
+        "Transition Logic"
       ]
     },
     {
       "role": "Real Time GFX Team Lead",
       "company": "Grupo Bandeirantes",
-      "logo": "/BAND.svg",
       "location": "São Paulo, Brazil",
       "period": "Dec 2013 – Nov 2020",
       "highlights": [
-        "Led a multidisciplinary Vizrt graphics team for TV and sports events",
-        "Created tools for dynamic newsroom integration and election coverage"
+        "Yearly Vizrt graphics packages for Brazilian football, UEFA and motorsport",
+        "On site for the 2016 Rio Olympics graphics integration; led the 2014 Winter Olympics package",
+        "Integrated Twitter into the MasterChef Brasil broadcast — 1.2M tweets in the 2015 final, innovation award",
+        "Standardised graphics production across national affiliates"
+      ]
+    },
+    {
+      "role": "Developer — Systems Integration & R&D",
+      "company": "dBOTZ",
+      "location": "São Paulo, Brazil",
+      "period": "Dec 2010 – Jan 2015",
+      "highlights": [
+        "New technologies and systems integration for television graphics"
       ]
     },
     {
       "role": "Avid / ORAD Senior Designer",
       "company": "Rede Record",
-      "logo": "/RECORD.png",
       "location": "São Paulo, Brazil",
       "period": "Sep 2008 – Dec 2013",
       "highlights": [
-        "Designed and implemented real-time templates using ORAD and Viz",
-        "Coordinated creative transition between platforms"
+        "Interfaces for graphics automation in .NET and Java",
+        "ORAD 3Designer and virtual sets"
       ]
     },
     {
       "role": "Real Time GFX Designer",
       "company": "MTV Brasil",
-      "logo": "/MTV.svg",
       "location": "São Paulo, Brazil",
-      "period": "Jan 2009 – Jan 2012",
-      "highlights": ["Created 3D interactive graphics for live and recorded programs"]
+      "period": "2009 – 2012",
+      "highlights": [
+        "3D interactive graphics for live and recorded programmes"
+      ]
     },
     {
-      "role": "Designer Assistant",
-      "company": "Rede Bandeirantes de Televisão",
-      "logo": "/BAND.svg",
+      "role": "Real Time GFX Designer",
+      "company": "Rede Bandeirantes",
       "location": "São Paulo, Brazil",
-      "period": "Feb 2008 – Sep 2008"
+      "period": "Feb 2008 – Sep 2008",
+      "highlights": [
+        "Virtual sets and graphics automation interfaces (Viz Artist, Trio, Pilot; .NET)"
+      ]
     },
     {
-      "role": "Designer Assistant",
+      "role": "Production & Art Assistant",
       "company": "RedeTV!",
-      "logo": "/REDETV.svg",
       "location": "São Paulo, Brazil",
-      "period": "Feb 2006 – Feb 2008"
+      "period": "Feb 2006 – Feb 2008",
+      "highlights": [
+        "News infographics and accident reconstructions"
+      ]
     }
   ],
-
   "education": [
     {
       "degree": "Bachelor’s in Social Communication with Emphasis in Digital Design",
@@ -172,12 +238,12 @@
       "years": "2012 – 2014"
     }
   ],
-
   "certifications": [
     {
       "name": "AI Agentic Engineer: Complete Agent & MCP",
       "issuer": "Ed Donner, Ligency Team",
-      "year": 2025
+      "year": 2025,
+      "featured": true
     },
     {
       "name": "Generative AI Developer",
@@ -192,7 +258,8 @@
     {
       "name": "AWS Solutions Architect Associate",
       "issuer": "Andre Iacono",
-      "year": 2024
+      "year": 2024,
+      "featured": true
     },
     {
       "name": "Scrum Project Management with Jira",
@@ -282,7 +349,8 @@
     {
       "name": "Viz Artist Designer",
       "issuer": "Vizrt",
-      "year": 2018
+      "year": 2018,
+      "featured": true
     },
     {
       "name": "LINUX LPI 2",
@@ -290,50 +358,319 @@
       "year": 2017
     }
   ],
-
   "presentations": [
-    {
-      "title": "Unreal into News Media",
-      "event": "Axel Springer",
-      "year": 2024,
-      "type": "Presentation"
-    },
     {
       "title": "How to Choose a MAM",
       "event": "European Broadcasting Union (EBU)",
       "year": 2024,
-      "type": "Presentation"
+      "type": "Talk"
     },
     {
       "title": "Fastchannels Next Steps",
       "event": "AWS",
       "year": 2024,
-      "type": "Presentation"
+      "type": "Talk"
+    },
+    {
+      "title": "Unreal into News Media",
+      "event": "Axel Springer",
+      "year": 2024,
+      "type": "Talk"
     }
   ],
-
   "publications": [
-    { "title": "Larry and TV — Best Friends", "year": 2018 },
-    { "title": "Second Screen — Bola Rolando", "year": 2019 },
-    { "title": "Twitter 50 Minutes", "year": 2020 }
+    {
+      "title": "Larry and TV — Best Friends",
+      "year": 2018
+    },
+    {
+      "title": "Second Screen — Bola Rolando",
+      "year": 2019
+    },
+    {
+      "title": "Twitter 50 Minutes",
+      "year": 2020
+    }
   ],
-
   "projects": [
-    {"id": "cnn-brasil-elections-2026", "title": "CNN Brasil Elections 2026", "summary": "Real-time election results pipeline for CNN Brasil: from the official TSE data to on-air graphics, web and social.", "type": "freelancer", "impact": "About 300 ms from data fetch to display, the fastest election results in Brazil.", "stack": ["TSE API", "Real-time data pipelines", "Broadcast graphics"], "tags": ["#RealTimeData", "#Elections", "#Broadcast"], "thumbnail": "/CNN.svg", "hasDetailedContent": true, "links": {"demo": null, "code": null}, "story": "# Brazilian Elections 2026 at CNN Brasil\n\nI was tech lead for the election results data pipeline at CNN Brasil, working through setup.news as the bridge between editorial and engineering.\n\n### What we built\n\n- Ingestion of official results from the TSE (Superior Electoral Court) API\n- Validation rules and a live fallback, so bad or late data never reached air\n- Delivery of the same results to TV graphics, web and social\n\n# Results\n\n- **About 300 ms** from fetching the TSE data to showing it on screen\n- The fastest election results display in Brazil"},
-    {"id": "teaserfly", "title": "Teaserfly", "summary": "AI-powered teaser automation for BILD platforms, built inside Axel Springer's product and innovation team.", "type": "collective", "impact": "Reduced teaser production time by 90%, from 15 minutes to about 90 seconds.", "stack": ["React", "Node.js", "TypeScript", "AWS", "OpenAI API", "Amazon Rekognition"], "tags": ["#AI", "#Automation", "#Node.js", "#AWS"], "thumbnail": "/assets/projects/teaserfly/teaserflyBanner.png", "video": "/assets/projects/teaserfly/teaserflyBanner.mp4", "hasDetailedContent": true, "links": {"demo": null, "code": null}, "story": "# Teaserfly\n\nAI-powered tool I helped conceive and build at BILD (Axel Springer) to automate teaser production for Bild.de, BILDplay and social channels.\n\n### My Role\n\nConcept, infrastructure and AI research, plus frontend architecture (React, TypeScript) and the AI enhancement layer.\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/teaserfly/teaserflyDemo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# Results\n\n- Teaser production time cut by 90%, from 15 minutes to about 90 seconds\n- Consistent design output across all formats\n\nThis is an internal Axel Springer project; no public demo or code can be shared."},
+    {
+      "id": "cnn-brasil-elections-2026",
+      "title": "CNN Brasil Elections 2026",
+      "summary": "Real-time election results pipeline for CNN Brasil: from the official TSE data to on-air graphics, web and social.",
+      "type": "freelancer",
+      "impact": "About 300 ms from data fetch to display, the fastest election results in Brazil.",
+      "stack": [
+        "TSE API",
+        "Real-time data pipelines",
+        "Broadcast graphics"
+      ],
+      "tags": [
+        "#RealTimeData",
+        "#Elections",
+        "#Broadcast"
+      ],
+      "thumbnail": "/logos/cnn-brasil-red.svg",
+      "hasDetailedContent": true,
+      "links": {
+        "demo": null,
+        "code": null
+      },
+      "story": "# Brazilian Elections 2026 at CNN Brasil\n\nI was tech lead for the election results data pipeline at CNN Brasil, working through setup.news as the bridge between editorial and engineering.\n\n### What we built\n\n- Ingestion of official results from the TSE (Superior Electoral Court) API\n- Validation rules and a live fallback, so bad or late data never reached air\n- Delivery of the same results to TV graphics, web and social\n\n# Results\n\n- **About 300 ms** from fetching the TSE data to showing it on screen\n- The fastest election results display in Brazil",
+      "client": "CNN Brasil",
+      "featured": true,
+      "flow": {
+        "nodes": [
+          {
+            "id": "tse",
+            "label": "TSE results API",
+            "tech": "Official feed",
+            "kind": "source"
+          },
+          {
+            "id": "ingest",
+            "label": "Ingestion",
+            "tech": "Polling + parsing",
+            "kind": "process"
+          },
+          {
+            "id": "validate",
+            "label": "Validation",
+            "tech": "Rules + live fallback",
+            "kind": "process"
+          },
+          {
+            "id": "dist",
+            "label": "Distribution",
+            "tech": "One result, many outputs",
+            "kind": "process"
+          },
+          {
+            "id": "tv",
+            "label": "TV graphics",
+            "tech": "On air",
+            "kind": "output"
+          },
+          {
+            "id": "web",
+            "label": "Web",
+            "kind": "output"
+          },
+          {
+            "id": "social",
+            "label": "Social",
+            "kind": "output"
+          }
+        ],
+        "edges": [
+          {
+            "from": "tse",
+            "to": "ingest"
+          },
+          {
+            "from": "ingest",
+            "to": "validate"
+          },
+          {
+            "from": "validate",
+            "to": "dist",
+            "label": "~300 ms"
+          },
+          {
+            "from": "dist",
+            "to": "tv"
+          },
+          {
+            "from": "dist",
+            "to": "web"
+          },
+          {
+            "from": "dist",
+            "to": "social"
+          }
+        ]
+      }
+    },
+    {
+      "id": "teaserfly",
+      "title": "Teaserfly",
+      "summary": "AI-powered teaser automation for BILD platforms, built inside Axel Springer's product and innovation team.",
+      "type": "collective",
+      "impact": "Reduced teaser production time by 90%, from 15 minutes to about 90 seconds.",
+      "stack": [
+        "React",
+        "Node.js",
+        "TypeScript",
+        "AWS",
+        "OpenAI API",
+        "Amazon Rekognition"
+      ],
+      "tags": [
+        "#AI",
+        "#Automation",
+        "#Node.js",
+        "#AWS"
+      ],
+      "thumbnail": "/assets/projects/teaserfly/teaserflyBanner.png",
+      "video": "/assets/projects/teaserfly/teaserflyBanner.mp4",
+      "hasDetailedContent": true,
+      "links": {
+        "demo": null,
+        "code": null
+      },
+      "story": "# Teaserfly\n\nAI-powered tool I helped conceive and build at BILD (Axel Springer) to automate teaser production for Bild.de, BILDplay and social channels.\n\n### My Role\n\nConcept, infrastructure and AI research, plus frontend architecture (React, TypeScript) and the AI enhancement layer.\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/teaserfly/teaserflyDemo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# Results\n\n- Teaser production time cut by 90%, from 15 minutes to about 90 seconds\n- Consistent design output across all formats\n\nThis is an internal Axel Springer project; no public demo or code can be shared.",
+      "client": "Axel Springer / Bild",
+      "flow": {
+        "nodes": [
+          {
+            "id": "cms",
+            "label": "Article",
+            "tech": "Newsroom CMS",
+            "kind": "source"
+          },
+          {
+            "id": "ui",
+            "label": "Teaserfly UI",
+            "tech": "React · TypeScript",
+            "kind": "process"
+          },
+          {
+            "id": "api",
+            "label": "Teaser API",
+            "tech": "Node.js on AWS",
+            "kind": "process"
+          },
+          {
+            "id": "ai",
+            "label": "AI layer",
+            "tech": "OpenAI · Rekognition",
+            "kind": "process"
+          },
+          {
+            "id": "bild",
+            "label": "Bild.de",
+            "kind": "output"
+          },
+          {
+            "id": "play",
+            "label": "BILDplay",
+            "kind": "output"
+          },
+          {
+            "id": "social",
+            "label": "Social",
+            "kind": "output"
+          }
+        ],
+        "edges": [
+          {
+            "from": "cms",
+            "to": "ui"
+          },
+          {
+            "from": "ui",
+            "to": "api"
+          },
+          {
+            "from": "api",
+            "to": "ai"
+          },
+          {
+            "from": "ai",
+            "to": "bild"
+          },
+          {
+            "from": "ai",
+            "to": "play"
+          },
+          {
+            "from": "ai",
+            "to": "social"
+          }
+        ]
+      }
+    },
     {
       "id": "quem-fica-em-pe",
       "title": "Quem Fica em Pé",
       "summary": "Game show control system for the Brazilian adaptation of 'Who’s Still Standing?', automating real-time graphics, questions, and prize management for live television broadcast.",
       "type": "freelancer",
       "impact": "Delivered a fully integrated real-time game control suite in two weeks, ensuring flawless live operation and boosting the show's premiere audience ratings on Band.",
-      "stack": ["C#", "PostgreSQL", "Vizrt", "TCPSocket", "Gamification"],
-      "tags": ["#CSharp", "#Vizrt", "#BroadcastTech", "#Gamification", "#RealTime"],
+      "stack": [
+        "C#",
+        "PostgreSQL",
+        "Vizrt",
+        "TCPSocket",
+        "Gamification"
+      ],
+      "tags": [
+        "#CSharp",
+        "#Vizrt",
+        "#BroadcastTech",
+        "#Gamification",
+        "#RealTime"
+      ],
       "thumbnail": "/assets/projects/quemficaempe/banner.jpg",
       "video": "/assets/projects/quemficaempe/demo.mp4",
       "hasDetailedContent": true,
       "story": "# The Challenge\n\nIn 2012, Rede Bandeirantes brought the international format of *'Who’s Still Standing?'* to Brazil, launching the game show **'Quem Fica em Pé'**, hosted by **José Luiz Datena**. The production demanded a complete digital control ecosystem built from scratch in just **two weeks** — responsible for managing every part of the game’s mechanics in real time.\n\n![Studio Demo](/assets/projects/quemficaempe/demo.jpg)\n\nThe system needed to integrate seamlessly with **Vizrt broadcast graphics**, synchronize with the presenter’s timing, and guarantee the accurate calculation of prizes — totaling **over R$500,000** in awards across two seasons. According to the show’s Wikipedia page, the premiere significantly **improved Band’s audience ratings** in the São Paulo region.\n\n# The Solution\n\nA fully custom-built, C#-based platform was developed to manage the entire show logic, with three interconnected applications working in real time:\n\n1. **Game Management System** – Proprietary CMS for registering over **3,000 questions**, managing rounds, prizes, and the complete rundown of each episode.\n2. **Vizrt Control Connector** – Real-time TCP socket controller for graphics and animations displayed on the studio’s large screen, ensuring frame-perfect sync with Datena’s narration.\n3. **Teleprompter System (TP)** – Interface for presenters and contestants displaying dynamic instructions and timed content during live recording.\n\n ![SystemScreen](/assets/projects/quemficaempe/tela1.png)\n\n# My Role\n\nI designed the system’s architecture, coded every module, and developed **custom connectors for Vizrt integration**. My responsibilities included:\n\n- Building the CMS and control interfaces\n- Implementing the scoring and prize logic\n- Managing TCP socket communication between systems\n- Supporting live studio operations throughout the first season\n\n# The Approach\n\nDevelopment was fast-paced and highly collaborative. I worked closely with the **engineering, art, and direction teams** to align visual and technical workflows. The system’s architecture combined **C#**, **PostgreSQL**, and **TCP-based real-time control**, delivering a stable, low-latency experience during broadcast.\n\n# Team & Production\n\n- **Program Director:** Pablo Mazover  \n- **Production Coordination:** Eduardo Gaspar  \n- **Art Direction:** Omar Sabbag  \n- **Art Coordination:** Pedro Coelho  \n- **Engineering Coordination:** Thiago Perrela / Carol Garcia  \n\n# Results\n\n- **Full delivery within two weeks** before the live premiere\n- **Zero technical failures** during broadcast\n- **Perfect synchronization** between presenter, visuals, and scoring system\n- **Boosted Band’s audience ratings** in the premiere week\n- Early Brazilian example of **live game automation integrated with broadcast graphics**\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/quemficaempe/demo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# Legacy\n\n'Quem Fica em Pé' set a benchmark for **interactive broadcast automation** in Brazilian television, inspiring future projects focused on real-time synchronization and audience engagement.",
-      "links": { "demo": null, "code": null }
+      "links": {
+        "demo": null,
+        "code": null
+      },
+      "client": "Band",
+      "flow": {
+        "nodes": [
+          {
+            "id": "cms",
+            "label": "Question CMS",
+            "tech": "3,000+ questions · PostgreSQL",
+            "kind": "source"
+          },
+          {
+            "id": "engine",
+            "label": "Game engine",
+            "tech": "C# · rounds, scoring, prizes",
+            "kind": "process"
+          },
+          {
+            "id": "viz",
+            "label": "Vizrt connector",
+            "tech": "TCP socket",
+            "kind": "process"
+          },
+          {
+            "id": "wall",
+            "label": "Studio wall graphics",
+            "tech": "Vizrt",
+            "kind": "output"
+          },
+          {
+            "id": "tp",
+            "label": "Teleprompter",
+            "tech": "Host + contestants",
+            "kind": "output"
+          }
+        ],
+        "edges": [
+          {
+            "from": "cms",
+            "to": "engine"
+          },
+          {
+            "from": "engine",
+            "to": "viz"
+          },
+          {
+            "from": "viz",
+            "to": "wall",
+            "label": "cues"
+          },
+          {
+            "from": "engine",
+            "to": "tp"
+          }
+        ]
+      }
     },
     {
       "id": "riot-telemetry",
@@ -341,13 +678,76 @@
       "summary": "Real-time telemetry system integrating biometric data from players into live eSports broadcasts for Riot Games' CBLOL 2016, connecting Zephyr sensors to Vizrt graphics via custom-built C# software.",
       "type": "freelancer",
       "impact": "Delivered the first human telemetry integration in Brazilian eSports broadcasts, enriching live storytelling under high operational pressure and compliance constraints.",
-      "stack": ["C#", "Bluetooth", "TCP Socket", "UDP", "JSON", "Vizrt", "Zephyr Sensors"],
-      "tags": ["#CSharp", "#Vizrt", "#RealTime", "#Telemetry", "#eSports", "#Innovation"],
+      "stack": [
+        "C#",
+        "Bluetooth",
+        "TCP Socket",
+        "UDP",
+        "JSON",
+        "Vizrt",
+        "Zephyr Sensors"
+      ],
+      "tags": [
+        "#CSharp",
+        "#Vizrt",
+        "#RealTime",
+        "#Telemetry",
+        "#eSports",
+        "#Innovation"
+      ],
       "thumbnail": "/assets/projects/riot-telemetry/banner.jpg",
       "video": "/assets/projects/riot-telemetry/banner.mp4",
       "hasDetailedContent": true,
       "story": "# The Challenge\n\nDuring the **CBLOL 2016** broadcasts, **Riot Games Brasil** aimed to redefine the eSports viewing experience by introducing **human telemetry**—tracking players’ heart rate, breathing, and stress levels—to reveal the physical and emotional intensity behind professional gaming.\n\nThe initiative took place under **significant pressure from Riot’s production leadership**, as audience numbers were at record highs and expectations for innovation were enormous. Furthermore, strict **compliance and operational safety policies** mandated that no system could interfere with gameplay performance or jeopardize the broadcast, even in case of failure.\n\nThe technical environment posed additional challenges: over **2,000 spectators** in the arena, high electromagnetic interference, and numerous wireless devices caused instability in Bluetooth communications.\n\n# The Solution\n\nWorking as a **freelance systems engineer**, I developed a two-part telemetry pipeline connecting **Zephyr biometric sensors** worn by the ten players to the **Vizrt** graphics system operated by **wTVision**. The goal was to stream real-time physiological data safely into the broadcast layer without impacting the competition.\n\nTwo complementary applications were built in **C#**:\n\n1. **Bluetooth Reader (NUC – Under Stage)**  \n   Installed beneath the main stage, this application handled **Bluetooth pairing, decoding, and data normalization** for all ten players’ Zephyr sensors. It managed signal stability and transmitted readings over **TCP Stream**.\n\n2. **Telemetry Controller (Control Room)**  \n   Running from the control room, it received data via TCP, processed and formatted it in **JSON**, and sent it via **UDP** to **Vizrt**, where graphics were updated live on screen. It also functioned as a monitoring dashboard, allowing real-time tracking of player vitals.\n\n![System Diagram](/assets/projects/riot-telemetry/diagram.jpg)\n\n# My Role\n\nI was responsible for designing and coding both systems end-to-end:\n\n- Built the **Bluetooth decoding layer** for Zephyr sensors.\n- Implemented **TCP/UDP communication middleware** to link stage and control room with minimal latency.\n- Developed a **real-time compliance logic** ensuring that signal loss would never impact gameplay or broadcast continuity.\n- Supported **live operations** throughout the event, troubleshooting Bluetooth instability under high interference.\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/riot-telemetry/demo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# The Approach\n\nThe project was executed in **three weeks**, involving close coordination between **Riot Games**, **wTVision**, and the local production crew. The architecture prioritized **redundancy, reliability, and isolation**, ensuring that any sensor or network failure would not affect live performance.\n\nAlthough magnetic noise caused **some instability during the event**, the system remained operational and successfully displayed live biometric data throughout the competition—marking a pioneering moment in Brazilian eSports broadcasting.\n\n# Results\n\n- **First-ever human telemetry integration** in a Brazilian eSports broadcast.\n- **Operational compliance** achieved — no interference with gameplay or broadcast continuity.\n- **Functional real-time data visualization** via Vizrt graphics.\n- **Performance rated as satisfactory** despite expected signal interference.\n- Praised by **Riot Games Brasil** and **wTVision** as an innovative step forward for live eSports production.\n\n![Control Room Screen](/assets/projects/riot-telemetry/screen1.png)",
-      "links": { "demo": null, "code": null }
+      "links": {
+        "demo": null,
+        "code": null
+      },
+      "client": "Riot Games",
+      "flow": {
+        "nodes": [
+          {
+            "id": "sensors",
+            "label": "10 × Zephyr sensors",
+            "tech": "Bluetooth",
+            "kind": "source"
+          },
+          {
+            "id": "reader",
+            "label": "Stage reader",
+            "tech": "C# on NUC · decode, normalise",
+            "kind": "process"
+          },
+          {
+            "id": "ctrl",
+            "label": "Telemetry controller",
+            "tech": "C# · JSON, monitoring",
+            "kind": "process"
+          },
+          {
+            "id": "viz",
+            "label": "Vizrt / wTVision",
+            "tech": "On air",
+            "kind": "output"
+          }
+        ],
+        "edges": [
+          {
+            "from": "sensors",
+            "to": "reader"
+          },
+          {
+            "from": "reader",
+            "to": "ctrl",
+            "label": "TCP stream"
+          },
+          {
+            "from": "ctrl",
+            "to": "viz",
+            "label": "UDP"
+          }
+        ]
+      }
     },
     {
       "id": "blue-marble",
@@ -367,7 +767,13 @@
         "AWS S3",
         "GRIB2"
       ],
-      "tags": ["#Python", "#Geospatial", "#WebMapping", "#DataVisualization", "#GDAL"],
+      "tags": [
+        "#Python",
+        "#Geospatial",
+        "#WebMapping",
+        "#DataVisualization",
+        "#GDAL"
+      ],
       "thumbnail": "/assets/projects/blue-marble/banner.jpg",
       "video": "/assets/projects/blue-marble/banner.mp4",
       "hasDetailedContent": true,
@@ -375,6 +781,69 @@
       "links": {
         "demo": null,
         "code": "https://github.com/ficosta/BlueMarble"
+      },
+      "client": "Personal lab",
+      "flow": {
+        "nodes": [
+          {
+            "id": "gfs",
+            "label": "NOAA GFS",
+            "tech": "GRIB2 forecasts",
+            "kind": "source"
+          },
+          {
+            "id": "decode",
+            "label": "Decode + derive",
+            "tech": "cfgrib · xarray",
+            "kind": "process"
+          },
+          {
+            "id": "proj",
+            "label": "Reproject",
+            "tech": "GDAL · EPSG:3857",
+            "kind": "process"
+          },
+          {
+            "id": "tiles",
+            "label": "Tile render",
+            "tech": "Parallel PNG pyramid",
+            "kind": "process"
+          },
+          {
+            "id": "store",
+            "label": "Tile store",
+            "tech": "S3 / MinIO",
+            "kind": "process"
+          },
+          {
+            "id": "map",
+            "label": "Leaflet map",
+            "tech": "Wind particles",
+            "kind": "output"
+          }
+        ],
+        "edges": [
+          {
+            "from": "gfs",
+            "to": "decode"
+          },
+          {
+            "from": "decode",
+            "to": "proj"
+          },
+          {
+            "from": "proj",
+            "to": "tiles"
+          },
+          {
+            "from": "tiles",
+            "to": "store"
+          },
+          {
+            "from": "store",
+            "to": "map"
+          }
+        ]
       }
     },
     {
@@ -390,7 +859,13 @@
         "Touchscreen Interface",
         "Object-Oriented Design"
       ],
-      "tags": ["#Vizrt", "#GamePhysics", "#VBA", "#BroadcastTech", "#RealTime"],
+      "tags": [
+        "#Vizrt",
+        "#GamePhysics",
+        "#VBA",
+        "#BroadcastTech",
+        "#RealTime"
+      ],
       "thumbnail": "/assets/projects/vizbirds/banner.jpg",
       "video": "/assets/projects/vizbirds/banner.mp4",
       "hasDetailedContent": true,
@@ -398,6 +873,49 @@
       "links": {
         "demo": "/assets/projects/vizbirds/vizbirds.via",
         "code": "https://github.com/ficosta/pythonbirds"
+      },
+      "client": "Vizrt community",
+      "flow": {
+        "nodes": [
+          {
+            "id": "touch",
+            "label": "Touchscreen",
+            "tech": "Aim + launch",
+            "kind": "source"
+          },
+          {
+            "id": "physics",
+            "label": "Physics loop",
+            "tech": "VBA · projectile, collisions",
+            "kind": "process"
+          },
+          {
+            "id": "state",
+            "label": "State machine",
+            "tech": "Active · launched · destroyed",
+            "kind": "process"
+          },
+          {
+            "id": "render",
+            "label": "Viz Artist render",
+            "tech": "Real time",
+            "kind": "output"
+          }
+        ],
+        "edges": [
+          {
+            "from": "touch",
+            "to": "physics"
+          },
+          {
+            "from": "physics",
+            "to": "state"
+          },
+          {
+            "from": "state",
+            "to": "render"
+          }
+        ]
       }
     }
   ]

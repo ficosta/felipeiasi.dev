@@ -3,12 +3,7 @@ export interface SocialLinks {
   linkedin?: string;
   github?: string;
   portfolio?: string;
-  phone?: string;
-}
-
-export interface Skill {
-  name: string;
-  level: number;
+  youtube?: string;
 }
 
 export interface Availability {
@@ -17,31 +12,53 @@ export interface Availability {
   status: string;
 }
 
+export interface StackLayer {
+  layer: string;
+  items: string[];
+}
+
 export interface Profile {
   name: string;
   title: string;
-  subtitle?: string;
+  headline: string;
+  tagline: string;
+  years: string;
+  current: { role: string; company: string };
   summary?: string;
   long_summary?: string;
-  location?: string;
   availability?: Availability;
   avatar: string;
-  glb?: string;
-  tags?: string[];
-  social?: SocialLinks;
-  contacts?: SocialLinks;
+  contacts: SocialLinks;
   languages?: Record<string, string>;
-  skills?: {
-    languages?: Skill[];
-    platforms?: Skill[];
-    design?: Skill[];
-  };
+  stackByLayer: StackLayer[];
+}
+
+export type FlowKind = 'source' | 'process' | 'output';
+
+export interface FlowNode {
+  id: string;
+  label: string;
+  tech?: string;
+  kind: FlowKind;
+}
+
+export interface FlowEdge {
+  from: string;
+  to: string;
+  label?: string;
+}
+
+export interface ProjectFlow {
+  nodes: FlowNode[];
+  edges: FlowEdge[];
 }
 
 export interface Project {
   id: string;
   title: string;
   summary: string;
+  client?: string;
+  featured?: boolean;
   type?: 'freelancer' | 'personal-lab' | 'open-source' | 'collective';
   impact?: string;
   stack?: string[];
@@ -50,6 +67,7 @@ export interface Project {
   video?: string;
   hasDetailedContent?: boolean;
   story?: string;
+  flow?: ProjectFlow;
   links?: {
     code?: string | null;
     demo?: string | null;
@@ -60,8 +78,8 @@ export interface Career {
   period: string;
   role: string;
   company: string;
-  logo?: string;
   location?: string;
+  current?: boolean;
   highlights?: string[];
   tech?: string[];
 }
@@ -70,6 +88,7 @@ export interface Certification {
   name: string;
   issuer: string;
   year: number;
+  featured?: boolean;
   url?: string;
 }
 
@@ -93,11 +112,10 @@ export interface Publication {
 
 export interface SiteData {
   profile: Profile;
-  projects?: Project[];
-  experience?: Career[];
-  career?: Career[];
-  certifications?: Certification[];
-  education?: Education[];
-  presentations?: Presentation[];
-  publications?: Publication[];
+  projects: Project[];
+  experience: Career[];
+  certifications: Certification[];
+  education: Education[];
+  presentations: Presentation[];
+  publications: Publication[];
 }
