@@ -220,6 +220,6 @@ Featured (PGM): CNN Brasil Elections 2026.
 
 ## Backlog
 
-- Add **ograf.dev** to Systems (requested 6 Oct 2026).
-- Add **storyobjectmodel.dev** to Systems (requested 6 Oct 2026).
+- ~~Add ograf.dev, storyobjectmodel.dev, setup.news, apuracao.setup.news, urnas.setup.news to Systems~~ — done 6 Oct 2026 (11 sources; the multiviewer is now 4 columns and widens the first row below the PGM block).
+- Confirm Felipe's role on setup.news and on SOM; the case stories describe the systems, not the role.
 - Highlights for the current Astucemedia role (LinkedIn has none yet).

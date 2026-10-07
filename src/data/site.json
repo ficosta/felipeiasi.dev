@@ -491,6 +491,549 @@
       }
     },
     {
+      "id": "setup-news",
+      "title": "setup.news",
+      "client": "setup.news",
+      "summary": "AI platform for newsrooms: discovery, creation and distribution of news in one cloud ecosystem, joining LLMs, real-time data and broadcast graphics.",
+      "impact": "12 integrated modules, 400+ LLMs under one contract, 55+ databases connected and a 42 ms real-time data flow.",
+      "stack": [
+        "Multi-LLM API layer",
+        "Real-time data platform",
+        "Broadcast graphics",
+        "Vizrt · vMix · Avid integrations",
+        "SSO · audit log"
+      ],
+      "thumbnail": "/assets/projects/setup-news/banner.jpg",
+      "hasDetailedContent": true,
+      "links": {
+        "demo": "https://setup.news",
+        "code": null
+      },
+      "story": "# The platform\n\nsetup.news is an AI platform built around journalistic production. It brings the tools a newsroom needs to **discover**, **create** and **distribute** news into one cloud ecosystem.\n\n### Architecture\n\n- **Data Platform** — real-time feeds and 55+ public and market databases (IBGE, Banco Central, TSE, World Bank, INMET weather, sports statistics), normalised once and served to every module\n- **Multi-LLM layer** — 400+ models (Claude, GPT, Gemini, Grok, DeepSeek and others) behind a single API and a single contract\n- **12 modules** on top: Prompt Press (assistant builder), Transcript, Smart Drive, edge.template (broadcast graphics), edge.engine (overlay/keyer), Magic Wall (interactive studio screen) and more\n- **Integrations** with Ardome, AP, vMix, Avid, Premiere and Vizrt\n\n### Operations\n\n- Data residency in Brazil, Europe or the US\n- SSO, LGPD compliance, role-based access and a complete audit log\n\n# Results\n\n- **42 ms** real-time data flow\n- The data layer behind the CNN Brasil 2026 election pipeline, the Apuração app and the Urnas map",
+      "flow": {
+        "nodes": [
+          {
+            "id": "data",
+            "label": "Public & market data",
+            "kind": "source",
+            "tech": "55+ databases"
+          },
+          {
+            "id": "feeds",
+            "label": "Live feeds",
+            "kind": "source",
+            "tech": "Agencies · sports · weather"
+          },
+          {
+            "id": "platform",
+            "label": "Data Platform",
+            "kind": "process",
+            "tech": "Ingest · normalise · 42 ms"
+          },
+          {
+            "id": "llm",
+            "label": "Multi-LLM layer",
+            "kind": "process",
+            "tech": "400+ models, one API"
+          },
+          {
+            "id": "modules",
+            "label": "Newsroom modules",
+            "kind": "process",
+            "tech": "12 modules"
+          },
+          {
+            "id": "gfx",
+            "label": "Broadcast graphics",
+            "kind": "output",
+            "tech": "edge.template · Vizrt"
+          },
+          {
+            "id": "wall",
+            "label": "Studio Magic Wall",
+            "kind": "output"
+          },
+          {
+            "id": "web",
+            "label": "Web & social",
+            "kind": "output"
+          }
+        ],
+        "edges": [
+          {
+            "from": "data",
+            "to": "platform"
+          },
+          {
+            "from": "feeds",
+            "to": "platform"
+          },
+          {
+            "from": "platform",
+            "to": "llm"
+          },
+          {
+            "from": "llm",
+            "to": "modules"
+          },
+          {
+            "from": "modules",
+            "to": "gfx"
+          },
+          {
+            "from": "modules",
+            "to": "wall"
+          },
+          {
+            "from": "modules",
+            "to": "web"
+          }
+        ]
+      }
+    },
+    {
+      "id": "apuracao-2026",
+      "title": "Apuração 2026",
+      "client": "setup.news",
+      "summary": "Real-time election results app for Brazil 2026: pick races and candidates, get notified the moment results land — served from a CDN mirror of the official TSE files.",
+      "impact": "Official results mirrored to object storage behind a CDN, so readers and newsrooms never hit the TSE directly — including municipal results for 2026 and 2022.",
+      "stack": [
+        "TSE results files",
+        "Mirror service",
+        "Object storage",
+        "Bunny CDN",
+        "Web app"
+      ],
+      "thumbnail": "/assets/projects/apuracao/banner.jpg",
+      "hasDetailedContent": true,
+      "links": {
+        "demo": "https://apuracao.setup.news",
+        "code": null
+      },
+      "story": "# The problem\n\nOn election night everyone hits the same official source at the same time. The TSE publishes results as static JSON files, and it rate-limits heavy readers.\n\n# The solution\n\nApuração reads the TSE once and serves everyone else from a CDN.\n\n- A **mirror service** follows the official result files and copies them into object storage, keeping the TSE's own paths\n- A **CDN pull zone** (`api.apuracao.setup.news`) fronts the bucket, so the web app, newsroom graphics and maps read cached files\n- **Historical layers** sit next to the live ones: 2022 results by municipality and simplified municipal geometry, ready for maps\n\nThe app lets readers choose the races they follow (president, governor by state, candidates by name or number) and notifies them when results come in.\n\n# Results\n\n- Live 2026 results by municipality served without touching the TSE\n- The same feed powers the Urnas map and swing analyses on election night",
+      "flow": {
+        "nodes": [
+          {
+            "id": "tse",
+            "label": "TSE result files",
+            "kind": "source",
+            "tech": "Official JSON"
+          },
+          {
+            "id": "mirror",
+            "label": "Mirror service",
+            "kind": "process",
+            "tech": "Follows + copies files"
+          },
+          {
+            "id": "bucket",
+            "label": "Object storage",
+            "kind": "process",
+            "tech": "Same paths as TSE"
+          },
+          {
+            "id": "cdn",
+            "label": "CDN",
+            "kind": "process",
+            "tech": "api.apuracao.setup.news"
+          },
+          {
+            "id": "app",
+            "label": "Apuração app",
+            "kind": "output",
+            "tech": "Races · alerts"
+          },
+          {
+            "id": "gfx",
+            "label": "Newsroom graphics",
+            "kind": "output"
+          },
+          {
+            "id": "maps",
+            "label": "Maps & analysis",
+            "kind": "output"
+          }
+        ],
+        "edges": [
+          {
+            "from": "tse",
+            "to": "mirror"
+          },
+          {
+            "from": "mirror",
+            "to": "bucket"
+          },
+          {
+            "from": "bucket",
+            "to": "cdn"
+          },
+          {
+            "from": "cdn",
+            "to": "app"
+          },
+          {
+            "from": "cdn",
+            "to": "gfx"
+          },
+          {
+            "from": "cdn",
+            "to": "maps"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ograf",
+      "title": "OGraf.dev",
+      "client": "EBU · OGraf community",
+      "summary": "The community home of OGraf, the EBU's open format for broadcast graphics: one web-native package that plays on any compatible renderer, with no vendor lock-in.",
+      "impact": "v1 stable since September 2025; 10+ tools and renderers; adopters include Adobe, BBC, NRK, Deutsche Welle and CBC.",
+      "stack": [
+        "HTML · CSS · JavaScript",
+        "Web Components",
+        "JSON Schema",
+        "CasparCG",
+        "ograf-server"
+      ],
+      "type": "open-source",
+      "thumbnail": "/assets/projects/ograf/banner.jpg",
+      "hasDetailedContent": true,
+      "links": {
+        "demo": "https://ograf.dev",
+        "code": null
+      },
+      "story": "# Why it matters\n\nBroadcast graphics have always been tied to the engine that renders them. OGraf, an open specification backed by the European Broadcasting Union, changes the unit of exchange: a graphic is a web package that any compliant renderer can play.\n\n# What ograf.dev is\n\nI curate ograf.dev with the OGraf community — the practical entry point to the spec for designers, developers and broadcasters.\n\n- **11 production tutorials**: lower thirds, tickers, quotes and more\n- A map of the **tools and renderers** that already speak OGraf (SPX Graphics, Loopic, SuperFlyTV, StreamShapers, CasparCG, ograf-server)\n- Spec, history and news in English, Portuguese and Spanish\n\n# How a graphic flows\n\nA graphic is a **Web Component** with standard lifecycle methods plus a **JSON Schema** describing its data. It is validated against the EBU schema and then plays on any OGraf renderer — no proprietary runtime.\n\n# Results\n\n- v1 stable since September 2025\n- 10+ tools and renderers\n- Adopters include Adobe, BBC, NRK, Deutsche Welle and CBC",
+      "flow": {
+        "nodes": [
+          {
+            "id": "author",
+            "label": "Graphic author",
+            "kind": "source",
+            "tech": "HTML · CSS · JS"
+          },
+          {
+            "id": "pkg",
+            "label": "OGraf package",
+            "kind": "process",
+            "tech": "Web Component + JSON Schema"
+          },
+          {
+            "id": "validate",
+            "label": "Validation",
+            "kind": "process",
+            "tech": "EBU schema"
+          },
+          {
+            "id": "spx",
+            "label": "SPX · Loopic",
+            "kind": "output"
+          },
+          {
+            "id": "caspar",
+            "label": "CasparCG",
+            "kind": "output"
+          },
+          {
+            "id": "server",
+            "label": "ograf-server",
+            "kind": "output"
+          }
+        ],
+        "edges": [
+          {
+            "from": "author",
+            "to": "pkg"
+          },
+          {
+            "from": "pkg",
+            "to": "validate"
+          },
+          {
+            "from": "validate",
+            "to": "spx"
+          },
+          {
+            "from": "validate",
+            "to": "caspar"
+          },
+          {
+            "from": "validate",
+            "to": "server"
+          }
+        ]
+      }
+    },
+    {
+      "id": "story-object-model",
+      "title": "Story Object Model",
+      "client": "IBC 2026",
+      "summary": "SOM 1.0, an open standard for story context in content production: one publish/subscribe bus where every newsroom tool reads and writes a single, live description of the story.",
+      "impact": "Published at IBC 2026 (12 Sep) with 14 champion organisations — including AP, BBC, NBCUniversal and Reuters — and 17 technology participants.",
+      "stack": [
+        "Publish / subscribe",
+        "JSON Schema",
+        "7 message families",
+        "Skills library",
+        "Apache 2.0 · CC BY 4.0"
+      ],
+      "type": "open-source",
+      "thumbnail": "/assets/projects/som/banner.jpg",
+      "hasDetailedContent": true,
+      "links": {
+        "demo": "https://storyobjectmodel.dev",
+        "code": null
+      },
+      "story": "# The problem\n\nA story lives in many tools at once: planning, rundown, graphics, playout, the MAM. Each holds a slightly different version of what is true, and they keep each other in sync through point-to-point integrations.\n\n# The model\n\nSOM puts one layer underneath those tools. **Tools talk to the story, not to each other.**\n\n- A **publish/subscribe bus** (broker-agnostic) carrying seven JSON message families with permanent schema URLs\n- Three core concepts: **Story**, **Asset** and **Telling**\n- **Full snapshots** — omission means absent, and late joiners receive the complete state\n- A **skills library** that encodes editorial rules once, readable by every tool\n- **Compliance gates** tied to story versions: any hold means held\n- Media travels by reference only; content never rides the bus\n\nSOM does not replace MOS, the NCS or the MAM — it coordinates context above them.\n\n# Results\n\n- SOM 1.0 published at IBC Amsterdam, 12 September 2026\n- Developed in the IBC Accelerator Media Innovation Programme 2026 (SMART STORIES)\n- 14 champion organisations and 17 technology participants",
+      "flow": {
+        "nodes": [
+          {
+            "id": "ncs",
+            "label": "Rundown / NCS",
+            "kind": "source"
+          },
+          {
+            "id": "plan",
+            "label": "Planning",
+            "kind": "source"
+          },
+          {
+            "id": "mam",
+            "label": "MAM",
+            "kind": "source",
+            "tech": "References only"
+          },
+          {
+            "id": "bus",
+            "label": "Story bus",
+            "kind": "process",
+            "tech": "Pub/sub · 7 message families"
+          },
+          {
+            "id": "skills",
+            "label": "Skills",
+            "kind": "process",
+            "tech": "Editorial rules, once"
+          },
+          {
+            "id": "gfx",
+            "label": "Graphics",
+            "kind": "output"
+          },
+          {
+            "id": "playout",
+            "label": "Playout",
+            "kind": "output"
+          },
+          {
+            "id": "gates",
+            "label": "Compliance gates",
+            "kind": "output",
+            "tech": "Any hold = held"
+          }
+        ],
+        "edges": [
+          {
+            "from": "ncs",
+            "to": "bus"
+          },
+          {
+            "from": "plan",
+            "to": "bus"
+          },
+          {
+            "from": "mam",
+            "to": "bus"
+          },
+          {
+            "from": "bus",
+            "to": "skills"
+          },
+          {
+            "from": "skills",
+            "to": "gfx"
+          },
+          {
+            "from": "skills",
+            "to": "playout"
+          },
+          {
+            "from": "skills",
+            "to": "gates"
+          }
+        ]
+      }
+    },
+    {
+      "id": "urnas-2026",
+      "title": "Urnas 2026",
+      "client": "setup.news",
+      "summary": "\"How the ballot boxes draw the country\": the 2026 presidential first round mapped polling place by polling place, rebuilt from the raw ballot-box files and checked against the TSE.",
+      "impact": "93,500 polling places and 497,075 sections, reconciled line by line with the official result — shipped as a static site with a ~1 MB first load.",
+      "stack": [
+        "Python",
+        "ASN.1 ballot decoding",
+        "Parquet",
+        "Leaflet + canvas",
+        "Bunny CDN"
+      ],
+      "thumbnail": "/assets/projects/urnas/banner.jpg",
+      "hasDetailedContent": true,
+      "links": {
+        "demo": "https://urnas.setup.news",
+        "code": null
+      },
+      "story": "# The challenge\n\nOfficial results stop at the municipality. The story of an election is often in the neighbourhood: which schools, which streets, which side of the river. That data exists — every ballot box publishes its own bulletin (BU) — but as hundreds of thousands of small binary files.\n\n# The pipeline\n\n1. **Backup** — batch download of the ballot-box files for every section, with rate steps and a circuit breaker on 429/403 so the TSE is never hammered\n2. **Decode** — an ASN.1 decoder turns each BU into rows (votes and sections) stored as Parquet per state, including sections counted by the backup tally system\n3. **Reconcile** — every state is checked against the official result, line by line, before anything is drawn (technical nulls folded into nulls, uninstalled sections accounted for)\n4. **Geocode** — polling places joined to the TSE location register; abroad, where the register has no coordinates, cities are geocoded by name and country\n5. **Publish** — a light static site: columnar points, detail cards in 183 shards fetched on tap, a custom canvas layer and long-lived CDN caching\n\n# Results\n\n- **93,500** polling places and **497,075** sections on one map\n- Totals that match the official TSE result\n- ~1 MB gzipped first load on mobile",
+      "flow": {
+        "nodes": [
+          {
+            "id": "bu",
+            "label": "Ballot-box files",
+            "kind": "source",
+            "tech": "BU per section · TSE"
+          },
+          {
+            "id": "places",
+            "label": "Polling places",
+            "kind": "source",
+            "tech": "TSE open data"
+          },
+          {
+            "id": "decode",
+            "label": "Backup + decode",
+            "kind": "process",
+            "tech": "ASN.1 → Parquet"
+          },
+          {
+            "id": "check",
+            "label": "Reconcile",
+            "kind": "process",
+            "tech": "vs official result"
+          },
+          {
+            "id": "build",
+            "label": "Static build",
+            "kind": "process",
+            "tech": "Columnar · 183 shards"
+          },
+          {
+            "id": "cdn",
+            "label": "CDN",
+            "kind": "process",
+            "tech": "Bunny · 1-year cache"
+          },
+          {
+            "id": "map",
+            "label": "Map",
+            "kind": "output",
+            "tech": "Canvas layer · mobile"
+          }
+        ],
+        "edges": [
+          {
+            "from": "bu",
+            "to": "decode"
+          },
+          {
+            "from": "places",
+            "to": "build"
+          },
+          {
+            "from": "decode",
+            "to": "check"
+          },
+          {
+            "from": "check",
+            "to": "build"
+          },
+          {
+            "from": "build",
+            "to": "cdn"
+          },
+          {
+            "from": "cdn",
+            "to": "map"
+          }
+        ]
+      }
+    },
+    {
+      "id": "riot-telemetry",
+      "title": "Riot Games – CBLOL Telemetry 2016",
+      "summary": "Real-time telemetry system integrating biometric data from players into live eSports broadcasts for Riot Games' CBLOL 2016, connecting Zephyr sensors to Vizrt graphics via custom-built C# software.",
+      "type": "freelancer",
+      "impact": "Delivered the first human telemetry integration in Brazilian eSports broadcasts, enriching live storytelling under high operational pressure and compliance constraints.",
+      "stack": [
+        "C#",
+        "Bluetooth",
+        "TCP Socket",
+        "UDP",
+        "JSON",
+        "Vizrt",
+        "Zephyr Sensors"
+      ],
+      "tags": [
+        "#CSharp",
+        "#Vizrt",
+        "#RealTime",
+        "#Telemetry",
+        "#eSports",
+        "#Innovation"
+      ],
+      "thumbnail": "/assets/projects/riot-telemetry/banner.jpg",
+      "video": "/assets/projects/riot-telemetry/banner.mp4",
+      "hasDetailedContent": true,
+      "story": "# The Challenge\n\nDuring the **CBLOL 2016** broadcasts, **Riot Games Brasil** aimed to redefine the eSports viewing experience by introducing **human telemetry**—tracking players’ heart rate, breathing, and stress levels—to reveal the physical and emotional intensity behind professional gaming.\n\nThe initiative took place under **significant pressure from Riot’s production leadership**, as audience numbers were at record highs and expectations for innovation were enormous. Furthermore, strict **compliance and operational safety policies** mandated that no system could interfere with gameplay performance or jeopardize the broadcast, even in case of failure.\n\nThe technical environment posed additional challenges: over **2,000 spectators** in the arena, high electromagnetic interference, and numerous wireless devices caused instability in Bluetooth communications.\n\n# The Solution\n\nWorking as a **freelance systems engineer**, I developed a two-part telemetry pipeline connecting **Zephyr biometric sensors** worn by the ten players to the **Vizrt** graphics system operated by **wTVision**. The goal was to stream real-time physiological data safely into the broadcast layer without impacting the competition.\n\nTwo complementary applications were built in **C#**:\n\n1. **Bluetooth Reader (NUC – Under Stage)**  \n   Installed beneath the main stage, this application handled **Bluetooth pairing, decoding, and data normalization** for all ten players’ Zephyr sensors. It managed signal stability and transmitted readings over **TCP Stream**.\n\n2. **Telemetry Controller (Control Room)**  \n   Running from the control room, it received data via TCP, processed and formatted it in **JSON**, and sent it via **UDP** to **Vizrt**, where graphics were updated live on screen. It also functioned as a monitoring dashboard, allowing real-time tracking of player vitals.\n\n![System Diagram](/assets/projects/riot-telemetry/diagram.jpg)\n\n# My Role\n\nI was responsible for designing and coding both systems end-to-end:\n\n- Built the **Bluetooth decoding layer** for Zephyr sensors.\n- Implemented **TCP/UDP communication middleware** to link stage and control room with minimal latency.\n- Developed a **real-time compliance logic** ensuring that signal loss would never impact gameplay or broadcast continuity.\n- Supported **live operations** throughout the event, troubleshooting Bluetooth instability under high interference.\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/riot-telemetry/demo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# The Approach\n\nThe project was executed in **three weeks**, involving close coordination between **Riot Games**, **wTVision**, and the local production crew. The architecture prioritized **redundancy, reliability, and isolation**, ensuring that any sensor or network failure would not affect live performance.\n\nAlthough magnetic noise caused **some instability during the event**, the system remained operational and successfully displayed live biometric data throughout the competition—marking a pioneering moment in Brazilian eSports broadcasting.\n\n# Results\n\n- **First-ever human telemetry integration** in a Brazilian eSports broadcast.\n- **Operational compliance** achieved — no interference with gameplay or broadcast continuity.\n- **Functional real-time data visualization** via Vizrt graphics.\n- **Performance rated as satisfactory** despite expected signal interference.\n- Praised by **Riot Games Brasil** and **wTVision** as an innovative step forward for live eSports production.\n\n![Control Room Screen](/assets/projects/riot-telemetry/screen1.png)",
+      "links": {
+        "demo": null,
+        "code": null
+      },
+      "client": "Riot Games",
+      "flow": {
+        "nodes": [
+          {
+            "id": "sensors",
+            "label": "10 × Zephyr sensors",
+            "tech": "Bluetooth",
+            "kind": "source"
+          },
+          {
+            "id": "reader",
+            "label": "Stage reader",
+            "tech": "C# on NUC · decode, normalise",
+            "kind": "process"
+          },
+          {
+            "id": "ctrl",
+            "label": "Telemetry controller",
+            "tech": "C# · JSON, monitoring",
+            "kind": "process"
+          },
+          {
+            "id": "viz",
+            "label": "Vizrt / wTVision",
+            "tech": "On air",
+            "kind": "output"
+          }
+        ],
+        "edges": [
+          {
+            "from": "sensors",
+            "to": "reader"
+          },
+          {
+            "from": "reader",
+            "to": "ctrl",
+            "label": "TCP stream"
+          },
+          {
+            "from": "ctrl",
+            "to": "viz",
+            "label": "UDP"
+          }
+        ]
+      }
+    },
+    {
       "id": "teaserfly",
       "title": "Teaserfly",
       "summary": "AI-powered teaser automation for BILD platforms, built inside Axel Springer's product and innovation team.",
@@ -668,83 +1211,6 @@
           {
             "from": "engine",
             "to": "tp"
-          }
-        ]
-      }
-    },
-    {
-      "id": "riot-telemetry",
-      "title": "Riot Games – CBLOL Telemetry 2016",
-      "summary": "Real-time telemetry system integrating biometric data from players into live eSports broadcasts for Riot Games' CBLOL 2016, connecting Zephyr sensors to Vizrt graphics via custom-built C# software.",
-      "type": "freelancer",
-      "impact": "Delivered the first human telemetry integration in Brazilian eSports broadcasts, enriching live storytelling under high operational pressure and compliance constraints.",
-      "stack": [
-        "C#",
-        "Bluetooth",
-        "TCP Socket",
-        "UDP",
-        "JSON",
-        "Vizrt",
-        "Zephyr Sensors"
-      ],
-      "tags": [
-        "#CSharp",
-        "#Vizrt",
-        "#RealTime",
-        "#Telemetry",
-        "#eSports",
-        "#Innovation"
-      ],
-      "thumbnail": "/assets/projects/riot-telemetry/banner.jpg",
-      "video": "/assets/projects/riot-telemetry/banner.mp4",
-      "hasDetailedContent": true,
-      "story": "# The Challenge\n\nDuring the **CBLOL 2016** broadcasts, **Riot Games Brasil** aimed to redefine the eSports viewing experience by introducing **human telemetry**—tracking players’ heart rate, breathing, and stress levels—to reveal the physical and emotional intensity behind professional gaming.\n\nThe initiative took place under **significant pressure from Riot’s production leadership**, as audience numbers were at record highs and expectations for innovation were enormous. Furthermore, strict **compliance and operational safety policies** mandated that no system could interfere with gameplay performance or jeopardize the broadcast, even in case of failure.\n\nThe technical environment posed additional challenges: over **2,000 spectators** in the arena, high electromagnetic interference, and numerous wireless devices caused instability in Bluetooth communications.\n\n# The Solution\n\nWorking as a **freelance systems engineer**, I developed a two-part telemetry pipeline connecting **Zephyr biometric sensors** worn by the ten players to the **Vizrt** graphics system operated by **wTVision**. The goal was to stream real-time physiological data safely into the broadcast layer without impacting the competition.\n\nTwo complementary applications were built in **C#**:\n\n1. **Bluetooth Reader (NUC – Under Stage)**  \n   Installed beneath the main stage, this application handled **Bluetooth pairing, decoding, and data normalization** for all ten players’ Zephyr sensors. It managed signal stability and transmitted readings over **TCP Stream**.\n\n2. **Telemetry Controller (Control Room)**  \n   Running from the control room, it received data via TCP, processed and formatted it in **JSON**, and sent it via **UDP** to **Vizrt**, where graphics were updated live on screen. It also functioned as a monitoring dashboard, allowing real-time tracking of player vitals.\n\n![System Diagram](/assets/projects/riot-telemetry/diagram.jpg)\n\n# My Role\n\nI was responsible for designing and coding both systems end-to-end:\n\n- Built the **Bluetooth decoding layer** for Zephyr sensors.\n- Implemented **TCP/UDP communication middleware** to link stage and control room with minimal latency.\n- Developed a **real-time compliance logic** ensuring that signal loss would never impact gameplay or broadcast continuity.\n- Supported **live operations** throughout the event, troubleshooting Bluetooth instability under high interference.\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/riot-telemetry/demo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# The Approach\n\nThe project was executed in **three weeks**, involving close coordination between **Riot Games**, **wTVision**, and the local production crew. The architecture prioritized **redundancy, reliability, and isolation**, ensuring that any sensor or network failure would not affect live performance.\n\nAlthough magnetic noise caused **some instability during the event**, the system remained operational and successfully displayed live biometric data throughout the competition—marking a pioneering moment in Brazilian eSports broadcasting.\n\n# Results\n\n- **First-ever human telemetry integration** in a Brazilian eSports broadcast.\n- **Operational compliance** achieved — no interference with gameplay or broadcast continuity.\n- **Functional real-time data visualization** via Vizrt graphics.\n- **Performance rated as satisfactory** despite expected signal interference.\n- Praised by **Riot Games Brasil** and **wTVision** as an innovative step forward for live eSports production.\n\n![Control Room Screen](/assets/projects/riot-telemetry/screen1.png)",
-      "links": {
-        "demo": null,
-        "code": null
-      },
-      "client": "Riot Games",
-      "flow": {
-        "nodes": [
-          {
-            "id": "sensors",
-            "label": "10 × Zephyr sensors",
-            "tech": "Bluetooth",
-            "kind": "source"
-          },
-          {
-            "id": "reader",
-            "label": "Stage reader",
-            "tech": "C# on NUC · decode, normalise",
-            "kind": "process"
-          },
-          {
-            "id": "ctrl",
-            "label": "Telemetry controller",
-            "tech": "C# · JSON, monitoring",
-            "kind": "process"
-          },
-          {
-            "id": "viz",
-            "label": "Vizrt / wTVision",
-            "tech": "On air",
-            "kind": "output"
-          }
-        ],
-        "edges": [
-          {
-            "from": "sensors",
-            "to": "reader"
-          },
-          {
-            "from": "reader",
-            "to": "ctrl",
-            "label": "TCP stream"
-          },
-          {
-            "from": "ctrl",
-            "to": "viz",
-            "label": "UDP"
           }
         ]
       }
