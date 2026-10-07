@@ -25,6 +25,11 @@ const markdownComponents: Components = {
   },
 };
 
+// Live sites show their host name; local files (e.g. a .via scene) are downloads.
+function demoLabel(url: string) {
+  return /^https?:\/\//.test(url) ? new URL(url).host : 'Download';
+}
+
 const FOCUSABLE = 'a[href], button, video[controls], [tabindex]:not([tabindex="-1"])';
 
 function useDialogBehaviour(ref: React.RefObject<HTMLDivElement | null>, onClose: () => void) {
@@ -134,7 +139,7 @@ export default function CaseFile({ project, onClose }: CaseFileProps) {
                   {project.links?.demo && (
                     <li>
                       <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">
-                        Demo / download ↗
+                        {demoLabel(project.links.demo)} ↗
                       </a>
                     </li>
                   )}
