@@ -17,10 +17,20 @@ describe('site.json', () => {
     }
   });
 
-  it('marks exactly one current role, listed first', () => {
-    const current = data.experience.filter((e) => e.current);
-    expect(current).toHaveLength(1);
-    expect(data.experience[0].current).toBe(true);
+  it('lists current roles before past ones', () => {
+    const firstPast = data.experience.findIndex((e) => !e.current);
+    expect(firstPast).toBeGreaterThan(0);
+    expect(data.experience.slice(firstPast).some((e) => e.current)).toBe(false);
+  });
+
+  it('only labels real certifications as certifications', () => {
+    const certs = data.certifications.filter((c) => c.kind === 'certification').map((c) => c.name);
+    expect(certs.sort()).toEqual(['LINUX LPI 2', 'Viz Artist Designer']);
+    expect(data.certifications.every((c) => c.kind)).toBe(true);
+  });
+
+  it('never uses an em dash (house style: commas, colons or an en dash for ranges)', () => {
+    expect(JSON.stringify(site)).not.toContain('\u2014');
   });
 
   it('has the positioning fields the hero needs', () => {

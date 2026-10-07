@@ -10,7 +10,7 @@
       ],
       "status": "Eligible and available to work freely across the EU and LATAM regions."
     },
-    "summary": "Solutions architect for broadcast and media technology. 18+ years in live sports, news and digital production — from on-air graphics to AI-driven workflows.",
+    "summary": "Solutions architect for broadcast and media technology. 18+ years in live sports, news and digital production, from on-air graphics to AI-driven workflows.",
     "long_summary": "I started in broadcast graphics and ended up designing the systems around them: data pipelines that feed election nights, control software for live shows, and the bridges between legacy broadcast infrastructure and cloud, API-driven and AI tooling.",
     "contacts": {
       "email": "felipeiasi@gmail.com",
@@ -23,11 +23,11 @@
       "Portuguese": "Native",
       "English": "Full Professional",
       "German": "Basic (A2)",
-      "Spanish": "Conversational"
+      "Spanish": "Conversational (B1)"
     },
     "avatar": "/assets/avatar.jpg",
     "headline": "Broadcast Solutions Architect",
-    "tagline": "I design the real-time systems behind live sports, news and elections — where the data has to be right the second it airs.",
+    "tagline": "I design the real-time systems behind live sports, news and elections, where the data has to be right the second it airs.",
     "years": "18+",
     "current": {
       "role": "Broadcast Solutions Architect · Team Lead",
@@ -87,74 +87,81 @@
     {
       "role": "Broadcast Solutions Architect · Team Lead",
       "company": "Astucemedia",
-      "location": "Remote, Spain",
+      "location": "Remote",
       "period": "Jul 2026 – Present",
-      "current": true
+      "current": true,
+      "highlights": [
+        "Architects real-time financial market data integrations for tier-1 broadcast clients in the US and Europe: ingestion, normalisation, API integration and the rendering layer that puts the data on air",
+        "Defines integration requirements with clients and leads delivery across data, development and operations teams"
+      ]
     },
     {
-      "role": "Head of Product and Innovation",
-      "company": "Axel Springer / Bild",
-      "location": "Berlin, Germany",
-      "period": "Sep 2023 – May 2026",
+      "role": "Managing Partner",
+      "company": "setup.news",
+      "location": "Brazil · remote",
+      "period": "Jul 2025 – Present",
+      "current": true,
       "highlights": [
-        "Architected AI-driven content automation and layout generation for digital and print",
-        "Bridged legacy broadcast infrastructure with cloud-based, API-driven systems",
-        "Designed a web-based studio production concept to cut costs and streamline operations",
-        "Led a cross-functional team of developers, designers and media engineers"
+        "Architected a modular, API-first platform for real-time data and AI: live ingestion, data platform, API gateway and automated delivery to real-time rendering, web and mobile",
+        "AI agents for news media: an MCP server in TypeScript connecting LLM agents to newsroom systems and live data, an AI cockpit for editorial workflows, and speech transcription",
+        "Telemetry architectures for motorsport, including Copa Truck vehicle telemetry and a UDP telemetry bridge; GPS data-collection hardware integrated into real-time pipelines",
+        "Solution concepts, proposals and demos for broadcasters, including the CNN Brasil elections data platform and interactive data walls"
       ],
       "tech": [
-        "Node.js",
+        "TypeScript",
+        "MCP",
+        "SSE",
+        "MQTT",
+        "WebSocket",
+        "AWS"
+      ]
+    },
+    {
+      "role": "Head of Product & Innovation",
+      "company": "Axel Springer / Bild",
+      "location": "Berlin, Germany",
+      "period": "Nov 2020 – May 2026",
+      "steps": [
+        {
+          "role": "Head of Product & Innovation",
+          "period": "Sep 2023 – May 2026"
+        },
+        {
+          "role": "Head of Real Time Broadcast Design Team",
+          "period": "Aug 2021 – Jan 2024"
+        },
+        {
+          "role": "Motion Design Team Lead",
+          "period": "Nov 2020 – Jan 2022"
+        }
+      ],
+      "highlights": [
+        "Owned BILDPlay, a €950K end-to-end video platform from architecture and budget to handover: 4 studios, centralised control room, ST 2110 and 12G-SDI, 4K media asset management, playout and cloud distribution; selected and coordinated around 10 vendors",
+        "BILDPlay runs 4 FAST channels 24/7 with 5M+ media loads per day",
+        "Produced the CAD cabling drawings and supervised hardware installation of studios and control room through to operational readiness",
+        "Led the start of the BILD AI Lab: use cases with editorial and business teams, AI training for newsroom, video and design teams",
+        "Real-time data pipeline for German election coverage on DPA results feeds: sub-second updates, validation rules and a live correction fallback",
+        "Live results, medal and schedule data for Tokyo 2020, Paris 2024 and Milano Cortina 2026",
+        "Founded the real-time graphics team from scratch with 5 FTE and 20 freelancers and zero turnover, and introduced Unreal Engine into news production"
+      ],
+      "tech": [
+        "ST 2110",
+        "12G-SDI",
+        "MAM",
+        "FAST",
         "AWS",
-        "AI",
-        "Docker"
-      ]
-    },
-    {
-      "role": "Head of Real Time Broadcast Design Team",
-      "company": "Axel Springer / Bild",
-      "location": "Berlin, Germany",
-      "period": "Aug 2021 – Jan 2024",
-      "highlights": [
-        "Built and led a Vizrt team of 5+ designers and 20+ freelancers, with zero turnover",
-        "Delivered a virtual set for the Ukraine war coverage with Unreal and Aximmetry in one week",
-        "Live graphics for the British coronation, German and US elections, COVID-19 and virtual sets"
-      ],
-      "tech": [
-        "Vizrt",
         "Unreal Engine",
-        "Aximmetry"
+        "Vizrt"
       ]
     },
     {
-      "role": "Motion Design Team Lead",
-      "company": "Axel Springer / Bild",
-      "location": "Berlin, Germany",
-      "period": "Nov 2020 – Jan 2022",
-      "highlights": [
-        "Introduced a design system for live graphics",
-        "Moved legacy Vizrt projects to modular templates"
-      ]
-    },
-    {
-      "role": "Real Time GFX Consultant",
-      "company": "Garena — Free Fire",
-      "location": "São Paulo, Brazil",
-      "period": "Jul 2020 – Dec 2020",
-      "highlights": [
-        "Real-time broadcast graphics for eSports streams",
-        "Integrated Unreal and Vizrt pipelines"
-      ]
-    },
-    {
-      "role": "Vizrt Consultant & Designer",
+      "role": "On-Air Graphics Lead, network launch",
       "company": "CNN Brasil",
       "location": "São Paulo, Brazil",
       "period": "Aug 2020 – Nov 2020",
       "highlights": [
-        "Launched the network's on-air graphics, based on CNN Atlanta, with Transition Logic and Pilot Edge",
-        "Set up Vizrt systems and backup workflows with the engineering team",
-        "Built automated election graphics, the finance crawl and the NBA package",
-        "Trained a new team of 3 designers and 10 operators"
+        "Freelance. Architected the on-air graphics system from scratch for the network launch, aligned with the CNN Atlanta reference design",
+        "Trained 3 designers and 10 operators"
       ],
       "tech": [
         "Vizrt",
@@ -163,79 +170,54 @@
       ]
     },
     {
-      "role": "Real Time GFX Team Lead",
+      "role": "Real-Time Graphics & Systems Coordinator",
       "company": "Grupo Bandeirantes",
       "location": "São Paulo, Brazil",
       "period": "Dec 2013 – Nov 2020",
       "highlights": [
-        "Yearly Vizrt graphics packages for Brazilian football, UEFA and motorsport",
-        "On site for the 2016 Rio Olympics graphics integration; led the 2014 Winter Olympics package",
-        "Integrated Twitter into the MasterChef Brasil broadcast — 1.2M tweets in the 2015 final, innovation award",
-        "Standardised graphics production across national affiliates"
+        "Standardised the production systems architecture across all regional affiliates nationwide",
+        "Integrated third-party timing and scoring (WTVision) with real-time rendering for live motorsport, Brazilian football and UEFA; on site at the Rio 2016 Olympic Games",
+        "Live social media integration for the MasterChef Brasil final in 2015: 1.2M tweets processed, industry innovation prize"
       ]
     },
     {
-      "role": "Developer — Systems Integration & R&D",
+      "role": "Developer: R&D, Automation & Systems Integration",
       "company": "dBOTZ",
       "location": "São Paulo, Brazil",
       "period": "Dec 2010 – Jan 2015",
       "highlights": [
-        "New technologies and systems integration for television graphics"
+        "R&D in automation and mechatronics: designed and integrated hardware and software to automate live production, from device control and sensors to custom software"
       ]
     },
     {
-      "role": "Avid / ORAD Senior Designer",
-      "company": "Rede Record",
+      "role": "Earlier broadcast roles",
+      "company": "Record · MTV · Band · RedeTV! · Garena",
       "location": "São Paulo, Brazil",
-      "period": "Sep 2008 – Dec 2013",
+      "period": "2006 – 2020",
       "highlights": [
-        "Interfaces for graphics automation in .NET and Java",
-        "ORAD 3Designer and virtual sets"
-      ]
-    },
-    {
-      "role": "Real Time GFX Designer",
-      "company": "MTV Brasil",
-      "location": "São Paulo, Brazil",
-      "period": "2009 – 2012",
-      "highlights": [
-        "3D interactive graphics for live and recorded programmes"
-      ]
-    },
-    {
-      "role": "Real Time GFX Designer",
-      "company": "Rede Bandeirantes",
-      "location": "São Paulo, Brazil",
-      "period": "Feb 2008 – Sep 2008",
-      "highlights": [
-        "Virtual sets and graphics automation interfaces (Viz Artist, Trio, Pilot; .NET)"
-      ]
-    },
-    {
-      "role": "Production & Art Assistant",
-      "company": "RedeTV!",
-      "location": "São Paulo, Brazil",
-      "period": "Feb 2006 – Feb 2008",
-      "highlights": [
-        "News infographics and accident reconstructions"
+        "Rede Record, 2008 – 2013: on site at Guadalajara 2011 and London 2012",
+        "Garena / Free Fire, 2020: real-time graphics for eSports",
+        "MTV Brasil, 2009 – 2012",
+        "Rede Bandeirantes, 2008",
+        "RedeTV!, 2006 – 2008"
       ]
     }
   ],
   "education": [
     {
-      "degree": "Bachelor’s in Social Communication with Emphasis in Digital Design",
-      "institution": "Centro Universitário Ibero Americano de São Paulo",
-      "years": "2006 – 2010"
-    },
-    {
       "degree": "Computer Science (Business Management Emphasis)",
-      "institution": "Faculdade de Tecnologia de São Paulo — FATEC-SP",
+      "institution": "Faculdade de Tecnologia de São Paulo (FATEC-SP)",
       "years": "2003 – 2004"
     },
     {
       "degree": "Specialization in Mechatronics",
       "institution": "Impacta Tecnologia",
       "years": "2012 – 2014"
+    },
+    {
+      "degree": "Bachelor’s in Social Communication with Emphasis in Digital Design",
+      "institution": "Centro Universitário Ibero Americano de São Paulo",
+      "years": "2006 – 2010"
     }
   ],
   "certifications": [
@@ -243,119 +225,143 @@
       "name": "AI Agentic Engineer: Complete Agent & MCP",
       "issuer": "Ed Donner, Ligency Team",
       "year": 2025,
+      "kind": "course",
       "featured": true
     },
     {
       "name": "Generative AI Developer",
       "issuer": "Hugging Face",
-      "year": 2025
+      "year": 2025,
+      "kind": "course"
     },
     {
       "name": "Build AI-Powered Apps",
       "issuer": "Code with Mosh",
-      "year": 2025
+      "year": 2025,
+      "kind": "course"
     },
     {
       "name": "AWS Solutions Architect Associate",
       "issuer": "Andre Iacono",
       "year": 2024,
+      "kind": "course",
       "featured": true
     },
     {
       "name": "Scrum Project Management with Jira",
       "issuer": "SquadHub Academy",
-      "year": 2024
+      "year": 2024,
+      "kind": "course"
     },
     {
       "name": "CompTIA Network+ Full Course",
       "issuer": "Jason Dion, Dion Training",
-      "year": 2024
+      "year": 2024,
+      "kind": "course"
     },
     {
       "name": "Node.js Complete: MVC, REST APIs, GraphQL",
       "issuer": "Academind by Maximilian",
-      "year": 2024
+      "year": 2024,
+      "kind": "course"
     },
     {
       "name": "D3.js Data Visualization",
       "issuer": "Vincent Gomez",
-      "year": 2024
+      "year": 2024,
+      "kind": "course"
     },
     {
       "name": "React 18: Intermediate Topics",
       "issuer": "Code with Mosh",
-      "year": 2023
+      "year": 2023,
+      "kind": "course"
     },
     {
       "name": "The Ultimate TypeScript Course",
       "issuer": "Code with Mosh",
-      "year": 2023
+      "year": 2023,
+      "kind": "course"
     },
     {
       "name": "Backend REST API with Python & Django",
       "issuer": "Mark Winterbottom",
-      "year": 2023
+      "year": 2023,
+      "kind": "course"
     },
     {
       "name": "User Experience Design Fundamentals",
       "issuer": "Joe Natoli",
-      "year": 2023
+      "year": 2023,
+      "kind": "course"
     },
     {
       "name": "React.js Ninja: React + Webpack Mastery",
       "issuer": "Fernando Daciuk",
-      "year": 2023
+      "year": 2023,
+      "kind": "course"
     },
     {
       "name": "UNREAL Engine Learning for Tomorrow – EMEA",
       "issuer": "Epic Games",
-      "year": 2022
+      "year": 2022,
+      "kind": "course"
     },
     {
       "name": "Unreal Engine 4: Blueprint Fundamentals",
       "issuer": "Luccas Schmigel",
-      "year": 2020
+      "year": 2020,
+      "kind": "course"
     },
     {
       "name": "Unreal Engine 4: Material Shaders Essentials",
       "issuer": "Daniel Orchard",
-      "year": 2020
+      "year": 2020,
+      "kind": "course"
     },
     {
       "name": "Unreal Engine 4: VFX for Games",
       "issuer": "Bradley Wascher",
-      "year": 2020
+      "year": 2020,
+      "kind": "course"
     },
     {
       "name": "Unreal Engine 4: Lighting Mastery",
       "issuer": "Bradley Wascher",
-      "year": 2020
+      "year": 2020,
+      "kind": "course"
     },
     {
       "name": "Unreal Engine 4: Composition & Rendering",
       "issuer": "Luccas Schmigel",
-      "year": 2020
+      "year": 2020,
+      "kind": "course"
     },
     {
       "name": "PyTorch and Machine Learning Intro",
       "issuer": "Aakash N S",
-      "year": 2019
+      "year": 2019,
+      "kind": "course"
     },
     {
       "name": "Python Computer Vision with OpenCV & Deep Learning",
       "issuer": "Jose Portilla, Pierian Training",
-      "year": 2018
+      "year": 2018,
+      "kind": "course"
     },
     {
       "name": "Viz Artist Designer",
       "issuer": "Vizrt",
       "year": 2018,
+      "kind": "certification",
       "featured": true
     },
     {
       "name": "LINUX LPI 2",
       "issuer": "Linux Professional Institute",
-      "year": 2017
+      "year": 2017,
+      "kind": "certification",
+      "featured": true
     }
   ],
   "presentations": [
@@ -366,25 +372,31 @@
       "type": "Talk"
     },
     {
-      "title": "Fastchannels Next Steps",
+      "title": "How to choose a MAM",
+      "event": "EBU",
+      "year": 2024,
+      "type": "Article"
+    },
+    {
+      "title": "FAST channels: next steps",
       "event": "AWS",
       "year": 2024,
-      "type": "Talk"
+      "type": "Article"
     },
     {
       "title": "Unreal into News Media",
       "event": "Axel Springer",
       "year": 2024,
-      "type": "Talk"
+      "type": "Article"
     }
   ],
   "publications": [
     {
-      "title": "Larry and TV — Best Friends",
+      "title": "Larry and TV: Best Friends",
       "year": 2018
     },
     {
-      "title": "Second Screen — Bola Rolando",
+      "title": "Second Screen: Bola Rolando",
       "year": 2019
     },
     {
@@ -509,7 +521,7 @@
         "demo": "https://setup.news",
         "code": null
       },
-      "story": "# The platform\n\nsetup.news is an AI platform built around journalistic production. It brings the tools a newsroom needs to **discover**, **create** and **distribute** news into one cloud ecosystem.\n\n### Architecture\n\n- **Data Platform** — real-time feeds and 55+ public and market databases (IBGE, Banco Central, TSE, World Bank, INMET weather, sports statistics), normalised once and served to every module\n- **Multi-LLM layer** — 400+ models (Claude, GPT, Gemini, Grok, DeepSeek and others) behind a single API and a single contract\n- **12 modules** on top: Prompt Press (assistant builder), Transcript, Smart Drive, edge.template (broadcast graphics), edge.engine (overlay/keyer), Magic Wall (interactive studio screen) and more\n- **Integrations** with Ardome, AP, vMix, Avid, Premiere and Vizrt\n\n### Operations\n\n- Data residency in Brazil, Europe or the US\n- SSO, LGPD compliance, role-based access and a complete audit log\n\n# Results\n\n- **42 ms** real-time data flow\n- The data layer behind the CNN Brasil 2026 election pipeline, the Apuração app and the Urnas map",
+      "story": "# The platform\n\nsetup.news is an AI platform built around journalistic production. It brings the tools a newsroom needs to **discover**, **create** and **distribute** news into one cloud ecosystem.\n\n### Architecture\n\n- **Data Platform**: real-time feeds and 55+ public and market databases (IBGE, Banco Central, TSE, World Bank, INMET weather, sports statistics), normalised once and served to every module\n- **Multi-LLM layer**: 400+ models (Claude, GPT, Gemini, Grok, DeepSeek and others) behind a single API and a single contract\n- **12 modules** on top: Prompt Press (assistant builder), Transcript, Smart Drive, edge.template (broadcast graphics), edge.engine (overlay/keyer), Magic Wall (interactive studio screen) and more\n- **Integrations** with Ardome, AP, vMix, Avid, Premiere and Vizrt\n\n### Operations\n\n- Data residency in Brazil, Europe or the US\n- SSO, LGPD compliance, role-based access and a complete audit log\n\n# Results\n\n- **42 ms** real-time data flow\n- The data layer behind the CNN Brasil 2026 election pipeline, the Apuração app and the Urnas map",
       "flow": {
         "nodes": [
           {
@@ -595,8 +607,8 @@
       "id": "apuracao-2026",
       "title": "Apuração 2026",
       "client": "setup.news",
-      "summary": "Real-time election results app for Brazil 2026: pick races and candidates, get notified the moment results land — served from a CDN mirror of the official TSE files.",
-      "impact": "Official results mirrored to object storage behind a CDN, so readers and newsrooms never hit the TSE directly — including municipal results for 2026 and 2022.",
+      "summary": "Real-time election results app for Brazil 2026: pick races and candidates, get notified the moment results land, served from a CDN mirror of the official TSE files.",
+      "impact": "Official results mirrored to object storage behind a CDN, so readers and newsrooms never hit the TSE directly, including municipal results for 2026 and 2022.",
       "stack": [
         "TSE results files",
         "Mirror service",
@@ -702,7 +714,7 @@
         "demo": "https://ograf.dev",
         "code": null
       },
-      "story": "# Why it matters\n\nBroadcast graphics have always been tied to the engine that renders them. OGraf, an open specification backed by the European Broadcasting Union, changes the unit of exchange: a graphic is a web package that any compliant renderer can play.\n\n# What ograf.dev is\n\nI curate ograf.dev with the OGraf community — the practical entry point to the spec for designers, developers and broadcasters.\n\n- **11 production tutorials**: lower thirds, tickers, quotes and more\n- A map of the **tools and renderers** that already speak OGraf (SPX Graphics, Loopic, SuperFlyTV, StreamShapers, CasparCG, ograf-server)\n- Spec, history and news in English, Portuguese and Spanish\n\n# How a graphic flows\n\nA graphic is a **Web Component** with standard lifecycle methods plus a **JSON Schema** describing its data. It is validated against the EBU schema and then plays on any OGraf renderer — no proprietary runtime.\n\n# Results\n\n- v1 stable since September 2025\n- 10+ tools and renderers\n- Adopters include Adobe, BBC, NRK, Deutsche Welle and CBC",
+      "story": "# Why it matters\n\nBroadcast graphics have always been tied to the engine that renders them. OGraf, an open specification backed by the European Broadcasting Union, changes the unit of exchange: a graphic is a web package that any compliant renderer can play.\n\n# What ograf.dev is\n\nI curate ograf.dev with the OGraf community. It is the practical entry point to the spec for designers, developers and broadcasters.\n\n- **11 production tutorials**: lower thirds, tickers, quotes and more\n- A map of the **tools and renderers** that already speak OGraf (SPX Graphics, Loopic, SuperFlyTV, StreamShapers, CasparCG, ograf-server)\n- Spec, history and news in English, Portuguese and Spanish\n\n# How a graphic flows\n\nA graphic is a **Web Component** with standard lifecycle methods plus a **JSON Schema** describing its data. It is validated against the EBU schema and then plays on any OGraf renderer, with no proprietary runtime.\n\n# Results\n\n- v1 stable since September 2025\n- 10+ tools and renderers\n- Adopters include Adobe, BBC, NRK, Deutsche Welle and CBC",
       "flow": {
         "nodes": [
           {
@@ -768,7 +780,7 @@
       "title": "Story Object Model",
       "client": "IBC 2026",
       "summary": "SOM 1.0, an open standard for story context in content production: one publish/subscribe bus where every newsroom tool reads and writes a single, live description of the story.",
-      "impact": "Published at IBC 2026 (12 Sep) with 14 champion organisations — including AP, BBC, NBCUniversal and Reuters — and 17 technology participants.",
+      "impact": "Published at IBC 2026 (12 Sep) with 14 champion organisations, including AP, BBC, NBCUniversal and Reuters, and 17 technology participants.",
       "stack": [
         "Publish / subscribe",
         "JSON Schema",
@@ -783,7 +795,7 @@
         "demo": "https://storyobjectmodel.dev",
         "code": null
       },
-      "story": "# The problem\n\nA story lives in many tools at once: planning, rundown, graphics, playout, the MAM. Each holds a slightly different version of what is true, and they keep each other in sync through point-to-point integrations.\n\n# The model\n\nSOM puts one layer underneath those tools. **Tools talk to the story, not to each other.**\n\n- A **publish/subscribe bus** (broker-agnostic) carrying seven JSON message families with permanent schema URLs\n- Three core concepts: **Story**, **Asset** and **Telling**\n- **Full snapshots** — omission means absent, and late joiners receive the complete state\n- A **skills library** that encodes editorial rules once, readable by every tool\n- **Compliance gates** tied to story versions: any hold means held\n- Media travels by reference only; content never rides the bus\n\nSOM does not replace MOS, the NCS or the MAM — it coordinates context above them.\n\n# Results\n\n- SOM 1.0 published at IBC Amsterdam, 12 September 2026\n- Developed in the IBC Accelerator Media Innovation Programme 2026 (SMART STORIES)\n- 14 champion organisations and 17 technology participants",
+      "story": "# The problem\n\nA story lives in many tools at once: planning, rundown, graphics, playout, the MAM. Each holds a slightly different version of what is true, and they keep each other in sync through point-to-point integrations.\n\n# The model\n\nSOM puts one layer underneath those tools. **Tools talk to the story, not to each other.**\n\n- A **publish/subscribe bus** (broker-agnostic) carrying seven JSON message families with permanent schema URLs\n- Three core concepts: **Story**, **Asset** and **Telling**\n- **Full snapshots**: omission means absent, and late joiners receive the complete state\n- A **skills library** that encodes editorial rules once, readable by every tool\n- **Compliance gates** tied to story versions: any hold means held\n- Media travels by reference only; content never rides the bus\n\nSOM does not replace MOS, the NCS or the MAM. It coordinates context above them.\n\n# Results\n\n- SOM 1.0 published at IBC Amsterdam, 12 September 2026\n- Developed in the IBC Accelerator Media Innovation Programme 2026 (SMART STORIES)\n- 14 champion organisations and 17 technology participants",
       "flow": {
         "nodes": [
           {
@@ -868,7 +880,7 @@
       "title": "Urnas 2026",
       "client": "setup.news",
       "summary": "\"How the ballot boxes draw the country\": the 2026 presidential first round mapped polling place by polling place, rebuilt from the raw ballot-box files and checked against the TSE.",
-      "impact": "93,500 polling places and 497,075 sections, reconciled line by line with the official result — shipped as a static site with a ~1 MB first load.",
+      "impact": "93,500 polling places and 497,075 sections, reconciled line by line with the official result, and shipped as a static site with a ~1 MB first load.",
       "stack": [
         "Python",
         "ASN.1 ballot decoding",
@@ -882,7 +894,7 @@
         "demo": "https://urnas.setup.news",
         "code": null
       },
-      "story": "# The challenge\n\nOfficial results stop at the municipality. The story of an election is often in the neighbourhood: which schools, which streets, which side of the river. That data exists — every ballot box publishes its own bulletin (BU) — but as hundreds of thousands of small binary files.\n\n# The pipeline\n\n1. **Backup** — batch download of the ballot-box files for every section, with rate steps and a circuit breaker on 429/403 so the TSE is never hammered\n2. **Decode** — an ASN.1 decoder turns each BU into rows (votes and sections) stored as Parquet per state, including sections counted by the backup tally system\n3. **Reconcile** — every state is checked against the official result, line by line, before anything is drawn (technical nulls folded into nulls, uninstalled sections accounted for)\n4. **Geocode** — polling places joined to the TSE location register; abroad, where the register has no coordinates, cities are geocoded by name and country\n5. **Publish** — a light static site: columnar points, detail cards in 183 shards fetched on tap, a custom canvas layer and long-lived CDN caching\n\n# Results\n\n- **93,500** polling places and **497,075** sections on one map\n- Totals that match the official TSE result\n- ~1 MB gzipped first load on mobile",
+      "story": "# The challenge\n\nOfficial results stop at the municipality. The story of an election is often in the neighbourhood: which schools, which streets, which side of the river. That data exists, since every ballot box publishes its own bulletin (BU), but as hundreds of thousands of small binary files.\n\n# The pipeline\n\n1. **Backup**: batch download of the ballot-box files for every section, with rate steps and a circuit breaker on 429/403 so the TSE is never hammered\n2. **Decode**: an ASN.1 decoder turns each BU into rows (votes and sections) stored as Parquet per state, including sections counted by the backup tally system\n3. **Reconcile**: every state is checked against the official result, line by line, before anything is drawn (technical nulls folded into nulls, uninstalled sections accounted for)\n4. **Geocode**: polling places joined to the TSE location register; abroad, where the register has no coordinates, cities are geocoded by name and country\n5. **Publish**: a light static site: columnar points, detail cards in 183 shards fetched on tap, a custom canvas layer and long-lived CDN caching\n\n# Results\n\n- **93,500** polling places and **497,075** sections on one map\n- Totals that match the official TSE result\n- ~1 MB gzipped first load on mobile",
       "flow": {
         "nodes": [
           {
@@ -982,7 +994,7 @@
       "thumbnail": "/assets/projects/riot-telemetry/banner.jpg",
       "video": "/assets/projects/riot-telemetry/banner.mp4",
       "hasDetailedContent": true,
-      "story": "# The Challenge\n\nDuring the **CBLOL 2016** broadcasts, **Riot Games Brasil** aimed to redefine the eSports viewing experience by introducing **human telemetry**—tracking players’ heart rate, breathing, and stress levels—to reveal the physical and emotional intensity behind professional gaming.\n\nThe initiative took place under **significant pressure from Riot’s production leadership**, as audience numbers were at record highs and expectations for innovation were enormous. Furthermore, strict **compliance and operational safety policies** mandated that no system could interfere with gameplay performance or jeopardize the broadcast, even in case of failure.\n\nThe technical environment posed additional challenges: over **2,000 spectators** in the arena, high electromagnetic interference, and numerous wireless devices caused instability in Bluetooth communications.\n\n# The Solution\n\nWorking as a **freelance systems engineer**, I developed a two-part telemetry pipeline connecting **Zephyr biometric sensors** worn by the ten players to the **Vizrt** graphics system operated by **wTVision**. The goal was to stream real-time physiological data safely into the broadcast layer without impacting the competition.\n\nTwo complementary applications were built in **C#**:\n\n1. **Bluetooth Reader (NUC – Under Stage)**  \n   Installed beneath the main stage, this application handled **Bluetooth pairing, decoding, and data normalization** for all ten players’ Zephyr sensors. It managed signal stability and transmitted readings over **TCP Stream**.\n\n2. **Telemetry Controller (Control Room)**  \n   Running from the control room, it received data via TCP, processed and formatted it in **JSON**, and sent it via **UDP** to **Vizrt**, where graphics were updated live on screen. It also functioned as a monitoring dashboard, allowing real-time tracking of player vitals.\n\n![System Diagram](/assets/projects/riot-telemetry/diagram.jpg)\n\n# My Role\n\nI was responsible for designing and coding both systems end-to-end:\n\n- Built the **Bluetooth decoding layer** for Zephyr sensors.\n- Implemented **TCP/UDP communication middleware** to link stage and control room with minimal latency.\n- Developed a **real-time compliance logic** ensuring that signal loss would never impact gameplay or broadcast continuity.\n- Supported **live operations** throughout the event, troubleshooting Bluetooth instability under high interference.\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/riot-telemetry/demo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# The Approach\n\nThe project was executed in **three weeks**, involving close coordination between **Riot Games**, **wTVision**, and the local production crew. The architecture prioritized **redundancy, reliability, and isolation**, ensuring that any sensor or network failure would not affect live performance.\n\nAlthough magnetic noise caused **some instability during the event**, the system remained operational and successfully displayed live biometric data throughout the competition—marking a pioneering moment in Brazilian eSports broadcasting.\n\n# Results\n\n- **First-ever human telemetry integration** in a Brazilian eSports broadcast.\n- **Operational compliance** achieved — no interference with gameplay or broadcast continuity.\n- **Functional real-time data visualization** via Vizrt graphics.\n- **Performance rated as satisfactory** despite expected signal interference.\n- Praised by **Riot Games Brasil** and **wTVision** as an innovative step forward for live eSports production.\n\n![Control Room Screen](/assets/projects/riot-telemetry/screen1.png)",
+      "story": "# The Challenge\n\nDuring the **CBLOL 2016** broadcasts, **Riot Games Brasil** aimed to redefine the eSports viewing experience by introducing **human telemetry**, tracking players’ heart rate, breathing and stress levels to reveal the physical and emotional intensity behind professional gaming.\n\nThe initiative took place under **significant pressure from Riot’s production leadership**, as audience numbers were at record highs and expectations for innovation were enormous. Furthermore, strict **compliance and operational safety policies** mandated that no system could interfere with gameplay performance or jeopardize the broadcast, even in case of failure.\n\nThe technical environment posed additional challenges: over **2,000 spectators** in the arena, high electromagnetic interference, and numerous wireless devices caused instability in Bluetooth communications.\n\n# The Solution\n\nWorking as a **freelance systems engineer**, I developed a two-part telemetry pipeline connecting **Zephyr biometric sensors** worn by the ten players to the **Vizrt** graphics system operated by **wTVision**. The goal was to stream real-time physiological data safely into the broadcast layer without impacting the competition.\n\nTwo complementary applications were built in **C#**:\n\n1. **Bluetooth Reader (NUC – Under Stage)**  \n   Installed beneath the main stage, this application handled **Bluetooth pairing, decoding, and data normalization** for all ten players’ Zephyr sensors. It managed signal stability and transmitted readings over **TCP Stream**.\n\n2. **Telemetry Controller (Control Room)**  \n   Running from the control room, it received data via TCP, processed and formatted it in **JSON**, and sent it via **UDP** to **Vizrt**, where graphics were updated live on screen. It also functioned as a monitoring dashboard, allowing real-time tracking of player vitals.\n\n![System Diagram](/assets/projects/riot-telemetry/diagram.jpg)\n\n# My Role\n\nI was responsible for designing and coding both systems end-to-end:\n\n- Built the **Bluetooth decoding layer** for Zephyr sensors.\n- Implemented **TCP/UDP communication middleware** to link stage and control room with minimal latency.\n- Developed a **real-time compliance logic** ensuring that signal loss would never impact gameplay or broadcast continuity.\n- Supported **live operations** throughout the event, troubleshooting Bluetooth instability under high interference.\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/riot-telemetry/demo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# The Approach\n\nThe project was executed in **three weeks**, involving close coordination between **Riot Games**, **wTVision**, and the local production crew. The architecture prioritized **redundancy, reliability, and isolation**, ensuring that any sensor or network failure would not affect live performance.\n\nAlthough magnetic noise caused **some instability during the event**, the system remained operational and successfully displayed live biometric data throughout the competition, a pioneering moment in Brazilian eSports broadcasting.\n\n# Results\n\n- **First-ever human telemetry integration** in a Brazilian eSports broadcast.\n- **Operational compliance** achieved, with no interference with gameplay or broadcast continuity.\n- **Functional real-time data visualization** via Vizrt graphics.\n- **Performance rated as satisfactory** despite expected signal interference.\n- Praised by **Riot Games Brasil** and **wTVision** as an innovative step forward for live eSports production.\n\n![Control Room Screen](/assets/projects/riot-telemetry/screen1.png)",
       "links": {
         "demo": null,
         "code": null
@@ -1155,7 +1167,7 @@
       "thumbnail": "/assets/projects/quemficaempe/banner.jpg",
       "video": "/assets/projects/quemficaempe/demo.mp4",
       "hasDetailedContent": true,
-      "story": "# The Challenge\n\nIn 2012, Rede Bandeirantes brought the international format of *'Who’s Still Standing?'* to Brazil, launching the game show **'Quem Fica em Pé'**, hosted by **José Luiz Datena**. The production demanded a complete digital control ecosystem built from scratch in just **two weeks** — responsible for managing every part of the game’s mechanics in real time.\n\n![Studio Demo](/assets/projects/quemficaempe/demo.jpg)\n\nThe system needed to integrate seamlessly with **Vizrt broadcast graphics**, synchronize with the presenter’s timing, and guarantee the accurate calculation of prizes — totaling **over R$500,000** in awards across two seasons. According to the show’s Wikipedia page, the premiere significantly **improved Band’s audience ratings** in the São Paulo region.\n\n# The Solution\n\nA fully custom-built, C#-based platform was developed to manage the entire show logic, with three interconnected applications working in real time:\n\n1. **Game Management System** – Proprietary CMS for registering over **3,000 questions**, managing rounds, prizes, and the complete rundown of each episode.\n2. **Vizrt Control Connector** – Real-time TCP socket controller for graphics and animations displayed on the studio’s large screen, ensuring frame-perfect sync with Datena’s narration.\n3. **Teleprompter System (TP)** – Interface for presenters and contestants displaying dynamic instructions and timed content during live recording.\n\n ![SystemScreen](/assets/projects/quemficaempe/tela1.png)\n\n# My Role\n\nI designed the system’s architecture, coded every module, and developed **custom connectors for Vizrt integration**. My responsibilities included:\n\n- Building the CMS and control interfaces\n- Implementing the scoring and prize logic\n- Managing TCP socket communication between systems\n- Supporting live studio operations throughout the first season\n\n# The Approach\n\nDevelopment was fast-paced and highly collaborative. I worked closely with the **engineering, art, and direction teams** to align visual and technical workflows. The system’s architecture combined **C#**, **PostgreSQL**, and **TCP-based real-time control**, delivering a stable, low-latency experience during broadcast.\n\n# Team & Production\n\n- **Program Director:** Pablo Mazover  \n- **Production Coordination:** Eduardo Gaspar  \n- **Art Direction:** Omar Sabbag  \n- **Art Coordination:** Pedro Coelho  \n- **Engineering Coordination:** Thiago Perrela / Carol Garcia  \n\n# Results\n\n- **Full delivery within two weeks** before the live premiere\n- **Zero technical failures** during broadcast\n- **Perfect synchronization** between presenter, visuals, and scoring system\n- **Boosted Band’s audience ratings** in the premiere week\n- Early Brazilian example of **live game automation integrated with broadcast graphics**\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/quemficaempe/demo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# Legacy\n\n'Quem Fica em Pé' set a benchmark for **interactive broadcast automation** in Brazilian television, inspiring future projects focused on real-time synchronization and audience engagement.",
+      "story": "# The Challenge\n\nIn 2012, Rede Bandeirantes brought the international format of *'Who’s Still Standing?'* to Brazil, launching the game show **'Quem Fica em Pé'**, hosted by **José Luiz Datena**. The production demanded a complete digital control ecosystem built from scratch in just **two weeks**, responsible for managing every part of the game’s mechanics in real time.\n\n![Studio Demo](/assets/projects/quemficaempe/demo.jpg)\n\nThe system needed to integrate seamlessly with **Vizrt broadcast graphics**, synchronize with the presenter’s timing, and guarantee the accurate calculation of prizes, totaling **over R$500,000** in awards across two seasons. According to the show’s Wikipedia page, the premiere significantly **improved Band’s audience ratings** in the São Paulo region.\n\n# The Solution\n\nA fully custom-built, C#-based platform was developed to manage the entire show logic, with three interconnected applications working in real time:\n\n1. **Game Management System** – Proprietary CMS for registering over **3,000 questions**, managing rounds, prizes, and the complete rundown of each episode.\n2. **Vizrt Control Connector** – Real-time TCP socket controller for graphics and animations displayed on the studio’s large screen, ensuring frame-perfect sync with Datena’s narration.\n3. **Teleprompter System (TP)** – Interface for presenters and contestants displaying dynamic instructions and timed content during live recording.\n\n ![SystemScreen](/assets/projects/quemficaempe/tela1.png)\n\n# My Role\n\nI designed the system’s architecture, coded every module, and developed **custom connectors for Vizrt integration**. My responsibilities included:\n\n- Building the CMS and control interfaces\n- Implementing the scoring and prize logic\n- Managing TCP socket communication between systems\n- Supporting live studio operations throughout the first season\n\n# The Approach\n\nDevelopment was fast-paced and highly collaborative. I worked closely with the **engineering, art, and direction teams** to align visual and technical workflows. The system’s architecture combined **C#**, **PostgreSQL**, and **TCP-based real-time control**, delivering a stable, low-latency experience during broadcast.\n\n# Team & Production\n\n- **Program Director:** Pablo Mazover  \n- **Production Coordination:** Eduardo Gaspar  \n- **Art Direction:** Omar Sabbag  \n- **Art Coordination:** Pedro Coelho  \n- **Engineering Coordination:** Thiago Perrela / Carol Garcia  \n\n# Results\n\n- **Full delivery within two weeks** before the live premiere\n- **Zero technical failures** during broadcast\n- **Perfect synchronization** between presenter, visuals, and scoring system\n- **Boosted Band’s audience ratings** in the premiere week\n- Early Brazilian example of **live game automation integrated with broadcast graphics**\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/quemficaempe/demo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# Legacy\n\n'Quem Fica em Pé' set a benchmark for **interactive broadcast automation** in Brazilian television, inspiring future projects focused on real-time synchronization and audience engagement.",
       "links": {
         "demo": null,
         "code": null
@@ -1243,7 +1255,7 @@
       "thumbnail": "/assets/projects/blue-marble/banner.jpg",
       "video": "/assets/projects/blue-marble/banner.mp4",
       "hasDetailedContent": true,
-      "story": "# The Challenge\n\nUnderstanding how modern weather mapping services like Windy, Ventusky, or Weather Underground work requires deep knowledge of geospatial data processing, meteorological formats, and web mapping technologies. The challenge was to build a complete pipeline that could:\n\n- **Ingest raw NOAA GFS data** in GRIB2 format (a complex binary meteorological standard)\n- **Process 20+ meteorological variables** including temperature, wind, precipitation, clouds, pressure, and specialized metrics like CAPE\n- **Transform gridded data into web-ready map tiles** compatible with standard mapping libraries\n- **Create visually compelling visualizations** with custom colormaps and transparency handling\n- **Optimize performance** for processing large datasets (multi-gigabyte files)\n\n![Weather Map Visualization](/assets/projects/blue-marble/demo.png)\n\n# The Solution\n\nBlueMarble is a comprehensive weather tile generation system that automates the entire pipeline from data download to interactive web visualization. The project demonstrates mastery of geospatial data processing while creating a practical tool for weather visualization.\n\n### Technical Architecture\n\n**Data Pipeline:**\n1. **NOAA GFS Data Ingestion** – Automated download of forecast data\n2. **GRIB2 Decoding** – Using cfgrib and xarray for data extraction\n3. **Variable Processing** – Computing derived metrics (wind speed, apparent temperature)\n4. **Geospatial Transformation** – Upsampling and Web Mercator reprojection via GDAL\n5. **Tile Generation** – Parallel processing into PNG tiles with custom colormaps\n6. **Storage & Delivery** – S3/MinIO deployment for web access\n\n**Advanced Features:**\n- **Custom Colormaps:** Specialized color schemes for different weather phenomena\n- **Smart Transparency:** Alpha channels for low-value data (clouds <25%, precipitation <0.25mm)\n- **Wind Animation:** Particle effects using leaflet-velocity for wind visualization\n- **Multi-Layer Support:** Simultaneous overlay of multiple meteorological variables\n- **Time Controls:** Interactive playback of forecast sequences\n\n# The Approach\n\nThe project was developed as a **personal learning initiative** to understand the complete stack of modern weather visualization:\n\n### Phase 1: Data Understanding\n- Studied GRIB2 format specifications\n- Analyzed NOAA GFS grid structure and coverage\n- Researched meteorological variable standards and units\n\n### Phase 2: Core Pipeline\n- Implemented GDAL-based processing workflows\n- Developed custom colormaps for each variable type\n- Built reprojection and upsampling logic\n- Created parallel tile generation system\n\n### Phase 3: Web Integration\n- Integrated Leaflet for interactive maps\n- Implemented leaflet-velocity for wind animations\n- Created responsive controls for layer and time management\n- Optimized tile delivery and caching\n\n### Phase 4: Deployment\n- Dockerized the entire pipeline\n- Implemented S3/MinIO storage integration\n- Added memory management and resource limits\n- Created comprehensive documentation\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/blue-marble/demo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# Technology Deep Dive\n\n### Geospatial Processing\n- **GDAL (Geospatial Data Abstraction Library):** Industry-standard for raster operations\n- **Web Mercator Projection:** EPSG:3857 for web mapping compatibility\n- **Tile Pyramid:** Standard zoom levels (0-12) for progressive detail\n\n### Meteorological Data\n- **GRIB2 Format:** WMO standard for gridded meteorological data\n- **Variable Coverage:** Temperature, humidity, wind (U/V components), precipitation, clouds, pressure, CAPE, and more\n- **Temporal Resolution:** 1-hour forecast intervals\n\n### Visualization\n- **Matplotlib Colormaps:** Custom and standard schemes (viridis, plasma, jet)\n- **Alpha Compositing:** Transparency for data emphasis and layering\n- **Canvas Rendering:** HTML5 for smooth particle animations\n\n# Results & Learning Outcomes\n\n**Technical Mastery:**\n- Comprehensive understanding of GDAL and geospatial transformations\n- Proficiency with xarray and n-dimensional data manipulation\n- Knowledge of Web Mercator projection and tile pyramid systems\n- Experience with GRIB2 format and meteorological data standards\n\n**System Design:**\n- Built scalable data processing pipelines\n- Implemented efficient parallel processing\n- Designed modular architecture for easy extension\n- Created deployment-ready containerized solution\n\n**Web Development:**\n- Integrated complex data visualization with Leaflet\n- Implemented real-time animation systems\n- Optimized asset delivery and caching strategies\n\n**Practical Application:**\n- Generated thousands of map tiles from multi-gigabyte datasets\n- Created smooth 60fps wind animations\n- Achieved memory-efficient processing within Docker constraints\n- Built reusable pipeline applicable to other geospatial data sources\n\n# Future Enhancements\n\nPotential extensions include:\n- **Additional Data Sources:** ERA5 reanalysis, satellite imagery, radar data\n- **Mobile App:** Native iOS/Android weather visualization\n- **API Layer:** RESTful service for programmatic access\n- **Machine Learning:** Forecast correction and nowcasting models\n- **3D Visualization:** WebGL-based atmospheric cross-sections\n\nThis project demonstrates the intersection of data engineering, geospatial processing, and web visualization — skills directly applicable to modern mapping platforms, environmental monitoring systems, and data-driven applications.",
+      "story": "# The Challenge\n\nUnderstanding how modern weather mapping services like Windy, Ventusky, or Weather Underground work requires deep knowledge of geospatial data processing, meteorological formats, and web mapping technologies. The challenge was to build a complete pipeline that could:\n\n- **Ingest raw NOAA GFS data** in GRIB2 format (a complex binary meteorological standard)\n- **Process 20+ meteorological variables** including temperature, wind, precipitation, clouds, pressure, and specialized metrics like CAPE\n- **Transform gridded data into web-ready map tiles** compatible with standard mapping libraries\n- **Create visually compelling visualizations** with custom colormaps and transparency handling\n- **Optimize performance** for processing large datasets (multi-gigabyte files)\n\n![Weather Map Visualization](/assets/projects/blue-marble/demo.png)\n\n# The Solution\n\nBlueMarble is a comprehensive weather tile generation system that automates the entire pipeline from data download to interactive web visualization. The project demonstrates mastery of geospatial data processing while creating a practical tool for weather visualization.\n\n### Technical Architecture\n\n**Data Pipeline:**\n1. **NOAA GFS Data Ingestion** – Automated download of forecast data\n2. **GRIB2 Decoding** – Using cfgrib and xarray for data extraction\n3. **Variable Processing** – Computing derived metrics (wind speed, apparent temperature)\n4. **Geospatial Transformation** – Upsampling and Web Mercator reprojection via GDAL\n5. **Tile Generation** – Parallel processing into PNG tiles with custom colormaps\n6. **Storage & Delivery** – S3/MinIO deployment for web access\n\n**Advanced Features:**\n- **Custom Colormaps:** Specialized color schemes for different weather phenomena\n- **Smart Transparency:** Alpha channels for low-value data (clouds <25%, precipitation <0.25mm)\n- **Wind Animation:** Particle effects using leaflet-velocity for wind visualization\n- **Multi-Layer Support:** Simultaneous overlay of multiple meteorological variables\n- **Time Controls:** Interactive playback of forecast sequences\n\n# The Approach\n\nThe project was developed as a **personal learning initiative** to understand the complete stack of modern weather visualization:\n\n### Phase 1: Data Understanding\n- Studied GRIB2 format specifications\n- Analyzed NOAA GFS grid structure and coverage\n- Researched meteorological variable standards and units\n\n### Phase 2: Core Pipeline\n- Implemented GDAL-based processing workflows\n- Developed custom colormaps for each variable type\n- Built reprojection and upsampling logic\n- Created parallel tile generation system\n\n### Phase 3: Web Integration\n- Integrated Leaflet for interactive maps\n- Implemented leaflet-velocity for wind animations\n- Created responsive controls for layer and time management\n- Optimized tile delivery and caching\n\n### Phase 4: Deployment\n- Dockerized the entire pipeline\n- Implemented S3/MinIO storage integration\n- Added memory management and resource limits\n- Created comprehensive documentation\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/blue-marble/demo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# Technology Deep Dive\n\n### Geospatial Processing\n- **GDAL (Geospatial Data Abstraction Library):** Industry-standard for raster operations\n- **Web Mercator Projection:** EPSG:3857 for web mapping compatibility\n- **Tile Pyramid:** Standard zoom levels (0-12) for progressive detail\n\n### Meteorological Data\n- **GRIB2 Format:** WMO standard for gridded meteorological data\n- **Variable Coverage:** Temperature, humidity, wind (U/V components), precipitation, clouds, pressure, CAPE, and more\n- **Temporal Resolution:** 1-hour forecast intervals\n\n### Visualization\n- **Matplotlib Colormaps:** Custom and standard schemes (viridis, plasma, jet)\n- **Alpha Compositing:** Transparency for data emphasis and layering\n- **Canvas Rendering:** HTML5 for smooth particle animations\n\n# Results & Learning Outcomes\n\n**Technical Mastery:**\n- Comprehensive understanding of GDAL and geospatial transformations\n- Proficiency with xarray and n-dimensional data manipulation\n- Knowledge of Web Mercator projection and tile pyramid systems\n- Experience with GRIB2 format and meteorological data standards\n\n**System Design:**\n- Built scalable data processing pipelines\n- Implemented efficient parallel processing\n- Designed modular architecture for easy extension\n- Created deployment-ready containerized solution\n\n**Web Development:**\n- Integrated complex data visualization with Leaflet\n- Implemented real-time animation systems\n- Optimized asset delivery and caching strategies\n\n**Practical Application:**\n- Generated thousands of map tiles from multi-gigabyte datasets\n- Created smooth 60fps wind animations\n- Achieved memory-efficient processing within Docker constraints\n- Built reusable pipeline applicable to other geospatial data sources\n\n# Future Enhancements\n\nPotential extensions include:\n- **Additional Data Sources:** ERA5 reanalysis, satellite imagery, radar data\n- **Mobile App:** Native iOS/Android weather visualization\n- **API Layer:** RESTful service for programmatic access\n- **Machine Learning:** Forecast correction and nowcasting models\n- **3D Visualization:** WebGL-based atmospheric cross-sections\n\nThis project demonstrates the intersection of data engineering, geospatial processing, and web visualization: skills directly applicable to modern mapping platforms, environmental monitoring systems, and data-driven applications.",
       "links": {
         "demo": null,
         "code": "https://github.com/ficosta/BlueMarble"
@@ -1335,7 +1347,7 @@
       "thumbnail": "/assets/projects/vizbirds/banner.jpg",
       "video": "/assets/projects/vizbirds/banner.mp4",
       "hasDetailedContent": true,
-      "story": "# The Challenge\n\nIn 2015, after completing a Python OOP training course focused on game development and physics simulation, I faced an interesting challenge: **could the projectile motion formulas and collision detection logic I learned in Python be implemented inside Vizrt's broadcast graphics environment?**\n\nThe technical hurdles were significant:\n\n- **Language Translation**: Converting Python code to VBA (Vizrt's scripting language)\n- **Physics Implementation**: Implementing trajectory calculations without external libraries\n- **Interactive Controls**: Creating touchscreen-based gameplay mechanics\n- **Performance**: Ensuring smooth real-time animation within Vizrt's rendering pipeline\n- **No Plugins**: Building everything using only native VizArtist capabilities for maximum accessibility\n\n![Vizrt Birds Screenshot](/assets/projects/vizbirds/banner.jpg)\n\n# The Solution\n\n**Vizrt Birds** is a fully functional Angry Birds-style game phase built entirely within VizArtist 3.6.3, demonstrating how broadcast graphics software can handle game physics and interactive logic typically reserved for game engines.\n\n### Core Features\n\n**Physics Simulation:**\n- **Projectile Motion**: Implemented oblique launch calculations with constant gravity\n  - Horizontal position: `X = X₀ + v·cos(θ)·Δt`\n  - Vertical position: `Y = Y₀ + v·sin(θ)·Δt - (G·Δt²)/2`\n- **Collision Detection**: Cartesian coordinate-based proximity detection\n- **Trajectory Rendering**: Real-time path visualization\n\n**Interactive Gameplay:**\n- Touchscreen controls for aiming and launching\n- Obstacle destruction mechanics\n- Game state management\n\n**Technical Architecture:**\n- Pure VBA implementation (no plugins)\n- Event-driven scripting for user interactions\n- Frame-based animation system\n- Modular code structure for extensibility\n\n# The Approach\n\n### Phase 1: Python Training Foundation\n\nI completed the Python Birds training course (now available on [GitHub](https://github.com/ficosta/pythonbirds)), which taught:\n- Object-oriented programming principles\n- Projectile motion physics and mathematics\n- Collision detection algorithms\n- Game state management\n\n### Phase 2: Physics Translation\n\nThe core challenge was translating Python's mathematical operations into VBA:\n\n```python\n# Python (from training)\nX = X0 + velocity * cos(angle_radians) * delta_time\nY = Y0 + velocity * sin(angle_radians) * delta_time - (GRAVITY * delta_time²) / 2\n```\n\nThis required:\n- Converting trigonometric functions to VBA syntax\n- Implementing radian-degree conversions\n- Creating custom physics update loops\n- Optimizing calculations for real-time performance\n\n### Phase 3: Vizrt Implementation\n\nBuilt the complete game logic within VizArtist:\n- Created actor classes (birds, obstacles, targets)\n- Implemented state machines (ACTIVE, LAUNCHED, DESTROYED)\n- Developed touchscreen interaction handlers\n- Added visual feedback and animation systems\n\n### Phase 4: Community Release\n\nPublished on the Vizrt Forum (April 9, 2015) with:\n- Complete VIA scene file for download\n- No external dependencies or plugins\n- Documentation for learning and customization\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/vizbirds/demo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# Results & Community Impact\n\n**Technical Achievement:**\n- Successfully demonstrated game physics in broadcast graphics software\n- Proved VBA's capability for complex mathematical simulations\n- Created accessible learning resource (no plugins required)\n\n**Community Reception:**\n- Positive feedback from Vizrt community\n- Downloaded and studied by fellow broadcast graphics professionals\n- Inspired exploration of interactive graphics in news and sports broadcasts\n\n**Personal Learning:**\n- Deep understanding of physics simulation and numerical methods\n- Mastery of VBA scripting within Vizrt ecosystem\n- Experience bridging game development concepts with broadcast technology\n\n# Download & Resources\n\n**Try It Yourself:**\n- [Download VIZRTBIRDS.via](/assets/projects/vizbirds/vizbirds.via) (1.0 MB)\n- Compatible with VizArtist 3.6.3+\n- No plugins required\n\n**Source Code Reference:**\n- [Python Birds Training Repo](https://github.com/ficosta/pythonbirds) - Original Python implementation\n- [Vizrt Forum Thread](https://forum.vizrt.com/index.php?threads/viz-birds.15413/) - Community discussion\n\n# Future Enhancements\n\nPotential improvements mentioned in the original forum post:\n- Object-oriented refactoring for better code organization\n- Additional bird types with unique physics behaviors\n- Enhanced particle effects for destruction animations\n- Multiplayer/competitive modes for live broadcast engagement\n\nThis project represents the creative intersection of game development, physics simulation, and broadcast graphics — demonstrating that innovation often comes from applying concepts across unexpected domains.",
+      "story": "# The Challenge\n\nIn 2015, after completing a Python OOP training course focused on game development and physics simulation, I faced an interesting challenge: **could the projectile motion formulas and collision detection logic I learned in Python be implemented inside Vizrt's broadcast graphics environment?**\n\nThe technical hurdles were significant:\n\n- **Language Translation**: Converting Python code to VBA (Vizrt's scripting language)\n- **Physics Implementation**: Implementing trajectory calculations without external libraries\n- **Interactive Controls**: Creating touchscreen-based gameplay mechanics\n- **Performance**: Ensuring smooth real-time animation within Vizrt's rendering pipeline\n- **No Plugins**: Building everything using only native VizArtist capabilities for maximum accessibility\n\n![Vizrt Birds Screenshot](/assets/projects/vizbirds/banner.jpg)\n\n# The Solution\n\n**Vizrt Birds** is a fully functional Angry Birds-style game phase built entirely within VizArtist 3.6.3, demonstrating how broadcast graphics software can handle game physics and interactive logic typically reserved for game engines.\n\n### Core Features\n\n**Physics Simulation:**\n- **Projectile Motion**: Implemented oblique launch calculations with constant gravity\n  - Horizontal position: `X = X₀ + v·cos(θ)·Δt`\n  - Vertical position: `Y = Y₀ + v·sin(θ)·Δt - (G·Δt²)/2`\n- **Collision Detection**: Cartesian coordinate-based proximity detection\n- **Trajectory Rendering**: Real-time path visualization\n\n**Interactive Gameplay:**\n- Touchscreen controls for aiming and launching\n- Obstacle destruction mechanics\n- Game state management\n\n**Technical Architecture:**\n- Pure VBA implementation (no plugins)\n- Event-driven scripting for user interactions\n- Frame-based animation system\n- Modular code structure for extensibility\n\n# The Approach\n\n### Phase 1: Python Training Foundation\n\nI completed the Python Birds training course (now available on [GitHub](https://github.com/ficosta/pythonbirds)), which taught:\n- Object-oriented programming principles\n- Projectile motion physics and mathematics\n- Collision detection algorithms\n- Game state management\n\n### Phase 2: Physics Translation\n\nThe core challenge was translating Python's mathematical operations into VBA:\n\n```python\n# Python (from training)\nX = X0 + velocity * cos(angle_radians) * delta_time\nY = Y0 + velocity * sin(angle_radians) * delta_time - (GRAVITY * delta_time²) / 2\n```\n\nThis required:\n- Converting trigonometric functions to VBA syntax\n- Implementing radian-degree conversions\n- Creating custom physics update loops\n- Optimizing calculations for real-time performance\n\n### Phase 3: Vizrt Implementation\n\nBuilt the complete game logic within VizArtist:\n- Created actor classes (birds, obstacles, targets)\n- Implemented state machines (ACTIVE, LAUNCHED, DESTROYED)\n- Developed touchscreen interaction handlers\n- Added visual feedback and animation systems\n\n### Phase 4: Community Release\n\nPublished on the Vizrt Forum (April 9, 2015) with:\n- Complete VIA scene file for download\n- No external dependencies or plugins\n- Documentation for learning and customization\n\n<video controls style=\"width: 100%; border-radius: 1rem; margin: 2rem 0;\">\n  <source src=\"/assets/projects/vizbirds/demo.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n\n# Results & Community Impact\n\n**Technical Achievement:**\n- Successfully demonstrated game physics in broadcast graphics software\n- Proved VBA's capability for complex mathematical simulations\n- Created accessible learning resource (no plugins required)\n\n**Community Reception:**\n- Positive feedback from Vizrt community\n- Downloaded and studied by fellow broadcast graphics professionals\n- Inspired exploration of interactive graphics in news and sports broadcasts\n\n**Personal Learning:**\n- Deep understanding of physics simulation and numerical methods\n- Mastery of VBA scripting within Vizrt ecosystem\n- Experience bridging game development concepts with broadcast technology\n\n# Download & Resources\n\n**Try It Yourself:**\n- [Download VIZRTBIRDS.via](/assets/projects/vizbirds/vizbirds.via) (1.0 MB)\n- Compatible with VizArtist 3.6.3+\n- No plugins required\n\n**Source Code Reference:**\n- [Python Birds Training Repo](https://github.com/ficosta/pythonbirds) - Original Python implementation\n- [Vizrt Forum Thread](https://forum.vizrt.com/index.php?threads/viz-birds.15413/) - Community discussion\n\n# Future Enhancements\n\nPotential improvements mentioned in the original forum post:\n- Object-oriented refactoring for better code organization\n- Additional bird types with unique physics behaviors\n- Enhanced particle effects for destruction animations\n- Multiplayer/competitive modes for live broadcast engagement\n\nThis project represents the creative intersection of game development, physics simulation, and broadcast graphics, demonstrating that innovation often comes from applying concepts across unexpected domains.",
       "links": {
         "demo": "/assets/projects/vizbirds/vizbirds.via",
         "code": "https://github.com/ficosta/pythonbirds"

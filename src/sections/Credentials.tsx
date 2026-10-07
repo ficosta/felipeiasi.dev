@@ -24,26 +24,26 @@ export default function Credentials({ education, certifications, presentations, 
     <section aria-labelledby="cred-title" id="credentials" className="wrap py-20 lg:py-28">
       <SectionHead id="cred-title" index="04" label="Credentials" title="On record" />
       <div className="grid gap-10 lg:grid-cols-3">
-        <Column title="Talks">
+        <Column title="Talks & articles">
           <ul className="space-y-4">
             {presentations.map((p) => (
               <li key={p.title}>
                 <p className="text-lg font-semibold leading-tight">{p.title}</p>
                 <p className="label mt-1">
-                  {p.event} · {p.year}
+                  {p.type} · {p.event} · {p.year}
                 </p>
               </li>
             ))}
           </ul>
         </Column>
 
-        <Column title="Certifications">
+        <Column title="Certifications / Training">
           <ul className="space-y-4">
             {featured.map((c) => (
               <li key={c.name}>
                 <p className="text-lg font-semibold leading-tight">{c.name}</p>
                 <p className="label mt-1">
-                  {c.issuer} · {c.year}
+                  {c.kind === 'certification' ? 'Certification' : 'Course'} · {c.issuer} · {c.year}
                 </p>
               </li>
             ))}
@@ -62,7 +62,7 @@ export default function Credentials({ education, certifications, presentations, 
                 <ul className="mt-4 space-y-2">
                   {rest.map((c) => (
                     <li key={c.name} className="text-[15px] leading-snug text-fg/80">
-                      {c.name} <span className="text-dim">— {c.issuer}, {c.year}</span>
+                      {c.name} <span className="text-dim">· {c.issuer}, {c.year}</span>
                     </li>
                   ))}
                 </ul>

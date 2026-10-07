@@ -16,7 +16,7 @@ function FlowList({ flow, className }: { flow: ProjectFlow; className: string })
           <li key={n.id} className="border-l border-line py-2 pl-4">
             <span className="label mr-2">{KIND_TAG[n.kind]}</span>
             <span className="font-semibold">{n.label}</span>
-            {n.tech && <span className="text-dim"> — {n.tech}</span>}
+            {n.tech && <span className="text-dim">: {n.tech}</span>}
             {out.length > 0 && (
               <span className="label mt-1 block">
                 → {out.map((e) => `${labelOf(e.to)}${e.label ? ` (${e.label})` : ''}`).join(', ')}

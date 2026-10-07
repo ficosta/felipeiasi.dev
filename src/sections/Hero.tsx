@@ -42,7 +42,7 @@ export default function Hero({ data }: { data: Profile }) {
             <img
               src={data.avatar}
               alt={`Pixel-art portrait of ${data.name}`}
-              className="h-full w-full object-cover object-[50%_20%] grayscale contrast-105"
+              className="h-full w-full -scale-x-100 object-cover object-[50%_20%] grayscale contrast-105"
             />
             <figcaption className="label absolute left-2.5 top-2.5 bg-black/70 px-1.5 py-0.5 text-[10px] text-fg">
               Cam 1

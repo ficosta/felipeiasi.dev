@@ -74,12 +74,19 @@ export interface Project {
   };
 }
 
+export interface CareerStep {
+  role: string;
+  period: string;
+}
+
 export interface Career {
   period: string;
   role: string;
   company: string;
   location?: string;
   current?: boolean;
+  /** Promotions inside the same company, newest first. */
+  steps?: CareerStep[];
   highlights?: string[];
   tech?: string[];
 }
@@ -88,6 +95,7 @@ export interface Certification {
   name: string;
   issuer: string;
   year: number;
+  kind?: 'certification' | 'course';
   featured?: boolean;
   url?: string;
 }

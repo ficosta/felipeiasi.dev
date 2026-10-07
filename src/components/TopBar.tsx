@@ -11,7 +11,7 @@ export default function TopBar({ base }: { base: string }) {
       <div className="wrap flex h-14 items-center justify-between">
         <a href="#top" className="label flex items-center gap-2 text-fg">
           <span className="tally-dot" aria-hidden />
-          On air — {base}
+          On air · {base}
         </a>
         <nav aria-label="Sections">
           <ul className="flex gap-5 sm:gap-8">

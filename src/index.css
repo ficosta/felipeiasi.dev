@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* On Air — single dark theme. Red (tally) only ever means "live / current". */
+/* On Air: single dark theme. Red (tally) only ever means "live / current". */
 @theme {
   --color-bg: #0a0a0b;
   --color-fg: #ecebe6;

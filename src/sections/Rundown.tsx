@@ -5,7 +5,7 @@ import type { Career } from '@/types/site';
 function shortPeriod(period: string) {
   const years = period.match(/\d{4}/g) ?? [];
   const end = /present/i.test(period) ? 'Now' : years[1];
-  return end && end !== years[0] ? `${years[0]} — ${end}` : years[0] ?? period;
+  return end && end !== years[0] ? `${years[0]} – ${end}` : years[0] ?? period;
 }
 
 function Row({ item, open, onToggle }: { item: Career; open: boolean; onToggle: () => void }) {
@@ -33,16 +33,29 @@ function Row({ item, open, onToggle }: { item: Career; open: boolean; onToggle: 
               {open ? '−' : '+'}
             </span>
           )}
+          {item.steps && item.steps.length > 1 && (
+            <span className="label mt-1.5 block">{item.steps.length} roles</span>
+          )}
         </span>
         <span className="order-3 text-dim lg:order-none lg:text-[17px]">{item.company}</span>
         <span className="label hidden text-right lg:block">{item.location?.split(',')[0]}</span>
       </button>
       {expandable && open && (
         <div id={panelId} className="pb-6 lg:pl-[224px]">
+          {item.steps && (
+            <ol className="mb-5 max-w-3xl border-l border-line">
+              {item.steps.map((step) => (
+                <li key={step.role} className="grid gap-x-6 py-1.5 pl-4 sm:grid-cols-[1fr_auto]">
+                  <span className="font-semibold">{step.role}</span>
+                  <span className="label">{step.period}</span>
+                </li>
+              ))}
+            </ol>
+          )}
           <ul className="max-w-3xl space-y-2">
             {item.highlights!.map((h) => (
               <li key={h} className="flex gap-3 text-[16px] leading-snug text-fg/85">
-                <span aria-hidden className="mt-[0.55em] h-px w-3 shrink-0 bg-dim" />
+                <span aria-hidden className="mt-[0.6em] h-1 w-1 shrink-0 bg-dim" />
                 {h}
               </li>
             ))}
@@ -57,7 +70,8 @@ function Row({ item, open, onToggle }: { item: Career; open: boolean; onToggle: 
 }
 
 export default function Rundown({ items }: { items: Career[] }) {
-  const [open, setOpen] = useState<number | null>(1);
+  // Open the richest entry (the one with promotions) so the depth is visible on arrival.
+  const [open, setOpen] = useState<number | null>(() => Math.max(0, items.findIndex((i) => i.steps)));
   return (
     <section aria-labelledby="rundown-title" id="rundown" className="wrap py-20 lg:py-28">
       <SectionHead id="rundown-title" index="02" label="Rundown" title="Career" meta="2006 → now" />
