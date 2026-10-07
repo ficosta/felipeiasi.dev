@@ -222,5 +222,6 @@ Featured (PGM): CNN Brasil Elections 2026.
 
 - ~~Add ograf.dev, storyobjectmodel.dev, setup.news, apuracao.setup.news, urnas.setup.news to Systems~~ — done 6 Oct 2026 (11 sources; the multiviewer is now 4 columns and widens the first row below the PGM block).
 - Confirm Felipe's role on setup.news and on SOM; the case stories describe the systems, not the role.
-- Highlights for the current Astucemedia role (LinkedIn has none yet).
+- ~~Highlights for the current Astucemedia role~~: done from the CVs.
+- Candidate projects from the CVs, to discuss 7 Oct 2026: FIFA World Cup 2026 data services (Sportradar, SSE, MQTT), SAM 3 computer-vision prototype on Modal, NBB scoreboard serial capture + scouting app, Copa Truck telemetry / UDP bridge, newsroom platform evaluation for a systems integrator, HTML5/CEF real-time graphics engine.
 - **F1 telemetry graphics** (to discuss 7 Oct 2026): real-time overlay on onboard footage — timing tower, gear/speed/RPM, G-force, tyres, DRS. Web encodes ready, uncommitted, in `public/assets/projects/f1-telemetry/` (demo.mp4 16 MB, banner.mp4 6 s loop, banner.jpg). Source: `~/Desktop/F1 Demo mp4.mov`.
