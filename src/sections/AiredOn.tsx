@@ -16,6 +16,7 @@ const MARKS: Mark[] = [
   { name: 'MTV Brasil', src: '/logos/mtv.svg', height: 30 },
   { name: 'RedeTV!', src: '/logos/redetv.svg', height: 34 },
   { name: 'Riot Games', src: '/logos/riot-games.svg', height: 30 },
+  { name: 'Garena', src: '/logos/garena.svg', height: 32 },
 ];
 
 export default function AiredOn() {
