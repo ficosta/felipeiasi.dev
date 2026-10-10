@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://felipeiasi.com/sitemap.xml
+Sitemap: https://felipeiasi.dev/sitemap.xml

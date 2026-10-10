@@ -1,4 +1,4 @@
-# Publish felipeiasi.com to Bunny edge storage on every push to main:
+# Publish felipeiasi.dev to Bunny edge storage on every push to main:
 # test -> build -> upload new or changed files -> purge the pull zone.
 name: Deploy to Bunny
 
