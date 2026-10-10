@@ -1,0 +1,56 @@
+# Publish felipeiasi.com to Bunny edge storage on every push to main:
+# test -> build -> upload new or changed files -> purge the pull zone.
+name: Deploy to Bunny
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-bunny
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      # Project videos live in Git LFS (a few hundred MB). Cache the objects so
+      # each deploy only fetches the ones that changed, not the whole set.
+      - name: List LFS objects
+        run: git lfs ls-files --long | cut -d' ' -f1 | sort > .lfs-ids
+      - uses: actions/cache@v4
+        with:
+          path: .git/lfs
+          key: lfs-${{ hashFiles('.lfs-ids') }}
+          restore-keys: lfs-
+      - name: Fetch LFS files
+        run: git lfs pull
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          cache: npm
+
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+
+      - name: Upload to Bunny and purge
+        env:
+          BUNNY_STORAGE_ZONE: ${{ vars.BUNNY_STORAGE_ZONE }}
+          BUNNY_PULL_ID: ${{ vars.BUNNY_PULL_ID }}
+          BUNNY_STORAGE_KEY: ${{ secrets.BUNNY_STORAGE_KEY }}
+          BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}
+        run: npm run deploy
+
+      - name: Smoke-test the CDN
+        env:
+          PULL_HOST: ${{ vars.BUNNY_PULL_HOST }}
+        run: |
+          set -euo pipefail
+          sleep 5
+          curl -sf -o /dev/null -w 'home:%{http_code}\n' "https://$PULL_HOST/"
+          curl -sf -o /dev/null -w 'og-card:%{http_code}\n' "https://$PULL_HOST/assets/og-card.jpg"
